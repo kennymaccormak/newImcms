@@ -1,0 +1,22 @@
+.imcms-data-picker{
+    position: relative;
+    padding: 10px;
+    display: block;
+    height: 35px;
+    max-width: 99px;
+    border: 1px solid #d3d8de;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.imcms-data-picker__current-data{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #2f4047;
+}
