@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components & Elements</title>
+    <!--style files-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+<hr>
+<h2>Buttons</h2>
+<hr>
+<button type="button" class="imcms-button imcms-button--negative">negative</button>
+<button type="button" class="imcms-button imcms-button--positive">positive</button>
+<button type="button" class="imcms-button imcms-button--neutral">neutral</button>
+<button type="button" class="imcms-button imcms-button--save">save</button>
+<hr>
+
+<h2>Switch</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-switch">
+        <input type="checkbox" id="switch1" class="imcms-switch__input imcms-input" name="switch" checked>
+        <label for="switch1" class="imcms-switch__label imcms-label"></label>
+    </div>
+</form>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-switch">
+        <input type="checkbox" id="switch2" class="imcms-switch__input imcms-input" name="switch">
+        <label for="switch2" class="imcms-switch__label imcms-label"></label>
+    </div>
+</form>
+<hr>
+
+<h2>Checkbox</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-checkbox">
+        <input type="checkbox" id="checkbox1" class="imcms-checkbox__input imcms-input" name="checkbox" checked>
+        <label for="checkbox1" class="imcms-checkbox__label imcms-label">item 1</label>
+    </div>
+    <div class="imcms-form__field imcms-checkbox">
+        <input type="checkbox" id="checkbox2" class="imcms-checkbox__input imcms-input" name="checkbox">
+        <label for="checkbox2" class="imcms-checkbox__label imcms-label">item 2</label>
+    </div>
+    <div class="imcms-form__field imcms-checkbox">
+        <input type="checkbox" id="checkbox3" class="imcms-checkbox__input imcms-input" name="checkbox">
+        <label for="checkbox3" class="imcms-checkbox__label imcms-label">item 3</label>
+    </div>
+</form>
+<hr>
+
+<h2>Radio</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-radio">
+        <input type="radio" id="radio1" class="imcms-radio__input imcms-input" name="radio" checked>
+        <label for="radio1" class="imcms-radio__label imcms-label">item 1</label>
+    </div>
+    <div class="imcms-form__field imcms-radio">
+        <input type="radio" id="radio2" class="imcms-radio__input imcms-input" name="radio">
+        <label for="radio2" class="imcms-radio__label imcms-label">item 2</label>
+    </div>
+    <div class="imcms-form__field imcms-radio">
+        <input type="radio" id="radio3" class="imcms-radio__input imcms-input" name="radio">
+        <label for="radio3" class="imcms-radio__label imcms-label">item 3</label>
+    </div>
+</form>
+<hr>
+
+<h2>Select</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-select">
+        <label for="select1" class="imcms-select__label imcms-label">Select</label>
+        <div class="imcms-select__drop-down-list imcms-select__drop-down-list--closed">
+            <div class="imcms-drop-down-list__select-item">
+                <span class="imcms-drop-down-list__select-item__value imcms-input">option 1</span>
+                <button type="button" class="imcms-button imcms-button--drop-down"></button>
+            </div>
+            <div class="imcms-drop-down-list__items">
+                <div class="imcms-drop-down-list__item imcms-input" data-value="1">option 1</div>
+                <div class="imcms-drop-down-list__item imcms-input" data-value="2">option 2</div>
+                <div class="imcms-drop-down-list__item imcms-input" data-value="3">option 3</div>
+                <div class="imcms-drop-down-list__item imcms-input" data-value="4">option 4</div>
+            </div>
+        </div>
+        <input type="hidden" id="select1">
+    </div>
+
+    <div class="imcms-form__field imcms-select">
+        <label for="select2" class="imcms-select__label imcms-label">Select</label>
+        <div class="imcms-select__drop-down-list imcms-select__drop-down-list--open">
+            <div class="imcms-drop-down-list__select-item">
+                <span class="imcms-drop-down-list__select-item__value imcms-input">option 1</span>
+                <button type="button" class="imcms-button imcms-button--drop-down"></button>
+            </div>
+            <div class="imcms-drop-down-list__items">
+                <div class="imcms-drop-down-list__item imcms-input" data-value="1">option 1</div>
+                <div class="imcms-drop-down-list__item imcms-input" data-value="2">option 2</div>
+                <div class="imcms-drop-down-list__item imcms-input" data-value="3">option 3</div>
+                <div class="imcms-drop-down-list__item imcms-input" data-value="4">option 4</div>
+            </div>
+        </div>
+        <input type="hidden" id="select2">
+    </div>
+</form>
+<hr>
+
+<h2>Text Input</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-text-box">
+        <label for="text" class="imcms-text-box__label imcms-label">Text</label>
+        <input type="text" id="text" class="imcms-text-box__input imcms-input" name="text" placeholder="Text" >
+    </div>
+</form>
+<hr>
+
+<h2>Text Area</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-text-area">
+        <label for="textarea" class="imcms-text-area__label imcms-label">Textarea</label>
+        <textarea name="textarea" id="textarea" class="imcms-text-area__input imcms-input" placeholder="Text" ></textarea>
+    </div>
+</form>
+<hr>
+
+<h2>Number Input</h2>
+<hr>
+<form class="imcms-form">
+    <div class="imcms-form__field imcms-number">
+        <label for="number1" class="imcms-number__label imcms-label">Number</label>
+        <div class="imcms-number-box">
+            <input type="text" id="number1" class="imcms-number-box__input imcms-input" name="number" placeholder="Number" >
+            <button type="button" class="imcms-button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-button--decrement"></button>
+        </div>
+            <div class="imcms-number-box__error-msg error-msg">Special info - Error</div>
+    </div>
+    <div class="imcms-form__field imcms-number">
+        <label for="number2" class="imcms-number__label imcms-label">Number</label>
+        <div class="imcms-number-box imcms-number-box--active">
+            <input type="text" id="number2" class="imcms-number-box__input imcms-input" name="number" placeholder="Number" >
+            <button type="button" class="imcms-button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-button--decrement"></button>
+        </div>
+            <div class="imcms-number-box__error-msg error-msg">Special info - Error</div>
+    </div>
+    <div class="imcms-form__field imcms-number">
+        <label for="number3" class="imcms-number__label imcms-label">Number</label>
+        <div class="imcms-number-box imcms-number-box--active imcms-number-box--error">
+            <input type="text" id="number3" class="imcms-number-box__input imcms-input" name="number" placeholder="Number" >
+            <button type="button" class="imcms-button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-button--decrement"></button>
+        </div>
+            <div class="imcms-number-box__error-msg error-msg">Special info - Error</div>
+    </div>
+</form>
+<hr>
+
+<h2>Choose File</h2>
+<hr>
+<div class="imcms-choose-file">
+    <label for="chooseFile" class="imcms-number__label imcms-label">Choose File</label>
+    <input type="text" id="chooseFile" class="imcms-choose-file__input imcms-input" readonly>
+    <button type="button" class="imcms-choose-file__button imcms-button imcms-button--neutral">choose...</button>
+    <span class="imcms-choose-file__file-name">File.path</span>
+</div>
+<hr>
+
+<h2>Space Around Input</h2>
+<hr>
+<div class="imcms-space-around">
+    <label for="space1" class="imcms-space-around__label imcms-label">Space Around Input</label>
+    <div class="imcms-space-around__input-box">
+        <input type="text" id="space1" class="imcms-space-around__input imcms-input" placeholder="0" name="space">
+        <input type="text" id="space2" class="imcms-space-around__input imcms-input" placeholder="top" name="space">
+        <input type="text" id="space3" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+        <input type="text" id="space4" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+    </div>
+</div>
+
+<div class="imcms-space-around imcms-space-around--active">
+    <label for="space1" class="imcms-space-around__label imcms-label">Space Around Input</label>
+    <div class="imcms-space-around__input-box">
+        <input type="text" id="space5" class="imcms-space-around__input imcms-input" placeholder="0" name="space">
+        <input type="text" id="space6" class="imcms-space-around__input imcms-input" placeholder="top" name="space">
+        <input type="text" id="space7" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+        <input type="text" id="space8" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+    </div>
+</div>
+<hr>
+
+<h2>Keyword Input</h2>
+<hr>
+<div class="imcms-keyword">
+    <label for="keyword" class="imcms-keyword__label imcms-label">Space Around Input</label>
+    <input type="text" id="keyword" class="imcms-keyword__input imcms-input" placeholder="keyword" name="space">
+    <button type="button" class="imcms-button imcms-button--neutral">ADD+</button>
+    <div class="imcms-keyword__filters">
+        <div class="imcms-keyword__filter">filter 1
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-keyword__filter">filter 2
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-keyword__filter">filter 3
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-keyword__filter">filter 4
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+    <!--script files-->
+    <script src="scripts/main.js"></script>
+</html>

@@ -1,0 +1,35 @@
+:-moz-placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #587380;
+}
+:-ms-input-placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #587380;
+}
+::-moz-placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #587380;
+}
+::-webkit-input-placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #587380;
+}
+::placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #587380;
+}

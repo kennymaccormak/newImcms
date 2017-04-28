@@ -1,0 +1,30 @@
+.imcms-checkbox{}
+
+.imcms-checkbox__input{
+    display: none;
+}
+
+.imcms-checkbox__label{
+    position: relative;
+    padding-left: 29px;
+}
+
+.imcms-checkbox__label:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 1px solid #d3d8de;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.imcms-checkbox__input:checked + .imcms-checkbox__label:before{
+    background: #42b070 url("../img/icon_checkbox_chek.png") no-repeat 1px 2px;
+    border-color: #ebedef;
+}

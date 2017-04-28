@@ -1,0 +1,40 @@
+.imcms-keyword__label{
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.imcms-keyword__input{
+    padding: 10px 15px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #d3d8de;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.imcms-keyword__input:focus{
+    border-color: #0b94d8;
+}
+
+.imcms-keyword__filters{
+    margin-top: 11px;
+    display: block;
+}
+
+.imcms-keyword__filter{
+    padding: 6px 14px;
+    display: inline-block;
+
+
+    background-color: #d0e9f9;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    color: #2f4047;
+}

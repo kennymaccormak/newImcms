@@ -1,0 +1,154 @@
+.imcms-button{
+    padding: 15px 28px;
+    display: inline-block;
+    border: 1px solid transparent;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: uppercase;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.imcms-button:hover{
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.imcms-button--negative{
+    background-color: #fbfbfe;
+    border-color: #d3d8de;
+    opacity: 0.8;
+    color: #587380;
+}
+
+.imcms-button--negative:hover{
+    background-color: #fff;
+    color: #2f4047;
+}
+
+.imcms-button--positive{
+    background-color: #0b94d8;
+    border-color: #0b94d8;
+    color: #fff;
+}
+
+.imcms-button--positive:hover{
+    background-color: transparent;
+    color: #2f4047;
+}
+
+.imcms-button--neutral{
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+    color: #0b94d8;
+}
+
+.imcms-button--neutral:hover{
+    color: #2f4047;
+}
+
+.imcms-button--save{
+    background-color: #27b864;
+    border-color: #27b864;
+    color: #fff;
+}
+
+.imcms-button--save:hover{
+    background-color: transparent;
+    color: #2f4047;
+}
+
+.imcms-button--drop-down{
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 10px;
+    padding: 0;
+    display: block;
+    height: 4px;
+    width: 6px;
+    background: url("../img/icon_arrow_down.png") no-repeat 0 0;
+}
+
+.imcms-button--increment{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0;
+    display: none;
+    height: 20px;
+    width: 6px;
+    background: url("../img/icon_arrow_up.png") no-repeat center;
+}
+
+.imcms-button--decrement{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 0;
+    display: none;
+    height: 20px;
+    width: 6px;
+    background: url("../img/icon_arrow_down.png") no-repeat center;
+}
+
+.imcms-button--close{
+    position: relative;
+    padding: 0;
+    margin: 0 0 0 11px;
+    float: right;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+}
+
+.imcms-button--close:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 13px;
+    height: 1px;
+    background-color: #2f4047;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.imcms-button--close:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 13px;
+    height: 1px;
+    background-color: #2f4047;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.imcms-button--close:hover:before,
+.imcms-button--close:hover:after{
+    background-color: #da1a1a;
+}
