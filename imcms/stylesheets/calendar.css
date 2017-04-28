@@ -1,0 +1,106 @@
+.imcms-calendar{
+    padding: 12px;
+    display: block;
+    max-width: 166px;
+    background-color: #fff;
+    border: 1px solid #d3d8de;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.imcms-calendar__header{
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.imcms-calendar__prev-month{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imcms-calendar__next-month{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.imcms-calendar__title{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.imcms-calendar__body{
+    position: relative;
+    display: block;
+    max-height: 118px;
+    width: 100%;
+}
+
+.imcms-calendar__days-name{
+    position: relative;
+    display: block;
+    height: 8px;
+    width: 100%;
+}
+
+.imcms-calendar__day-name{
+    float: left;
+    width: 14%;
+    height: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0b94d8;
+}
+
+.imcms-calendar__weeks{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.imcms-calendar__week{
+    position: relative;
+    margin-top: 8px;
+    display: block;
+    height: 11px;
+    width: 100%;
+}
+
+.imcms-calendar__day{
+    float: left;
+    width: 14%;
+    height: 11px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+    color: #2f4047;
+}
+
+.imcms-day--outer{
+    color: #587380;
+}
+
+.imcms-day--today{
+    background-color: #0b94d8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+}

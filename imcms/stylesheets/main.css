@@ -15,3 +15,13 @@
 @import url("placeholder.css");
 @import url("space-around-inputs.css");
 @import url("keyword.css");
+@import url("messages.css");
+@import url("calendar.css");
+
+
+
+
+
+body{
+    padding-bottom: 500px;
+}
