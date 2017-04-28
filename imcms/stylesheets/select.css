@@ -7,6 +7,7 @@
 
 .imcms-select__drop-down-list{
     display: block;
+    max-width: 650px;
     background: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 5px;

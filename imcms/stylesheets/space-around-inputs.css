@@ -5,6 +5,7 @@
 
 .imcms-space-around__input-box{
     display: block;
+    max-width: 322px;
     overflow: hidden;
 }
 

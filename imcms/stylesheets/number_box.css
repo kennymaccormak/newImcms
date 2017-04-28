@@ -33,10 +33,12 @@
 
 .imcms-number-box--active .imcms-button--increment{
     display: block;
+    top: 0;
 }
 
 .imcms-number-box--active .imcms-button--decrement{
     display: block;
+    bottom: 0;
 }
 
 .imcms-number-box--error .imcms-number-box__input{
@@ -47,4 +49,9 @@
 
 .imcms-number-box--error + .imcms-number-box__error-msg{
     display: block;
+}
+
+.imcms-number__button{
+    right: 10px;
+    display: none;
 }

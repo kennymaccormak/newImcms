@@ -137,8 +137,8 @@
         <label for="number1" class="imcms-number__label imcms-label">Number</label>
         <div class="imcms-number-box">
             <input type="text" id="number1" class="imcms-number-box__input imcms-input" name="number" placeholder="Number" >
-            <button type="button" class="imcms-button imcms-button--increment"></button>
-            <button type="button" class="imcms-button imcms-button--decrement"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--decrement"></button>
         </div>
             <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
     </div>
@@ -146,8 +146,8 @@
         <label for="number2" class="imcms-number__label imcms-label">Number</label>
         <div class="imcms-number-box imcms-number-box--active">
             <input type="text" id="number2" class="imcms-number-box__input imcms-input" name="number" placeholder="Number" >
-            <button type="button" class="imcms-button imcms-button--increment"></button>
-            <button type="button" class="imcms-button imcms-button--decrement"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--decrement"></button>
         </div>
             <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
     </div>
@@ -155,8 +155,8 @@
         <label for="number3" class="imcms-number__label imcms-label">Number</label>
         <div class="imcms-number-box imcms-number-box--active imcms-number-box--error">
             <input type="text" id="number3" class="imcms-number-box__input imcms-input" name="number" placeholder="Number" >
-            <button type="button" class="imcms-button imcms-button--increment"></button>
-            <button type="button" class="imcms-button imcms-button--decrement"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--decrement"></button>
         </div>
             <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
     </div>
@@ -226,93 +226,13 @@
 <span class="imcms-title">Lorem ipsum dolor.</span>
 <hr>
 
-<h2>Calendar</h2>
-<hr>
-<div class="imcms-calendar">
-    <div class="imcms-calendar__header">
-        <button type="button" class="imcms-button imcms-calendar__prev-month imcms-button--prev"></button>
-        <div class="imcms-calendar__title">december 2016</div>
-        <button type="button" class="imcms-button imcms-calendar__next-month imcms-button--next"></button>
-    </div>
-    <div class="imcms-calendar__body">
-        <div class="imcms-calendar__days-name">
-            <div class="imcms-calendar__day-name">sun</div>
-            <div class="imcms-calendar__day-name">mon</div>
-            <div class="imcms-calendar__day-name">tue</div>
-            <div class="imcms-calendar__day-name">wed</div>
-            <div class="imcms-calendar__day-name">thu</div>
-            <div class="imcms-calendar__day-name">fri</div>
-            <div class="imcms-calendar__day-name">sat</div>
-        </div>
-        <div class="imcms-calendar__weeks">
-            <div class="imcms-calendar__week">
-                <div class="imcms-calendar__day imcms-day--outer">28</div>
-                <div class="imcms-calendar__day imcms-day--outer">29</div>
-                <div class="imcms-calendar__day imcms-day--outer">30</div>
-                <div class="imcms-calendar__day">1</div>
-                <div class="imcms-calendar__day">2</div>
-                <div class="imcms-calendar__day">3</div>
-                <div class="imcms-calendar__day">4</div>
-            </div>
-            <div class="imcms-calendar__week">
-                <div class="imcms-calendar__day">5</div>
-                <div class="imcms-calendar__day">6</div>
-                <div class="imcms-calendar__day">7</div>
-                <div class="imcms-calendar__day">8</div>
-                <div class="imcms-calendar__day">9</div>
-                <div class="imcms-calendar__day">10</div>
-                <div class="imcms-calendar__day">11</div>
-            </div>
-            <div class="imcms-calendar__week">
-                <div class="imcms-calendar__day">12</div>
-                <div class="imcms-calendar__day">13</div>
-                <div class="imcms-calendar__day">14</div>
-                <div class="imcms-calendar__day">15</div>
-                <div class="imcms-calendar__day">16</div>
-                <div class="imcms-calendar__day">17</div>
-                <div class="imcms-calendar__day">18</div>
-            </div>
-            <div class="imcms-calendar__week">
-                <div class="imcms-calendar__day">19</div>
-                <div class="imcms-calendar__day">20</div>
-                <div class="imcms-calendar__day">21</div>
-                <div class="imcms-calendar__day">22</div>
-                <div class="imcms-calendar__day">23</div>
-                <div class="imcms-calendar__day">24</div>
-                <div class="imcms-calendar__day imcms-day--today">25</div>
-            </div>
-            <div class="imcms-calendar__week">
-                <div class="imcms-calendar__day">26</div>
-                <div class="imcms-calendar__day">27</div>
-                <div class="imcms-calendar__day">28</div>
-                <div class="imcms-calendar__day">29</div>
-                <div class="imcms-calendar__day">30</div>
-                <div class="imcms-calendar__day">31</div>
-                <div class="imcms-calendar__day imcms-day--outer">1</div>
-            </div>
-        </div>
-    </div>
-</div>
-<hr>
-
 <h2>Data Picker</h2>
 <hr>
 <div class="imcms-data-picker">
     <div class="imcms-data-picker__current-data">
         2016-10-25
     </div>
-</div>
-<hr>
-
-<h2>Data Picker & Calendar</h2>
-<hr>
-<div class="imcms-calendar-data-picker">
-    <div class="imcms-calendar-data-picker__item imcms-data-picker">
-        <div class="imcms-data-picker__current-data">
-            2016-10-25
-        </div>
-    </div>
-    <div class="imcms-calendar-data-picker__item imcms-calendar">
+    <div class="imcms-calendar">
         <div class="imcms-calendar__header">
             <button type="button" class="imcms-button imcms-calendar__prev-month imcms-button--prev"></button>
             <div class="imcms-calendar__title">december 2016</div>
@@ -378,9 +298,142 @@
         </div>
     </div>
 </div>
+<hr>
 
+<h2>Data Picker & Calendar</h2>
+<hr>
+<div class="imcms-data-picker imcms-data-picker--active">
+    <div class="imcms-data-picker__current-data">
+        2016-10-25
+    </div>
+    <div class="imcms-calendar">
+        <div class="imcms-calendar__header">
+            <button type="button" class="imcms-button imcms-calendar__prev-month imcms-button--prev"></button>
+            <div class="imcms-calendar__title">december 2016</div>
+            <button type="button" class="imcms-button imcms-calendar__next-month imcms-button--next"></button>
+        </div>
+        <div class="imcms-calendar__body">
+            <div class="imcms-calendar__days-name">
+                <div class="imcms-calendar__day-name">sun</div>
+                <div class="imcms-calendar__day-name">mon</div>
+                <div class="imcms-calendar__day-name">tue</div>
+                <div class="imcms-calendar__day-name">wed</div>
+                <div class="imcms-calendar__day-name">thu</div>
+                <div class="imcms-calendar__day-name">fri</div>
+                <div class="imcms-calendar__day-name">sat</div>
+            </div>
+            <div class="imcms-calendar__weeks">
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day imcms-day--outer">28</div>
+                    <div class="imcms-calendar__day imcms-day--outer">29</div>
+                    <div class="imcms-calendar__day imcms-day--outer">30</div>
+                    <div class="imcms-calendar__day">1</div>
+                    <div class="imcms-calendar__day">2</div>
+                    <div class="imcms-calendar__day">3</div>
+                    <div class="imcms-calendar__day">4</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">5</div>
+                    <div class="imcms-calendar__day">6</div>
+                    <div class="imcms-calendar__day">7</div>
+                    <div class="imcms-calendar__day">8</div>
+                    <div class="imcms-calendar__day">9</div>
+                    <div class="imcms-calendar__day">10</div>
+                    <div class="imcms-calendar__day">11</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">12</div>
+                    <div class="imcms-calendar__day">13</div>
+                    <div class="imcms-calendar__day">14</div>
+                    <div class="imcms-calendar__day">15</div>
+                    <div class="imcms-calendar__day">16</div>
+                    <div class="imcms-calendar__day">17</div>
+                    <div class="imcms-calendar__day">18</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">19</div>
+                    <div class="imcms-calendar__day">20</div>
+                    <div class="imcms-calendar__day">21</div>
+                    <div class="imcms-calendar__day">22</div>
+                    <div class="imcms-calendar__day">23</div>
+                    <div class="imcms-calendar__day">24</div>
+                    <div class="imcms-calendar__day imcms-day--today">25</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">26</div>
+                    <div class="imcms-calendar__day">27</div>
+                    <div class="imcms-calendar__day">28</div>
+                    <div class="imcms-calendar__day">29</div>
+                    <div class="imcms-calendar__day">30</div>
+                    <div class="imcms-calendar__day">31</div>
+                    <div class="imcms-calendar__day imcms-day--outer">1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
 
+<h2>Time</h2>
+<hr>
+<div class="imcms-time-picker">
+    <div class="imcms-time-picker__current-time">
+        11:20
+    </div>
+    <div class="imcms-time-picker__time">
+        <div class="imcms-time-picker__hours">
+            <button type="button" class="imcms-time-picker__prev-hour imcms-button imcms-button--increment"></button>
+            <div class="imcms-time-picker__hour">12</div>
+            <div class="imcms-time-picker__hour">13</div>
+            <div class="imcms-time-picker__hour imcms-time-picker__hour--choose">14</div>
+            <div class="imcms-time-picker__hour">15</div>
+            <div class="imcms-time-picker__hour">16</div>
+            <div class="imcms-time-picker__hour">17</div>
+            <button type="button" class="imcms-time-picker__next-hour imcms-button imcms-button--decrement"></button>
+        </div>
+        <div class="imcms-time-picker__minutes">
+            <button type="button" class="imcms-time-picker__prev-minute imcms-button imcms-button--increment"></button>
+            <div class="imcms-time-picker__minute">00</div>
+            <div class="imcms-time-picker__minute">05</div>
+            <div class="imcms-time-picker__minute">10</div>
+            <div class="imcms-time-picker__minute imcms-time-picker__minute--choose">15</div>
+            <div class="imcms-time-picker__minute">20</div>
+            <div class="imcms-time-picker__minute">25</div>
+            <button type="button" class="imcms-time-picker__next-minute imcms-button imcms-button--decrement"></button>
+        </div>
+    </div>
+</div>
+<hr>
 
+<h2>Time Picker</h2>
+<hr>
+<div class="imcms-time-picker imcms-time-picker--active">
+    <div class="imcms-time-picker__current-time">
+        11:20
+    </div>
+    <div class="imcms-time-picker__time">
+        <div class="imcms-time-picker__hours">
+            <button type="button" class="imcms-time-picker__prev-hour imcms-button imcms-button--increment"></button>
+            <div class="imcms-time-picker__hour">12</div>
+            <div class="imcms-time-picker__hour">13</div>
+            <div class="imcms-time-picker__hour imcms-time-picker__hour--choose">14</div>
+            <div class="imcms-time-picker__hour">15</div>
+            <div class="imcms-time-picker__hour">16</div>
+            <div class="imcms-time-picker__hour">17</div>
+            <button type="button" class="imcms-time-picker__next-hour imcms-button imcms-button--decrement"></button>
+        </div>
+        <div class="imcms-time-picker__minutes">
+            <button type="button" class="imcms-time-picker__prev-minute imcms-button imcms-button--increment"></button>
+            <div class="imcms-time-picker__minute">00</div>
+            <div class="imcms-time-picker__minute">05</div>
+            <div class="imcms-time-picker__minute">10</div>
+            <div class="imcms-time-picker__minute imcms-time-picker__minute--choose">15</div>
+            <div class="imcms-time-picker__minute">20</div>
+            <div class="imcms-time-picker__minute">25</div>
+            <button type="button" class="imcms-time-picker__next-minute imcms-button imcms-button--decrement"></button>
+        </div>
+    </div>
+</div>
 
 
 

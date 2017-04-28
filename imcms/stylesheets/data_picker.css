@@ -2,8 +2,7 @@
     position: relative;
     padding: 10px;
     display: block;
-    height: 35px;
-    max-width: 99px;
+    max-width: 166px;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -13,10 +12,30 @@
 }
 
 .imcms-data-picker__current-data{
+    position: relative;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 15px;
     text-transform: uppercase;
     color: #2f4047;
+}
+
+.imcms-data-picker--active .imcms-data-picker__current-data:after{
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 5%;
+    display: block;
+    height: 1px;
+    width: 90%;
+    background-color: #d3d8de;
+}
+
+.imcms-data-picker .imcms-calendar{
+    display: none;
+}
+
+.imcms-data-picker--active .imcms-calendar{
+    display: block;
 }

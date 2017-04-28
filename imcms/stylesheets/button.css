@@ -86,10 +86,7 @@
 
 .imcms-button--increment{
     position: absolute;
-    top: 0;
-    right: 10px;
     padding: 0;
-    display: none;
     height: 20px;
     width: 6px;
     background: url("../img/icon_arrow_up.png") no-repeat center;
@@ -97,10 +94,7 @@
 
 .imcms-button--decrement{
     position: absolute;
-    bottom: 0;
-    right: 10px;
     padding: 0;
-    display: none;
     height: 20px;
     width: 6px;
     background: url("../img/icon_arrow_down.png") no-repeat center;
