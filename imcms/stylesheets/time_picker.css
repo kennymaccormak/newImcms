@@ -1,4 +1,4 @@
-.imcms-time-picker{
+.imcms-time-picker {
     position: relative;
     padding: 10px;
     display: block;
@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.imcms-time-picker__current-time{
+.imcms-time-picker__current-time {
     position: relative;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
@@ -22,7 +22,7 @@
     color: #2f4047;
 }
 
-.imcms-time-picker--active .imcms-time-picker__current-time:after{
+.imcms-time-picker--active .imcms-time-picker__current-time:after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -33,16 +33,16 @@
     background-color: #d3d8de;
 }
 
-.imcms-time-picker--active .imcms-time-picker__time{
+.imcms-time-picker--active .imcms-time-picker__time {
     display: block;
 }
 
-.imcms-time-picker__time{
+.imcms-time-picker__time {
     display: none;
     margin-top: 10px;
 }
 
-.imcms-time-picker__hours{
+.imcms-time-picker__hours {
     position: relative;
     float: left;
     padding-top: 20px;
@@ -51,7 +51,7 @@
     width: 50%;
 }
 
-.imcms-time-picker__hour{
+.imcms-time-picker__hour {
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -60,11 +60,11 @@
     color: #587380;
 }
 
-.imcms-time-picker__hour--choose{
+.imcms-time-picker__hour--choose {
     color: #2f4047;
 }
 
-.imcms-time-picker__minutes{
+.imcms-time-picker__minutes {
     position: relative;
     float: left;
     padding-top: 20px;
@@ -73,7 +73,7 @@
     width: 50%;
 }
 
-.imcms-time-picker__minute{
+.imcms-time-picker__minute {
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -82,11 +82,11 @@
     color: #587380;
 }
 
-.imcms-time-picker__minute--choose{
+.imcms-time-picker__minute--choose {
     color: #2f4047;
 }
 
-.imcms-time-picker__minutes:before{
+.imcms-time-picker__minutes:before {
     content: "";
     position: absolute;
     top: 5%;
@@ -97,22 +97,22 @@
     background-color: #d3d8de;
 }
 
-.imcms-time-picker__prev-hour{
+.imcms-time-picker__prev-hour {
     top: 0;
     left: calc(50% - 3px);
 }
 
-.imcms-time-picker__next-hour{
+.imcms-time-picker__next-hour {
     bottom: 0;
     left: calc(50% - 3px);
 }
 
-.imcms-time-picker__prev-minute{
+.imcms-time-picker__prev-minute {
     top: 0;
     left: calc(50% - 3px);
 }
 
-.imcms-time-picker__next-minute{
+.imcms-time-picker__next-minute {
     bottom: 0;
     left: calc(50% - 3px);
 }

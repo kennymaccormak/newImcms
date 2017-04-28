@@ -1,15 +1,16 @@
-.imcms-radio{}
+.imcms-radio {
+}
 
-.imcms-radio__input{
+.imcms-radio__input {
     display: none;
 }
 
-.imcms-radio__label{
+.imcms-radio__label {
     position: relative;
     padding-left: 29px;
 }
 
-.imcms-radio__label:before{
+.imcms-radio__label:before {
     content: "";
     position: absolute;
     left: 0;
@@ -24,7 +25,7 @@
     border-radius: 50%;
 }
 
-.imcms-radio__label:after{
+.imcms-radio__label:after {
     content: "";
     position: absolute;
     left: 5px;
@@ -38,11 +39,11 @@
     border-radius: 50%;
 }
 
-.imcms-radio__input:checked + .imcms-radio__label:before{
+.imcms-radio__input:checked + .imcms-radio__label:before {
     background: #42b070;
     border-color: #ebedef;
 }
 
-.imcms-radio__input:checked + .imcms-radio__label:after{
+.imcms-radio__input:checked + .imcms-radio__label:after {
     display: block;
 }

@@ -1,4 +1,4 @@
-.imcms-data-picker{
+.imcms-data-picker {
     position: relative;
     padding: 10px;
     display: block;
@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.imcms-data-picker__current-data{
+.imcms-data-picker__current-data {
     position: relative;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
@@ -21,7 +21,7 @@
     color: #2f4047;
 }
 
-.imcms-data-picker--active .imcms-data-picker__current-data:after{
+.imcms-data-picker--active .imcms-data-picker__current-data:after {
     content: "";
     position: absolute;
     bottom: -7px;
@@ -32,10 +32,10 @@
     background-color: #d3d8de;
 }
 
-.imcms-data-picker .imcms-calendar{
+.imcms-data-picker .imcms-calendar {
     display: none;
 }
 
-.imcms-data-picker--active .imcms-calendar{
+.imcms-data-picker--active .imcms-calendar {
     display: block;
 }

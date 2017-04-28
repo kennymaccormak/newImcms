@@ -1,10 +1,11 @@
-.imcms-switch{}
+.imcms-switch {
+}
 
-.imcms-switch__input{
+.imcms-switch__input {
     display: none;
 }
 
-.imcms-switch__label{
+.imcms-switch__label {
     position: relative;
     display: block;
     height: 15px;
@@ -16,7 +17,7 @@
     border-radius: 4px;
 }
 
-.imcms-switch__label:before{
+.imcms-switch__label:before {
     content: "";
     position: absolute;
     left: 1px;
@@ -34,7 +35,7 @@
     transition: all .2s;
 }
 
-.imcms-switch__input:checked + .imcms-switch__label:before{
+.imcms-switch__input:checked + .imcms-switch__label:before {
     left: 14px;
     background-color: #42b070;
     -webkit-transition: all .2s;

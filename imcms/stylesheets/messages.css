@@ -1,4 +1,4 @@
-.imcms-error-msg{
+.imcms-error-msg {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -6,7 +6,7 @@
     color: #da1a1a;
 }
 
-.imcms-info-msg{
+.imcms-info-msg {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -14,7 +14,7 @@
     color: #b35100;
 }
 
-.imcms-title{
+.imcms-title {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight: 600;

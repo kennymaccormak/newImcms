@@ -1,9 +1,9 @@
-.imcms-keyword__label{
+.imcms-keyword__label {
     margin-bottom: 12px;
     display: inline-block;
 }
 
-.imcms-keyword__input{
+.imcms-keyword__input {
     padding: 10px 15px;
     display: inline-block;
     width: 100%;
@@ -16,19 +16,18 @@
     outline: none;
 }
 
-.imcms-keyword__input:focus{
+.imcms-keyword__input:focus {
     border-color: #0b94d8;
 }
 
-.imcms-keyword__filters{
+.imcms-keyword__filters {
     margin-top: 11px;
     display: block;
 }
 
-.imcms-keyword__filter{
+.imcms-keyword__filter {
     padding: 6px 14px;
     display: inline-block;
-
 
     background-color: #d0e9f9;
     -webkit-border-radius: 10px;

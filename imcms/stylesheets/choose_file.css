@@ -1,9 +1,9 @@
-.imcms-number__label{
+.imcms-number__label {
     margin-bottom: 12px;
     display: block;
 }
 
-.imcms-choose-file__input{
+.imcms-choose-file__input {
     margin-bottom: 8px;
     padding: 10px 15px;
     display: block;
@@ -17,11 +17,11 @@
     outline: none;
 }
 
-.imcms-choose-file__button{
+.imcms-choose-file__button {
     margin-right: 18px;
 }
 
-.imcms-choose-file__file-name{
+.imcms-choose-file__file-name {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight: 400;

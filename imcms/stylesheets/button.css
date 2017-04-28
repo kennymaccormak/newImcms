@@ -1,4 +1,4 @@
-.imcms-button{
+.imcms-button {
     padding: 15px 28px;
     display: inline-block;
     border: 1px solid transparent;
@@ -21,59 +21,59 @@
     transition: all .3s;
 }
 
-.imcms-button:hover{
+.imcms-button:hover {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
 }
 
-.imcms-button--negative{
+.imcms-button--negative {
     background-color: #fbfbfe;
     border-color: #d3d8de;
     opacity: 0.8;
     color: #587380;
 }
 
-.imcms-button--negative:hover{
+.imcms-button--negative:hover {
     background-color: #fff;
     color: #2f4047;
 }
 
-.imcms-button--positive{
+.imcms-button--positive {
     background-color: #0b94d8;
     border-color: #0b94d8;
     color: #fff;
 }
 
-.imcms-button--positive:hover{
+.imcms-button--positive:hover {
     background-color: transparent;
     color: #2f4047;
 }
 
-.imcms-button--neutral{
+.imcms-button--neutral {
     padding: 0;
     background-color: transparent;
     border-color: transparent;
     color: #0b94d8;
 }
 
-.imcms-button--neutral:hover{
+.imcms-button--neutral:hover {
     color: #2f4047;
 }
 
-.imcms-button--save{
+.imcms-button--save {
     background-color: #27b864;
     border-color: #27b864;
     color: #fff;
 }
 
-.imcms-button--save:hover{
+.imcms-button--save:hover {
     background-color: transparent;
     color: #2f4047;
 }
 
-.imcms-button--drop-down{
+.imcms-button--drop-down {
     position: absolute;
     padding: 0;
     display: block;
@@ -82,7 +82,7 @@
     background: url("../img/icon_arrow_down.png") no-repeat 0 0;
 }
 
-.imcms-button--increment{
+.imcms-button--increment {
     position: absolute;
     padding: 0;
     height: 20px;
@@ -90,7 +90,7 @@
     background: url("../img/icon_arrow_up.png") no-repeat center;
 }
 
-.imcms-button--decrement{
+.imcms-button--decrement {
     position: absolute;
     padding: 0;
     height: 20px;
@@ -98,7 +98,7 @@
     background: url("../img/icon_arrow_down.png") no-repeat center;
 }
 
-.imcms-button--close{
+.imcms-button--close {
     position: relative;
     padding: 0;
     margin: 0 0 0 11px;
@@ -109,7 +109,7 @@
     background-color: transparent;
 }
 
-.imcms-button--close:before{
+.imcms-button--close:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -124,7 +124,8 @@
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.imcms-button--close:after{
+
+.imcms-button--close:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -141,11 +142,11 @@
 }
 
 .imcms-button--close:hover:before,
-.imcms-button--close:hover:after{
+.imcms-button--close:hover:after {
     background-color: #da1a1a;
 }
 
-.imcms-button--prev{
+.imcms-button--prev {
     padding: 0;
     display: block;
     height: 4px;
@@ -158,7 +159,7 @@
     transform: rotate(90deg);
 }
 
-.imcms-button--next{
+.imcms-button--next {
     padding: 0;
     display: block;
     height: 4px;

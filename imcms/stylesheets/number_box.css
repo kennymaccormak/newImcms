@@ -1,16 +1,18 @@
-.imcms-number{}
-.imcms-number__label{
+.imcms-number {
+}
+
+.imcms-number__label {
     margin-bottom: 12px;
     display: inline-block;
 }
 
-.imcms-number-box{
+.imcms-number-box {
     position: relative;
     display: block;
     max-width: 310px;
 }
 
-.imcms-number-box__input{
+.imcms-number-box__input {
     padding: 10px 15px;
     display: block;
     width: 100%;
@@ -23,37 +25,37 @@
     color: #587380;
 }
 
-.imcms-number-box__error-msg{
+.imcms-number-box__error-msg {
     display: none;
 }
 
-.imcms-number-box--active .imcms-number-box__input{
+.imcms-number-box--active .imcms-number-box__input {
     border-color: #0b94d8;
     background-color: #fff;
     color: #1f2a2e;
 }
 
-.imcms-number-box--active .imcms-button--increment{
+.imcms-number-box--active .imcms-button--increment {
     display: block;
     top: 0;
 }
 
-.imcms-number-box--active .imcms-button--decrement{
+.imcms-number-box--active .imcms-button--decrement {
     display: block;
     bottom: 0;
 }
 
-.imcms-number-box--error .imcms-number-box__input{
+.imcms-number-box--error .imcms-number-box__input {
     background-color: #fff;
     border-color: #d3d8de;
     color: #da1a1a;
 }
 
-.imcms-number-box--error + .imcms-number-box__error-msg{
+.imcms-number-box--error + .imcms-number-box__error-msg {
     display: block;
 }
 
-.imcms-number__button{
+.imcms-number__button {
     right: 10px;
     display: none;
 }

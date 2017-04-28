@@ -1,4 +1,4 @@
-.imcms-calendar{
+.imcms-calendar {
     margin-top: 15px;
     display: block;
     width: 100%;
@@ -6,7 +6,7 @@
     background-color: #fff;
 }
 
-.imcms-calendar__header{
+.imcms-calendar__header {
     position: relative;
     display: block;
     height: 20px;
@@ -14,19 +14,19 @@
     text-align: center;
 }
 
-.imcms-calendar__prev-month{
+.imcms-calendar__prev-month {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.imcms-calendar__next-month{
+.imcms-calendar__next-month {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.imcms-calendar__title{
+.imcms-calendar__title {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     font-size: 10px;
@@ -35,21 +35,21 @@
     color: #000;
 }
 
-.imcms-calendar__body{
+.imcms-calendar__body {
     position: relative;
     display: block;
     max-height: 118px;
     width: 100%;
 }
 
-.imcms-calendar__days-name{
+.imcms-calendar__days-name {
     position: relative;
     display: block;
     height: 8px;
     width: 100%;
 }
 
-.imcms-calendar__day-name{
+.imcms-calendar__day-name {
     float: left;
     width: 14%;
     height: 8px;
@@ -62,14 +62,14 @@
     color: #0b94d8;
 }
 
-.imcms-calendar__weeks{
+.imcms-calendar__weeks {
     position: relative;
     display: block;
     height: 100%;
     width: 100%;
 }
 
-.imcms-calendar__week{
+.imcms-calendar__week {
     position: relative;
     margin-top: 8px;
     display: block;
@@ -77,7 +77,7 @@
     width: 100%;
 }
 
-.imcms-calendar__day{
+.imcms-calendar__day {
     float: left;
     width: 14%;
     height: 11px;
@@ -90,11 +90,11 @@
     color: #2f4047;
 }
 
-.imcms-day--outer{
+.imcms-day--outer {
     color: #587380;
 }
 
-.imcms-day--today{
+.imcms-day--today {
     background-color: #0b94d8;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
