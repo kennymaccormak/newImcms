@@ -6,12 +6,14 @@
 
 .imcms-number-box{
     position: relative;
-    display: inline-block;
+    display: block;
+    max-width: 310px;
 }
 
 .imcms-number-box__input{
     padding: 10px 15px;
     display: block;
+    width: 100%;
     background-color: #f3f3fd;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 5px;

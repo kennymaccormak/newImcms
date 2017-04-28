@@ -6,6 +6,8 @@
 .imcms-keyword__input{
     padding: 10px 15px;
     display: inline-block;
+    width: 100%;
+    max-width: 310px;
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 5px;

@@ -1,12 +1,14 @@
 .imcms-number__label{
     margin-bottom: 12px;
-    display: inline-block;
+    display: block;
 }
 
 .imcms-choose-file__input{
     margin-bottom: 8px;
     padding: 10px 15px;
     display: block;
+    width: 100%;
+    max-width: 310px;
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 5px;

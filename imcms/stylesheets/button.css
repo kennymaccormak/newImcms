@@ -75,8 +75,6 @@
 
 .imcms-button--drop-down{
     position: absolute;
-    top: calc(50% - 2px);
-    right: 10px;
     padding: 0;
     display: block;
     height: 4px;
