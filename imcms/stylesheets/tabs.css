@@ -1,10 +1,10 @@
-.imcms-tabs{
+.imcms-tabs {
 }
 
-.imcms-tabs .imcms-tab{
+.imcms-tabs .imcms-tab {
 }
 
-.imcms-tab{
+.imcms-tab {
     position: relative;
     padding: 27px 35px;
     display: block;
@@ -15,11 +15,11 @@
 
 }
 
-.imcms-tab:hover{
+.imcms-tab:hover {
     border-color: #ebedef;
 }
 
-.imcms-tab:hover:after{
+.imcms-tab:hover:after {
     content: "";
     position: absolute;
     top: -1px;
@@ -30,11 +30,11 @@
     background-color: #389ecf;
 }
 
-.imcms-tab--active{
+.imcms-tab--active {
     border-color: #ebedef;
 }
 
-.imcms-tab--active:after{
+.imcms-tab--active:after {
     content: "";
     position: absolute;
     top: 0;

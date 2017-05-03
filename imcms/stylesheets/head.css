@@ -1,11 +1,11 @@
-.imcms-head{
+.imcms-head {
     display: block;
     width: 100%;
     background-color: #389ecf;
     text-align: center;
 }
 
-.imcms-head__title{
+.imcms-head__title {
     line-height: 42px;
     color: #fff;
     text-transform: uppercase;
