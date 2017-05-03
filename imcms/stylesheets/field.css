@@ -1,6 +1,6 @@
 .imcms-field {
     margin-bottom: 10px;
-    clear: both;
+    overflow: hidden;
 }
 
 .imcms-field__item {
