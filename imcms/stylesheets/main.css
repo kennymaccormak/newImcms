@@ -19,6 +19,9 @@
 @import url("calendar.css");
 @import url("data_picker.css");
 @import url("time_picker.css");
+@import url("field.css");
+@import url("access_tabs_page.css");
+@import url("tabs.css");
 
 body {
     padding-bottom: 500px;
