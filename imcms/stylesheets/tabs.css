@@ -1,0 +1,54 @@
+.imcms-tabs{
+    float: left;
+    display: block;
+    width: 25%;
+    max-width: 250px;
+    background-color: #fff;
+    -webkit-box-shadow:  0 0 29px 13px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow:  0 0 29px 13px rgba(0, 0, 0, 0.07);
+    box-shadow:  0 0 29px 13px rgba(0, 0, 0, 0.07);
+}
+
+.imcms-tabs .imcms-tab{
+
+}
+
+.imcms-tab{
+    position: relative;
+    padding: 27px 35px;
+    display: block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.imcms-tab:hover{
+    border-color: #ebedef;
+}
+
+.imcms-tab:hover:after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: block;
+    height: calc(100% + 2px);
+    width: 3px;
+    background-color: #389ecf;
+}
+
+.imcms-tab--active{
+    border-color: #ebedef;
+}
+
+.imcms-tab--active:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1px;
+    display: block;
+    height: calc(100% + 2px);
+    width: 3px;
+    background-color: #389ecf;
+}

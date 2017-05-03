@@ -25,4 +25,5 @@
 
 body {
     padding-bottom: 500px;
+    overflow: hidden;
 }
