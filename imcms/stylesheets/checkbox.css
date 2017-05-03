@@ -7,14 +7,14 @@
 
 .imcms-checkbox__label {
     position: relative;
-    padding-left: 29px;
+    padding-left: 20px;
 }
 
 .imcms-checkbox__label:before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2px;
     display: block;
     height: 15px;
     width: 15px;

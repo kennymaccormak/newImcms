@@ -22,8 +22,11 @@
 @import url("field.css");
 @import url("access_tabs_page.css");
 @import url("tabs.css");
+@import url("head.css");
+@import url("pop_up_modal.css");
 
 body {
     padding-bottom: 500px;
+    padding-left: 15px;
     overflow: hidden;
 }
