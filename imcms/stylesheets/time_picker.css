@@ -3,6 +3,8 @@
     padding: 10px;
     display: block;
     max-width: 61px;
+    min-width: 58px;
+    background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
