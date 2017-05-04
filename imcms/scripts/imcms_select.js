@@ -1,36 +1,41 @@
-$(function () {
+(function (Imcms) {
+    Imcms.Select = {
+        init: function () {
+            $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
+        },
+        toggleSelect: function () {
+            var $this = $(this),
+                select = $this.closest(".imcms-select__drop-down-list"),
+                dropDownItem = select.children(".imcms-drop-down-list__items")
+                    .find(".imcms-drop-down-list__item")
+            ;
 
-    function Select() {
-        var $this = $(this),
-            select = $this.closest(".imcms-select__drop-down-list"),
-            dropDownItems = select.children(".imcms-drop-down-list__items"),
-            dropDownItem = dropDownItems.find(".imcms-drop-down-list__item"),
-            selectedItem = select.find(".imcms-drop-down-list__select-item__value")
-        ;
+            if (select.hasClass("imcms-select__drop-down-list--active")) {
+                select.removeClass("imcms-select__drop-down-list--active")
+            }
+            else {
+                select.addClass("imcms-select__drop-down-list--active")
+            }
 
-        if (select.hasClass("imcms-select__drop-down-list--active")) {
-            select.removeClass("imcms-select__drop-down-list--active")
-        }
-        else {
-            select.addClass("imcms-select__drop-down-list--active")
-        }
+            dropDownItem.click(Imcms.Select.selectItem);
 
-        dropDownItem.click(Select.prototype.selectItem);
 
-    }
-
-    Select.prototype = {
+        },
         selectItem: function () {
-            var content = $(this).text();
+            var $this = $(this),
+                content = $this.text(),
+                select = $this.closest(".imcms-select__drop-down-list"),
+                itemValue = select.find(".imcms-drop-down-list__select-item__value").html(content)
+            ;
 
-            $(this).closest(".imcms-select__drop-down-list")
-                .find(".imcms-drop-down-list__select-item__value")
-                .html(content);
+            select.removeClass("imcms-select__drop-down-list--active");
+
+            return itemValue;
         }
-
-
     };
 
 
-    $(".imcms-drop-down-list__button").click(Select);
-});
+
+
+    return Imcms.Select;
+})(Imcms);
