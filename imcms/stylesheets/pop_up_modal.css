@@ -31,6 +31,7 @@
     height: 80%;
     width: 75%;
     background-color: #f3f5f7;
+    overflow-y: auto;
 }
 
 .imcms-pop-up-modal .imcms-right-side .imcms-permissions-box {
@@ -46,6 +47,10 @@
 .imcms-pop-up-modal .imcms-right-side .imcms-status-box {
     float: left;
     margin-right: 25px;
+}
+
+.imcms-pop-up-modal .imcms-right-side .imcms-cycle-box {
+    float: left;
 }
 
 .imcms-pop-up-modal .imcms-footer {
