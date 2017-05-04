@@ -77,9 +77,9 @@
     position: absolute;
     padding: 0;
     display: block;
-    height: 4px;
-    width: 6px;
-    background: url("../img/icon_arrow_down.png") no-repeat 0 0;
+    height: 100%;
+    width: 25px;
+    background: url("../img/icon_arrow_down.png") no-repeat center;
 }
 
 .imcms-button--increment {
@@ -171,3 +171,29 @@
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
+
+.imcms-button__flag {
+    margin-right: 10px;
+    padding: 0;
+    width: 29px;
+    height: 17px;
+    border: none;
+    border-radius: 0;
+}
+
+.imcms-button__flag__en--active {
+    background: url("../img/icon_flag_en_active.png") no-repeat left top;
+}
+
+.imcms-button__flag__en--inactive {
+    background: url("../img/icon_flag_en_inactive.png") no-repeat left top;
+}
+
+.imcms-button__flag__sw--active {
+    background: url("../img/icon_flag_sw_active.png") no-repeat left top;
+}
+
+.imcms-button__flag__sw--inactive {
+    background: url("../img/icon_flag_sw_inactive.png") no-repeat left top;
+}
+

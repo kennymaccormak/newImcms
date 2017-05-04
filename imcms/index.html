@@ -17,6 +17,10 @@
 <button type="button" class="imcms-button imcms-button--positive">positive</button>
 <button type="button" class="imcms-button imcms-button--neutral">neutral</button>
 <button type="button" class="imcms-button imcms-button--save">save</button>
+<button class="imcms-button imcms-button__flag imcms-button__flag__en--active"></button>
+<button class="imcms-button imcms-button__flag imcms-button__flag__en--inactive"></button>
+<button class="imcms-button imcms-button__flag imcms-button__flag__sw--active"></button>
+<button class="imcms-button imcms-button__flag imcms-button__flag__sw--inactive"></button>
 <hr>
 
 <h2>Switch</h2>
@@ -1153,7 +1157,7 @@
 </div>
 <hr>
 
-<h2>Page Info Example: Appearance</h2>
+<h2>Page Info Example: Life Cycle</h2>
 <hr>
 <div class="imcms-pop-up-modal">
     <div class="imcms-head">
@@ -1329,9 +1333,98 @@
         <button type="button" class="imcms-button imcms-button--positive">ok</button>
     </div>
 </div>
+<hr>
+
+<h2>Page Info Example: Appearance</h2>
+<hr>
+<div class="imcms-pop-up-modal">
+    <div class="imcms-head">
+        <div class="imcms-head__title imcms-title">document 1001</div>
+    </div>
+    <div class="imcms-left-side">
+        <div class="imcms-tabs">
+            <div class="imcms-tab imcms-tab--active imcms-title">appearance</div>
+            <div class="imcms-tab imcms-title">life cycle</div>
+            <div class="imcms-tab imcms-title">keywords</div>
+            <div class="imcms-tab imcms-title">categories</div>
+            <div class="imcms-tab imcms-title">access</div>
+            <div class="imcms-tab imcms-title">permissions</div>
+            <div class="imcms-tab imcms-title">templates</div>
+            <div class="imcms-tab imcms-title">status</div>
+        </div>
+    </div>
+    <div class="imcms-right-side">
+        <div class="imcms-field">
+            <button class="imcms-button imcms-button__flag imcms-button__flag__en--active"></button>
+            <button class="imcms-button imcms-button__flag imcms-button__flag__sw--inactive"></button>
+        </div>
+        <div class="imcms-field">
+            <div class="imcms-field__field imcms-checkbox">
+                <input type="checkbox" id="checkbox011" class="imcms-checkbox__input imcms-input" name="checkbox011"
+                       checked>
+                <label for="checkbox011" class="imcms-checkbox__label imcms-label">English</label>
+            </div>
+        </div>
+        <div class="imcms-field">
+            <div class="imcms-field__field imcms-text-box">
+                <label for="text9" class="imcms-text-box__label imcms-label">Title</label>
+                <input type="text" id="text9" class="imcms-text-box__input imcms-input" name="text9" placeholder="Text"
+                       value="Start Page">
+            </div>
+        </div>
+        <div class="imcms-field">
+            <div class="imcms-field__field imcms-text-area">
+                <label for="textarea1" class="imcms-text-area__label imcms-label">Menu Text</label>
+                <textarea name="textarea1" id="textarea1" class="imcms-text-area__input imcms-input"
+                          placeholder=""></textarea>
+            </div>
+        </div>
+        <div class="imcms-field">
+            <div class="imcms-field__field imcms-choose-file">
+                <label for="chooseFile1" class="imcms-number__label imcms-label">Choose File</label>
+                <input type="text" id="chooseFile1" class="imcms-choose-file__input imcms-input" readonly>
+                <button type="button" class="imcms-choose-file__button imcms-button imcms-button--neutral">choose...
+                </button>
+                <span class="imcms-choose-file__file-name">File.path</span>
+            </div>
+        </div>
+        <div class="imcms-field">
+            <div class="imcms-right-side__select imcms-select">
+                <label for="select101" class="imcms-select__label imcms-label">Show in</label>
+                <div class="imcms-select__drop-down-list">
+                    <div class="imcms-drop-down-list__select-item">
+                        <span class="imcms-drop-down-list__select-item__value imcms-input">Same Frame</span>
+                        <button type="button"
+                                class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                    </div>
+                    <div class="imcms-drop-down-list__items">
+                        <div class="imcms-drop-down-list__item imcms-input" data-value="1">Same Frame</div>
+                        <div class="imcms-drop-down-list__item imcms-input" data-value="2">New Window</div>
+                        <div class="imcms-drop-down-list__item imcms-input" data-value="3">Replace All</div>
+                    </div>
+                </div>
+                <input type="hidden" id="select101">
+            </div>
+        </div>
+        <div class="imcms-field">
+            <div class="imcms-field__field imcms-text-box">
+                <label for="text91" class="imcms-text-box__label imcms-label">Document Alias</label>
+                <input type="text" id="text91" class="imcms-text-box__input imcms-input" name="text91"
+                       placeholder="Text"
+                       value="Start Page">
+            </div>
+        </div>
+    </div>
+    <div class="imcms-footer">
+        <button type="button" class="imcms-button imcms-button--save">Save and publish this version</button>
+        <button type="button" class="imcms-button imcms-button--negative">Cancel</button>
+        <button type="button" class="imcms-button imcms-button--positive">ok</button>
+    </div>
+</div>
 
 
 </body>
 <!--script files-->
-<script src="scripts/main.js"></script>
+<script src="scripts/imcms-main.js"></script>
+<script src="scripts/imcms_select.js"></script>
 </html>
