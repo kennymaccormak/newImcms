@@ -18,8 +18,6 @@
             }
 
             dropDownItem.click(Imcms.Select.selectItem);
-
-
         },
         selectItem: function () {
             var $this = $(this),
