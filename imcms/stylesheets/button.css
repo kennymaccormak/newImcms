@@ -181,19 +181,20 @@
     border-radius: 0;
 }
 
-.imcms-button__flag__en--active {
-    background: url("../img/icon_flag_en_active.png") no-repeat left top;
+.imcms-button__flag__en {
+    background: url("../img/icon_flag_en_inactive.png") no-repeat left top;
 }
 
-.imcms-button__flag__en--inactive {
-    background: url("../img/icon_flag_en_inactive.png") no-repeat left top;
+.imcms-button__flag__sw {
+    background: url("../img/icon_flag_sw_inactive.png") no-repeat left top;
+}
+
+.imcms-button__flag__en--active {
+    background: url("../img/icon_flag_en_active.png") no-repeat left top;
 }
 
 .imcms-button__flag__sw--active {
     background: url("../img/icon_flag_sw_active.png") no-repeat left top;
 }
 
-.imcms-button__flag__sw--inactive {
-    background: url("../img/icon_flag_sw_inactive.png") no-repeat left top;
-}
 

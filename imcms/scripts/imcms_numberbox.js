@@ -44,6 +44,7 @@
                 value = parseInt(numberBoxInput.val())
             ;
 
+
             if ($this.hasClass("imcms-button--increment")) {
                 value += 1;
             }
