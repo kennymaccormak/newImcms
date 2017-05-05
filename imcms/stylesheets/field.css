@@ -8,8 +8,13 @@
     width: 100%;
 }
 
-.imcms-field__select .imcms-select__drop-down-list{
+.imcms-field .imcms-field__select .imcms-select__drop-down-list{
     display: block;
+}
+
+.imcms-field .imcms-field__text-box .imcms-text-box__input,
+.imcms-field .imcms-field__text-area .imcms-text-area__input{
+    width: 100%;
 }
 
 
