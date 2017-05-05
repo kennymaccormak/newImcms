@@ -60,3 +60,5 @@
 
     return Imcms.Number;
 })(Imcms);
+
+//todo: add logic for number box according to their specifics
