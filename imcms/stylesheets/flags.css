@@ -1,0 +1,15 @@
+.imcms-flags{}
+.imcms-flags::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.imcms-flags__flag{
+    margin-right: 10px;
+    float: left;
+    width: 29px;
+    height: 17px;
+}
+.imcms:last-child {
+    margin: 0;
+}

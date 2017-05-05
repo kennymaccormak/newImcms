@@ -1,0 +1,15 @@
+.imcms-buttons{
+
+}
+.imcms-buttons::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.imcms-buttons__button{
+    float: left;
+    margin-right: 5px;
+}
+.buttons__button:last-child {
+    margin: 0;
+}

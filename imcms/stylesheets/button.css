@@ -1,6 +1,6 @@
 .imcms-button {
     padding: 15px 28px;
-    display: inline-block;
+    display: block;
     border: 1px solid transparent;
     -webkit-border-radius: 23px;
     -moz-border-radius: 23px;
@@ -72,7 +72,9 @@
     background-color: transparent;
     color: #2f4047;
 }
+/***********************************/
 
+/*****************************************/
 .imcms-button--drop-down {
     position: absolute;
     padding: 0;
@@ -172,29 +174,6 @@
     transform: rotate(-90deg);
 }
 
-.imcms-button__flag {
-    margin-right: 10px;
-    padding: 0;
-    width: 29px;
-    height: 17px;
-    border: none;
-    border-radius: 0;
-}
 
-.imcms-button__flag__en {
-    background: url("../img/icon_flag_en_inactive.png") no-repeat left top;
-}
-
-.imcms-button__flag__sw {
-    background: url("../img/icon_flag_sw_inactive.png") no-repeat left top;
-}
-
-.imcms-button__flag__en--active {
-    background: url("../img/icon_flag_en_active.png") no-repeat left top;
-}
-
-.imcms-button__flag__sw--active {
-    background: url("../img/icon_flag_sw_active.png") no-repeat left top;
-}
 
 
