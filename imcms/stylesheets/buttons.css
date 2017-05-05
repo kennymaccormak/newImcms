@@ -11,5 +11,5 @@
     margin-right: 5px;
 }
 .buttons__button:last-child {
-    margin: 0;
+    margin-right: 0;
 }

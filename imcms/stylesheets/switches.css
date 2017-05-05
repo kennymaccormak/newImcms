@@ -1,13 +1,13 @@
-.imcms-flags{}
+.imcms-switches{}
 .imcms-flags::after {
     content: '';
     display: block;
     clear: both;
 }
-.imcms-flags__flag{
+.imcms-switches__switch{
     margin-right: 10px;
     float: left;
 }
-.imcms-flags__flag:last-child {
+.imcms-switches__switch:last-child {
     margin-right: 0;
 }

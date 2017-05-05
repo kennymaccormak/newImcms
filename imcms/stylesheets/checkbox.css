@@ -1,7 +1,7 @@
 .imcms-checkbox {
 }
 
-.imcms-checkbox__input {
+.imcms-checkbox__checkbox {
     display: none;
 }
 
@@ -25,7 +25,7 @@
     border-radius: 4px;
 }
 
-.imcms-checkbox__input:checked + .imcms-checkbox__label:before {
+.imcms-checkbox__checkbox:checked + .imcms-checkbox__label:before {
     background: #42b070 url("../img/icon_checkbox_chek.png") no-repeat 1px 2px;
     border-color: #ebedef;
 }
