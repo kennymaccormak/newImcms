@@ -30,7 +30,7 @@
         },
 
         changeNeighborFlag: function ($btn) {
-            var neighborFlag = ($btn.next().length !== 0)? $btn.next(): $btn.prev();
+            var neighborFlag = ($btn.next().length !== 0) ? $btn.next() : $btn.prev();
 
             if (neighborFlag.hasClass("imcms-button__flag__en")) {
                 if (neighborFlag.hasClass("imcms-button__flag__en--active")) {
