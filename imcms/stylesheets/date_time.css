@@ -1,0 +1,25 @@
+.imcms-date-time {
+    position: relative;
+    padding: 10px;
+    display: block;
+    max-width: 150px;
+    min-width: 94px;
+    background-color: #fff;
+    border: 1px solid #d3d8de;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.imcms-date-time .imcms-data-picker__current-data {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.imcms-date-time .imcms-time-picker__current-time {
+    display: inline-block;
+}
+
+.imcms-date-time--without-label {
+    margin-top: 25px;
+}

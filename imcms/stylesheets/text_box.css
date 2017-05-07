@@ -1,11 +1,12 @@
 .imcms-text-box__label {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     display: inline-block;
 }
 
 .imcms-text-box__input {
-    padding: 10px 15px;
+    padding: 8px 15px;
     display: block;
+    width: 100%;
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 5px;

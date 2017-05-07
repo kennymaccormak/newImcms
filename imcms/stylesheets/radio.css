@@ -7,14 +7,14 @@
 
 .imcms-radio__label {
     position: relative;
-    padding-left: 29px;
+    padding-left: 20px;
 }
 
 .imcms-radio__label:before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2px;
     display: block;
     height: 15px;
     width: 15px;
@@ -29,7 +29,7 @@
     content: "";
     position: absolute;
     left: 5px;
-    top: 5px;
+    top: 7px;
     display: none;
     height: 5px;
     width: 5px;

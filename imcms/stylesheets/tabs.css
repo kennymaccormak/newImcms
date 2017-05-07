@@ -1,0 +1,46 @@
+.imcms-tabs {
+}
+
+.imcms-tabs .imcms-tab {
+}
+
+.imcms-tab {
+    position: relative;
+    padding: 27px 35px;
+    display: block;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.imcms-tab:hover {
+    border-color: #ebedef;
+}
+
+.imcms-tab:hover:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: block;
+    height: calc(100% + 2px);
+    width: 3px;
+    background-color: #389ecf;
+}
+
+.imcms-tab--active {
+    border-color: #ebedef;
+}
+
+.imcms-tab--active:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: block;
+    height: calc(100% + 2px);
+    width: 3px;
+    background-color: #389ecf;
+}
