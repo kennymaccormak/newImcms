@@ -2,7 +2,6 @@
 }
 
 .imcms-number__label {
-    margin-bottom: 12px;
     display: inline-block;
 }
 
@@ -17,11 +16,6 @@
     display: block;
     width: 100%;
     background-color: #f3f3fd;
-    border: 1px solid #d3d8de;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    outline: none;
     color: #587380;
 }
 

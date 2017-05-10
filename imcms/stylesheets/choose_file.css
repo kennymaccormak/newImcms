@@ -1,24 +1,19 @@
 .imcms-number__label {
-    margin-bottom: 12px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
     display: block;
 }
 
 .imcms-choose-file__input {
-    margin-bottom: 8px;
-    padding: 10px 15px;
-    display: block;
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #d3d8de;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    cursor: not-allowed;
-    outline: none;
-}
-
-.imcms-choose-file__button {
-    margin-right: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -50;
+    cursor: pointer;
+    height: 15px;
+    width: 60px;
+    opacity: 0;
 }
 
 .imcms-choose-file__file-name {

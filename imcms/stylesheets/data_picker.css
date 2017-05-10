@@ -14,12 +14,17 @@
 
 .imcms-data-picker__current-data {
     position: relative;
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 15px;
+    text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
     color: #2f4047;
 }
 

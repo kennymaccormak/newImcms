@@ -20,7 +20,14 @@
     border-bottom: 1px solid #d3d8de;
     border-right: none;
     border-left: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     outline: none;
+}
+
+.imcms-space-around__input:focus {
+    border-color: #d3d8de;
 }
 
 .imcms-space-around__input:first-child {

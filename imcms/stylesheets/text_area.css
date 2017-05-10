@@ -1,15 +1,9 @@
 .imcms-text-area__label {
-    margin-bottom: 12px;
     display: block;
 }
 
 .imcms-text-area__input {
     padding: 10px 15px;
     display: block;
-    background-color: #fff;
-    border: 1px solid #d3d8de;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    outline: none;
+    min-height: 50px;
 }

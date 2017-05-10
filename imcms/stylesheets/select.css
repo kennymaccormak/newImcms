@@ -3,7 +3,6 @@
 }
 
 .imcms-select__label {
-    margin-bottom: 12px;
     display: block;
 }
 
@@ -46,7 +45,11 @@
 }
 
 .imcms-drop-down-list__select-item__value {
-    font-weight: 600;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
     color: #587380;
 }
 
@@ -72,7 +75,11 @@
 
 .imcms-drop-down-list__item {
     padding: 5px 15px 5px 15px;
-    font-weight: 600;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
     color: #587380;
 }
 

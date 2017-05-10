@@ -81,15 +81,15 @@
     <label for="select1" class="imcms-select__label imcms-label">Select</label>
     <div class="imcms-select__drop-down-list">
         <div class="imcms-drop-down-list__select-item">
-            <span class="imcms-drop-down-list__select-item__value imcms-input">option 1</span>
+            <span class="imcms-drop-down-list__select-item__value">option 1</span>
             <button type="button"
                     class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
         </div>
         <div class="imcms-drop-down-list__items">
-            <div class="imcms-drop-down-list__item imcms-input" data-value="1">option 1</div>
-            <div class="imcms-drop-down-list__item imcms-input" data-value="2">option 2</div>
-            <div class="imcms-drop-down-list__item imcms-input" data-value="3">option 3</div>
-            <div class="imcms-drop-down-list__item imcms-input" data-value="4">option 4</div>
+            <div class="imcms-drop-down-list__item" data-value="1">option 1</div>
+            <div class="imcms-drop-down-list__item" data-value="2">option 2</div>
+            <div class="imcms-drop-down-list__item" data-value="3">option 3</div>
+            <div class="imcms-drop-down-list__item" data-value="4">option 4</div>
         </div>
     </div>
     <input type="hidden" id="select1">
@@ -100,15 +100,15 @@
         <label for="select2" class="imcms-select__label imcms-label">Select in Field</label>
         <div class="imcms-select__drop-down-list">
             <div class="imcms-drop-down-list__select-item">
-                <span class="imcms-drop-down-list__select-item__value imcms-input">option 1</span>
+                <span class="imcms-drop-down-list__select-item__value">option 1</span>
                 <button type="button"
                         class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
             </div>
             <div class="imcms-drop-down-list__items">
-                <div class="imcms-drop-down-list__item imcms-input" data-value="1">option 1</div>
-                <div class="imcms-drop-down-list__item imcms-input" data-value="2">option 2</div>
-                <div class="imcms-drop-down-list__item imcms-input" data-value="3">option 3</div>
-                <div class="imcms-drop-down-list__item imcms-input" data-value="4">option 4</div>
+                <div class="imcms-drop-down-list__item" data-value="1">option 1</div>
+                <div class="imcms-drop-down-list__item" data-value="2">option 2</div>
+                <div class="imcms-drop-down-list__item" data-value="3">option 3</div>
+                <div class="imcms-drop-down-list__item" data-value="4">option 4</div>
             </div>
         </div>
         <input type="hidden" id="select2">
@@ -123,10 +123,8 @@
     <input type="text" id="text1" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
 </div>
 <div class="imcms-field">
-    <div class="imcms-text-box imcms-field__text-box">
-        <label for="text" class="imcms-text-box__label imcms-label">Text in Field</label>
-        <input type="text" id="text" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
-    </div>
+    <label for="text" class="imcms-text-box__label imcms-label">Text in Field</label>
+    <input type="text" id="text" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
 </div>
 <hr>
 
@@ -138,21 +136,205 @@
               placeholder="Text"></textarea>
 </div>
 <div class="imcms-field">
-    <div class="imcms-text-area imcms-field__text-area">
-        <label for="textarea0" class="imcms-text-area__label imcms-label">Textarea in Field</label>
-        <textarea name="textarea" id="textarea0" class="imcms-text-area__input imcms-input"
-                  placeholder="Text"></textarea>
+    <label for="textarea0" class="imcms-text-area__label imcms-label">Textarea in Field</label>
+    <textarea name="textarea" id="textarea0" class="imcms-text-area__input imcms-input"
+              placeholder="Text"></textarea>
+</div>
+<hr>
+
+<h2>Number Input</h2>
+<hr>
+<div class="imcms-number">
+    <label for="number1" class="imcms-number__label imcms-label">Number</label>
+    <div class="imcms-number-box">
+        <input type="text" id="number1" class="imcms-number-box__input imcms-input" name="number"
+               placeholder="Number">
+        <button type="button" class="imcms-button imcms-number__button imcms-button--increment"></button>
+        <button type="button" class="imcms-button imcms-number__button imcms-button--decrement"></button>
+    </div>
+    <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+</div>
+
+<div class="imcms-field">
+    <div class="imcms-field__number imcms-number">
+        <label for="number3" class="imcms-number__label imcms-label">Number</label>
+        <div class="imcms-number-box imcms-number-box--active imcms-number-box--error">
+            <input type="text" id="number3" class="imcms-number-box__input imcms-input" name="number"
+                   placeholder="Number">
+            <button type="button" class="imcms-button imcms-number__button imcms-button--increment"></button>
+            <button type="button" class="imcms-button imcms-number__button imcms-button--decrement"></button>
+        </div>
+        <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
     </div>
 </div>
 <hr>
 
+<h2>Choose File</h2>
+<hr>
+<div class="imcms-field">
+    <div class="imcms-field__file imcms-choose-file">
+        <div class="imcms-text-box imcms-field__text-box">
+            <label for="path1" class="imcms-text-box__label imcms-label">File Path</label>
+            <input type="text" id="path1" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
+        </div>
+        <label for="file" class="imcms-number__label imcms-button imcms-button--neutral">
+            choose...
+            <input id="file" type="file" class="imcms-choose-file__input">
+        </label>
+        <span class="imcms-choose-file__file-name">File.path</span>
+    </div>
+</div>
+<hr>
 
+<h2>Space Around Input</h2>
+<hr>
+<div class="imcms-space-around">
+    <label for="space1" class="imcms-space-around__label imcms-label">Space Around Input</label>
+    <div class="imcms-space-around__input-box">
+        <input type="text" id="space1" class="imcms-space-around__input imcms-input" placeholder="0" name="space">
+        <input type="text" id="space2" class="imcms-space-around__input imcms-input" placeholder="top" name="space">
+        <input type="text" id="space3" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+        <input type="text" id="space4" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+    </div>
+</div>
 
+<div class="imcms-field">
+    <div class="imcms-field__space-around imcms-space-around imcms-space-around--active">
+        <label for="space5" class="imcms-space-around__label imcms-label">Space Around Input</label>
+        <div class="imcms-space-around__input-box">
+            <input type="text" id="space5" class="imcms-space-around__input imcms-input" placeholder="0" name="space">
+            <input type="text" id="space6" class="imcms-space-around__input imcms-input" placeholder="top" name="space">
+            <input type="text" id="space7" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+            <input type="text" id="space8" class="imcms-space-around__input imcms-input" placeholder="1000" name="space">
+        </div>
+    </div>
+</div>
+<hr>
 
+<h2>Keyword Input</h2>
+<hr>
+<div class="imcms-keyword">
+    <label for="keyword0" class="imcms-keyword__label imcms-label">Space Around Input</label>
+    <input type="text" id="keyword0" class="imcms-text-box__input imcms-input" placeholder="keyword" name="space">
+    <button type="button" class="imcms-button imcms-keyword__button imcms-button--neutral">ADD+</button>
+    <div class="imcms-keyword__filters">
+        <div class="imcms-keyword__filter">filter 1
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-keyword__filter">filter 2
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-keyword__filter">filter 3
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-keyword__filter">filter 4
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+    </div>
+</div>
 
+<div class="imcms-field">
+    <div class="imcms-field__keyword imcms-keyword">
+        <label for="keyword1" class="imcms-keyword__label imcms-label">Space Around Input</label>
+        <input type="text" id="keyword1" class="imcms-text-box__input imcms-input" placeholder="keyword" name="space">
+        <button type="button" class="imcms-button imcms-keyword__button imcms-button--neutral">ADD+</button>
+        <div class="imcms-keyword__filters">
+            <div class="imcms-keyword__filter">filter 1
+                <button type="button" class="imcms-button imcms-button--close"></button>
+            </div>
+            <div class="imcms-keyword__filter">filter 2
+                <button type="button" class="imcms-button imcms-button--close"></button>
+            </div>
+            <div class="imcms-keyword__filter">filter 3
+                <button type="button" class="imcms-button imcms-button--close"></button>
+            </div>
+            <div class="imcms-keyword__filter">filter 4
+                <button type="button" class="imcms-button imcms-button--close"></button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<hr>
 
+<h2>Typography</h2>
+<hr>
+<span class="imcms-error-msg">Lorem ipsum dolor.</span>
+<span class="imcms-info-msg">Lorem ipsum dolor.</span>
+<span class="imcms-title">Lorem ipsum dolor.</span>
+<hr>
 
+<h2>Data Picker & Calendar</h2>
+<hr>
+<div class="imcms-data-picker">
+    <input type="text" class="imcms-data-picker__current-data" value="2016-10-25">
+    <div class="imcms-calendar">
+        <div class="imcms-calendar__header">
+            <button type="button" class="imcms-button imcms-calendar__prev-month imcms-button--prev"></button>
+            <div class="imcms-calendar__title">december 2016</div>
+            <button type="button" class="imcms-button imcms-calendar__next-month imcms-button--next"></button>
+        </div>
+        <div class="imcms-calendar__body">
+            <div class="imcms-calendar__days-name">
+                <div class="imcms-calendar__day-name">sun</div>
+                <div class="imcms-calendar__day-name">mon</div>
+                <div class="imcms-calendar__day-name">tue</div>
+                <div class="imcms-calendar__day-name">wed</div>
+                <div class="imcms-calendar__day-name">thu</div>
+                <div class="imcms-calendar__day-name">fri</div>
+                <div class="imcms-calendar__day-name">sat</div>
+            </div>
+            <div class="imcms-calendar__weeks">
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day imcms-day--outer">28</div>
+                    <div class="imcms-calendar__day imcms-day--outer">29</div>
+                    <div class="imcms-calendar__day imcms-day--outer">30</div>
+                    <div class="imcms-calendar__day">1</div>
+                    <div class="imcms-calendar__day">2</div>
+                    <div class="imcms-calendar__day">3</div>
+                    <div class="imcms-calendar__day">4</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">5</div>
+                    <div class="imcms-calendar__day">6</div>
+                    <div class="imcms-calendar__day">7</div>
+                    <div class="imcms-calendar__day">8</div>
+                    <div class="imcms-calendar__day">9</div>
+                    <div class="imcms-calendar__day">10</div>
+                    <div class="imcms-calendar__day">11</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">12</div>
+                    <div class="imcms-calendar__day">13</div>
+                    <div class="imcms-calendar__day">14</div>
+                    <div class="imcms-calendar__day">15</div>
+                    <div class="imcms-calendar__day">16</div>
+                    <div class="imcms-calendar__day">17</div>
+                    <div class="imcms-calendar__day">18</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">19</div>
+                    <div class="imcms-calendar__day">20</div>
+                    <div class="imcms-calendar__day">21</div>
+                    <div class="imcms-calendar__day">22</div>
+                    <div class="imcms-calendar__day">23</div>
+                    <div class="imcms-calendar__day">24</div>
+                    <div class="imcms-calendar__day imcms-day--today">25</div>
+                </div>
+                <div class="imcms-calendar__week">
+                    <div class="imcms-calendar__day">26</div>
+                    <div class="imcms-calendar__day">27</div>
+                    <div class="imcms-calendar__day">28</div>
+                    <div class="imcms-calendar__day">29</div>
+                    <div class="imcms-calendar__day">30</div>
+                    <div class="imcms-calendar__day">31</div>
+                    <div class="imcms-calendar__day imcms-day--outer">1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
 
 
 

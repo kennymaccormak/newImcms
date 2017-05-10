@@ -4,28 +4,16 @@
 
 .imcms-keyword__label {
     margin-bottom: 12px;
-    display: block;
-}
-
-.imcms-keyword__input {
-    margin-right: 23px;
-    padding: 10px 15px;
     display: inline-block;
-    width: 87%;
-    background-color: #fff;
-    border: 1px solid #d3d8de;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    outline: none;
 }
 
-.imcms-keyword__input:focus {
-    border-color: #0b94d8;
+.imcms-keyword .imcms-text-box__input {
+    margin-right: 23px;
+    display: inline-block;
 }
 
 .imcms-keyword__button {
-
+    display: inline-block;
 }
 
 .imcms-keyword__filters {
