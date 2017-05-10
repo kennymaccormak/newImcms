@@ -58,7 +58,7 @@
             ;
 
             current.each(function () {
-                if($(this).hasClass("imcms-data-picker__current-year")){
+                if ($(this).hasClass("imcms-data-picker__current-year")) {
                     $(this).on('change keyup input click', function () {
                         var $this = $(this),
                             value = $this.val(),
@@ -71,7 +71,7 @@
                             $this.val(value.substring(0, 4))
                     });
                 }
-                if($(this).hasClass("imcms-data-picker__current-month")){
+                if ($(this).hasClass("imcms-data-picker__current-month")) {
                     $(this).on('change keyup input click', function () {
                         var $this = $(this),
                             value = $this.val(),
@@ -85,17 +85,14 @@
                             $this.val(value.substring(0, 2))
                     });
                 }
-                if($(this).hasClass("imcms-data-picker__current-day")){
+                if ($(this).hasClass("imcms-data-picker__current-day")) {
                     $(this).change();
                 }
             });
 
 
-
         }
     };
-
-
 
 
     //[0][0-9]|[1][0-2]
