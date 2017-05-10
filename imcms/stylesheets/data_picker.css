@@ -16,23 +16,11 @@
     position: relative;
     display: block;
     width: 100%;
-    overflow: hidden;
-    text-align: center;
 }
 
-.imcms-data-picker__current-data span{
-    padding: 0 1px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 15px;
-}
-
-.imcms-data-picker__current-year,
-.imcms-data-picker__current-month,
-.imcms-data-picker__current-day{
-    display: inline-block;
-    width: 22%;
+.imcms-current-data__input{
+    display: block;
+    width: 100%;
     border: none;
     cursor: pointer;
     outline: none;

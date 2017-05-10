@@ -2,14 +2,13 @@
     Imcms.DatePicker = {
         init: function () {
             Imcms.DatePicker.currentDate();
-            Imcms.DatePicker.currentDateValidation();
             $(".imcms-data-picker .imcms-data-picker__current-data")
                 .click(Imcms.DatePicker.openCalendar);
             $(document).click(Imcms.DatePicker.closeCalendar);
         },
         openCalendar: function () {
             var curdate = $(this),
-                datePicker = curdate.parent(),
+                datePicker = curdate.parents(".imcms-data-picker"),
                 calendar = datePicker.find(".imcms-calendar")
             ;
 
@@ -20,9 +19,9 @@
         },
         closeCalendar: function (e) {
             if (
-                !$(e.target).closest(".imcms-data-picker__current").length
+                !$(e.target).closest(".imcms-current-data__input").length
                 &&
-                (e.target.classList[1] !== "imcms-data-picker__current"
+                (e.target.classList[1] !== "imcms-current-data__input"
                 ||
                 e.target.classList[1] !== ".imcms-data-picker__current-data")
                 &&
@@ -33,6 +32,10 @@
                 e.stopPropagation();
             }
 
+            var currentDateVal = Imcms.DatePicker.currentDate();
+
+            Imcms.DatePicker.currentDateValidation(currentDateVal);
+
         },
         currentDate: function () {
             var d = new Date(),
@@ -40,62 +43,38 @@
                 month = d.getMonth() + 1,
                 date = d.getDate(),
                 datePicker = $(".imcms-data-picker"),
-                currentYear = datePicker.find(".imcms-data-picker__current-year"),
-                currentMonth = datePicker.find(".imcms-data-picker__current-month"),
-                currentDay = datePicker.find(".imcms-data-picker__current-day")
+                currentDate = datePicker.find(".imcms-current-data__input"),
+                currentDateVal = currentDate.val()
             ;
 
             if (month < 10) month = "0" + month;
             if (date < 10) date = "0" + date;
 
-            currentYear.val(year);
-            currentMonth.val(month);
-            currentDay.val(date);
-        },
-        currentDateValidation: function () {
-            var current = $(".imcms-data-picker__current")
+            currentDate.val(year + "-" + month + "-" + date);
 
+            return currentDateVal;
+        },
+        currentDateValidation: function (currentDateVal) {
+            var carDate = currentDateVal.split('-')
             ;
 
-            current.each(function () {
-                if ($(this).hasClass("imcms-data-picker__current-year")) {
-                    $(this).on('change keyup input click', function () {
-                        var $this = $(this),
-                            value = $this.val(),
-                            len = value.length
-                        ;
-
-                        if (value.match(/[^0-9]/g))
-                            $this.val(value.replace(/[^0-9]/g, ''));
-                        if (len > 4)
-                            $this.val(value.substring(0, 4))
-                    });
-                }
-                if ($(this).hasClass("imcms-data-picker__current-month")) {
-                    $(this).on('change keyup input click', function () {
-                        var $this = $(this),
-                            value = $this.val(),
-                            len = value.length
-                        ;
-                        if (value.match(/[^0-9]/g))
-                            $this.val(value.replace(/[^0-9]/g, ''));
-                        if (parseInt(value) > 12)
-                            $this.val("");
-                        if (len > 2)
-                            $this.val(value.substring(0, 2))
-                    });
-                }
-                if ($(this).hasClass("imcms-data-picker__current-day")) {
-                    $(this).change();
-                }
-            });
+            console.log(carDate);
+            carDate[0] = parseInt(carDate[0]);
+            carDate[1] = parseInt(carDate[1]) - 1;
+            carDate[2] = parseInt(carDate[2]);
+            //carDate[1] -= 1;
+            var d = new Date(carDate[0], carDate[1], carDate[2]);
+            console.log(carDate[0]);
+            if ((d.getFullYear() === carDate[0]) && (d.getMonth() === carDate[1]) && (d.getDate() === carDate[2])) {
+                return true;
+            } else {
+                console.log("Введена некорректная дата!");
+                return false;
+            }
 
 
         }
     };
-
-
-    //[0][0-9]|[1][0-2]
 
     return Imcms.DatePicker
 })(Imcms);
