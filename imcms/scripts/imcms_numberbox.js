@@ -19,7 +19,9 @@
 
         },
         deactivateNumberBox: function (e) {
-            if (!$(e.target).closest(".imcms-number-box__input").length && e.target.classList[1] !== "imcms-number__button"){
+            if (!$(e.target).closest(".imcms-number-box__input").length &&
+                   e.target.classList[1] !== "imcms-number__button"){
+
                 $(".imcms-number-box__input").closest(".imcms-number-box")
                     .removeClass("imcms-number-box--active");
                 e.stopPropagation();

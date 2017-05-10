@@ -267,7 +267,13 @@
 <h2>Data Picker & Calendar</h2>
 <hr>
 <div class="imcms-data-picker">
-    <input type="text" class="imcms-data-picker__current-data" value="2016-10-25">
+    <div class="imcms-data-picker__current-data">
+        <input type="text" class="imcms-data-picker__current imcms-data-picker__current-year">
+        <span>-</span>
+        <input type="text" class="imcms-data-picker__current imcms-data-picker__current-month">
+        <span>-</span>
+        <input type="text" class="imcms-data-picker__current imcms-data-picker__current-day">
+    </div>
     <div class="imcms-calendar">
         <div class="imcms-calendar__header">
             <button type="button" class="imcms-button imcms-calendar__prev-month imcms-button--prev"></button>
