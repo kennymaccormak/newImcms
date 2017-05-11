@@ -2,7 +2,7 @@
     Imcms.Calendar = {
         buildCalendar: function (calendar) {
             var calendar = calendar;
-           console.log("Calendar not work yet!( it's the template");
+           console.log(calendar);
 
            //todo: create logic
         }

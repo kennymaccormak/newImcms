@@ -101,7 +101,7 @@
 .imcms-day--outer {
     color: #587380;
 }
-
+.imcms-calendar__day:hover,
 .imcms-day--today {
     background-color: #0b94d8;
     -webkit-border-radius: 6px;
