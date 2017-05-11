@@ -21,9 +21,7 @@
                 Imcms.Calendar.buildCalendar(year, month, date, calendar);
             }
 
-            calendar.find(".imcms-calendar__button").each(function () {
-                $(this).click(Imcms.Calendar.chooseMonth);
-            });
+
         },
         buildCalendar: function (y, m, d, calendar) {
             var $thisCalendar = calendar,
@@ -34,11 +32,12 @@
                 calendarTitleVal = calendarTitle.val().split(""),
                 calendarWeek = $thisCalendar.find(".imcms-calendar__week"),
                 firstDay = new Date(year, month - 1),
-                firstDate = firstDay.getDate(),
-                firstDayNumber = firstDay.getDay(),
+                firstDate = parseInt(firstDay.getDate()),
+                firstDayNumber = parseInt(firstDay.getDay()),
                 lastD = new Date(year, month, 0),
-                lastDay = lastD.getDate(),
-
+                lastDay = parseInt(lastD.getDate()),
+                prevMonthD = new Date(year, month - 1, 0),
+                prevMonthDay = parseInt(prevMonthD.getDate()),
                 count = 0,
                 monthList = [
                     "January",
@@ -60,26 +59,39 @@
             calendarTitleVal[1] = year;
             calendarTitle.html(calendarTitleVal.join(" "));
             count = 0;
+            var a = firstDayNumber - 1;
+            var b = 1;
             calendarWeek.each(function () {
                 $(this).find(".imcms-calendar__day").each(function () {
                     if (count < firstDayNumber) {
-                        $(this).text("-");
-                        $(this).addClass("imcms-day--outer");
+                        $(this).text(prevMonthDay - a);
+                        $(this).removeClass("imcms-day--outer-prev");
+                        $(this).removeClass("imcms-day--outer-next");
+                        $(this).removeClass("imcms-day--today");
+                        $(this).addClass("imcms-day--outer-prev");
+                        $(this).attr("data-month", prevMonthD.getMonth() + 1);
+                        a--
                     }
                     else if ((count - firstDayNumber + 1) > lastDay) {
-                        $(this).text("-");
-                        $(this).addClass("imcms-day--outer");
+                        $(this).text(b++);
+                        $(this).removeClass("imcms-day--outer-prev");
+                        $(this).removeClass("imcms-day--outer-next");
+                        $(this).removeClass("imcms-day--today");
+                        $(this).addClass("imcms-day--outer-next");
+                        $(this).attr("data-month", firstDay.getMonth() + 2);
                     }
                     else {
                         $(this).text(firstDate);
-                        $(this).removeClass("imcms-day--outer");
+                        $(this).removeClass("imcms-day--outer-prev");
+                        $(this).removeClass("imcms-day--outer-next");
                         $(this).removeClass("imcms-day--today");
+                        $(this).removeAttr("data-month");
                         firstDate++;
                         if ((count - firstDayNumber + 1) === date) {
                             $(this).addClass("imcms-day--today");
                         }
-                        $(this).click(Imcms.Calendar.setSelectDate)
                     }
+                    $(this).click(Imcms.Calendar.setSelectDate);
                     count++;
                 });
             });
@@ -108,6 +120,19 @@
                 if (month < 10) month = "0" + month;
             }
 
+            if ($thisDay.hasClass("imcms-day--outer-prev")) {
+                month = $thisDay.attr("data-month");
+                if (month < 10) month = "0" + month;
+            }
+            else if ($thisDay.hasClass("imcms-day--outer-next")) {
+                month = $thisDay.attr("data-month");
+                if (month < 10) month = "0" + month;
+            }
+            else {
+                year = curDateInputVal[0];
+                month = curDateInputVal[1];
+                date = $thisDay.text();
+            }
 
             $thisDay.parents(".imcms-calendar__body")
                 .find(".imcms-day--today")

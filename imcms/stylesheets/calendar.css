@@ -98,7 +98,8 @@
     color: #2f4047;
 }
 
-.imcms-day--outer {
+.imcms-day--outer-prev,
+.imcms-day--outer-next {
     color: #587380;
 }
 .imcms-calendar__day:hover,

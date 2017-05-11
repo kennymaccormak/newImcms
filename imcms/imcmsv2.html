@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheets/main.css">
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="libs/jquery.mask.min.js"></script>
 </head>
 <body>
 <hr>
@@ -268,7 +269,7 @@
 <hr>
 <div class="imcms-data-picker">
     <div class="imcms-data-picker__current-data">
-        <input type="text" class="imcms-current-data__input" title="data-picker" placeholder="YYYY-MM-DD">
+        <input id="zalupa" type="text" class="imcms-current-data__input" title="data-picker" placeholder="YYYY-MM-DD">
     </div>
     <div class="imcms-calendar">
         <div class="imcms-calendar__header">
@@ -288,9 +289,9 @@
             </div>
             <div class="imcms-calendar__weeks">
                 <div class="imcms-calendar__week">
-                    <div class="imcms-calendar__day imcms-day--outer">28</div>
-                    <div class="imcms-calendar__day imcms-day--outer">29</div>
-                    <div class="imcms-calendar__day imcms-day--outer">30</div>
+                    <div class="imcms-calendar__day">28</div>
+                    <div class="imcms-calendar__day">29</div>
+                    <div class="imcms-calendar__day">30</div>
                     <div class="imcms-calendar__day">1</div>
                     <div class="imcms-calendar__day">2</div>
                     <div class="imcms-calendar__day">3</div>
@@ -321,7 +322,7 @@
                     <div class="imcms-calendar__day">22</div>
                     <div class="imcms-calendar__day">23</div>
                     <div class="imcms-calendar__day">24</div>
-                    <div class="imcms-calendar__day imcms-day--today">25</div>
+                    <div class="imcms-calendar__day">25</div>
                 </div>
                 <div class="imcms-calendar__week">
                     <div class="imcms-calendar__day">26</div>
@@ -330,7 +331,7 @@
                     <div class="imcms-calendar__day">29</div>
                     <div class="imcms-calendar__day">30</div>
                     <div class="imcms-calendar__day">31</div>
-                    <div class="imcms-calendar__day imcms-day--outer">1</div>
+                    <div class="imcms-calendar__day">1</div>
                 </div>
                 <div class="imcms-calendar__week">
                     <div class="imcms-calendar__day">26</div>
@@ -339,7 +340,7 @@
                     <div class="imcms-calendar__day">29</div>
                     <div class="imcms-calendar__day">30</div>
                     <div class="imcms-calendar__day">31</div>
-                    <div class="imcms-calendar__day imcms-day--outer">1</div>
+                    <div class="imcms-calendar__day">1</div>
                 </div>
             </div>
         </div>
