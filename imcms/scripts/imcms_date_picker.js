@@ -106,10 +106,10 @@
             ;
             Imcms.Calendar.buildCalendar(year, month, date, calendar);
             calendar.find(".imcms-calendar__day").each(function () {
-                if($(this).html() === date){
+                if ($(this).html() === date) {
                     $(this).addClass("imcms-day--today");
                 }
-                else{
+                else {
                     $(this).removeClass("imcms-day--today");
                 }
             });
