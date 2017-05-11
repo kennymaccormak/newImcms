@@ -13,10 +13,14 @@
                 calendar = datePicker.find(".imcms-calendar")
             ;
 
-            if (!datePicker.hasClass("imcms-data-picker--active")) {
-                datePicker.addClass("imcms-data-picker--active");
-                Imcms.Calendar.buildCalendar(calendar);
-            }
+            // if (!datePicker.hasClass("imcms-data-picker--active")) {
+            //     datePicker.addClass("imcms-data-picker--active");
+            // }
+            Imcms.Calendar.init(datePicker);
+
+            datePicker.find(".imcms-data-picker__error")
+                .css({"display": "none"});
+            datePicker.css({"border-color": "#d3d8de"});
         },
         closeCalendar: function (e) {
             if (
@@ -40,16 +44,14 @@
                 month = d.getMonth() + 1,
                 date = d.getDate(),
                 datePicker = $(".imcms-data-picker"),
-                currentDate = datePicker.find(".imcms-current-data__input"),
-                currentDateVal = ""
+                currentDate = datePicker.find(".imcms-current-data__input")
             ;
 
             if (month < 10) month = "0" + month;
             if (date < 10) date = "0" + date;
 
             currentDate.val(year + "-" + month + "-" + date);
-            currentDateVal = currentDate.val();
-            return currentDateVal;
+            return currentDate.val();
         },
         currentDateValidation: function () {
             var currentDateInput = $(this);
@@ -62,12 +64,18 @@
             //carDate[1] -= 1;
             var d = new Date(carDate[0], carDate[1], carDate[2]);
             if ((d.getFullYear() === carDate[0]) && (d.getMonth() === carDate[1]) && (d.getDate() === carDate[2])) {
-                currentDateInput.parents(".imcms-data-picker").css({"border-color": "#d3d8de"});
                 return true;
-            } else {
+            }
+            else if (currentDateInput.val() === "") {
+                currentDateInput.val("--");
+                return true;
+            }
+            else if (currentDateInput.val() === "--") {
+                return true;
+            }
+            else {
                 var cd = Imcms.DatePicker.currentDate();
                 currentDateInput.val(cd);
-                currentDateInput.parents(".imcms-data-picker").css({"border-color": "red"});
                 return false;
             }
 

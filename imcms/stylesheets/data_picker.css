@@ -70,3 +70,7 @@
 .imcms-data-picker--active .imcms-calendar {
     display: block;
 }
+
+.imcms-data-picker__error{
+    display: none;
+}
