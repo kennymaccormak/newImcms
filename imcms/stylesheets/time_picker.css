@@ -2,27 +2,43 @@
     position: relative;
     padding: 10px;
     display: block;
-    max-width: 61px;
-    min-width: 58px;
+    max-width: 70px;
+    /*min-width: 58px;*/
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: visible;
     text-align: center;
 }
 
 .imcms-time-picker__current-time {
     position: relative;
+}
+
+.imcms-current-time__input {
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 15px;
+    text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
     color: #2f4047;
 }
+
+.imcms-time-picker--active{
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+}
+
 
 .imcms-time-picker--active .imcms-time-picker__current-time:after {
     content: "";
@@ -40,8 +56,19 @@
 }
 
 .imcms-time-picker__time {
-    display: none;
+    position: absolute;
+    top: 31px;
+    left: -1px;
+    z-index: 50;
     margin-top: 10px;
+    display: none;
+    width: calc(100% + 2px);
+    background-color: #fff;
+    border: 1px solid #d3d8de;
+    border-top: none;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
 }
 
 .imcms-time-picker__hours {
