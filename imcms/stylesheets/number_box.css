@@ -47,6 +47,7 @@
 
 .imcms-number-box--error + .imcms-number-box__error-msg {
     display: block;
+    margin-top: 10px;
 }
 
 .imcms-number__button {
