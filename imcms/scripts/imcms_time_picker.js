@@ -218,5 +218,7 @@
             }
 
         }
-    }
+    };
+
+    return Imcms.TimePicker;
 })(Imcms);

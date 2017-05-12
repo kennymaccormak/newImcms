@@ -2,6 +2,7 @@
     Imcms.Select = {
         init: function () {
             $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
+            $(".imcms-drop-down-list__select-item__value").click(Imcms.Select.toggleSelect);
         },
         toggleSelect: function () {
             var $this = $(this),

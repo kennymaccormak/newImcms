@@ -4,4 +4,5 @@
     Imcms.Button.init();
     Imcms.DatePicker.init();
     Imcms.TimePicker.init();
+    Imcms.Keyword.init();
 })(Imcms);

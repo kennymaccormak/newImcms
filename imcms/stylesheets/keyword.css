@@ -22,6 +22,7 @@
 }
 
 .imcms-keyword__filter {
+    margin-right: 5px;
     padding: 6px 14px;
     display: inline-block;
     background-color: #d0e9f9;
@@ -33,4 +34,8 @@
     font-size: 15px;
     line-height: 15px;
     color: #2f4047;
+}
+
+.imcms-keyword__filter:last-child{
+    margin-right: 0;
 }

@@ -1,4 +1,6 @@
-.imcms-switches{}
+.imcms-switches{
+    overflow: hidden;
+}
 .imcms-flags::after {
     content: '';
     display: block;
