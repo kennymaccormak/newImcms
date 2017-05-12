@@ -89,7 +89,8 @@
     color: #587380;
 }
 
-.imcms-time-picker__hour--choose {
+.imcms-time-picker__hour--choose,
+.imcms-time-picker__hour:hover{
     color: #2f4047;
 }
 
@@ -111,7 +112,8 @@
     color: #587380;
 }
 
-.imcms-time-picker__minute--choose {
+.imcms-time-picker__minute--choose,
+.imcms-time-picker__minute:hover{
     color: #2f4047;
 }
 
