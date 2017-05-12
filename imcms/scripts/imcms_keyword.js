@@ -9,11 +9,15 @@
                 keywordInputVal = keywordInput.val(),
                 keywords = $btn.parent().find(".imcms-keyword__filters")
             ;
+
+            if(keywords.children().length === 0){
+                keywords.css({"display": "block"})
+            }
+
             if (keywordInputVal === "") {
                 event.preventDefault();
             }
             else {
-                console.log(keywordInputVal);
                 $("<div>", {
                     "class": "imcms-keyword__filter",
                     html: $("<button>", {
@@ -22,15 +26,21 @@
                     }).click(Imcms.Keyword.removeKeyword)
                 }).prepend(keywordInputVal).appendTo(keywords);
             }
+
             keywordInput.val("");
         },
         removeKeyword: function () {
             var $btn = $(this),
-                keyword = $btn.parents(".imcms-keyword__filter")
+                keyword = $btn.parents(".imcms-keyword__filter"),
+                keywords = keyword.parent()
             ;
 
             keyword.remove();
+            if(keywords.children().length === 0){
+                keywords.css({"display": "none"})
+            }
 
+            console.log(keywords);
         }
     };
 
