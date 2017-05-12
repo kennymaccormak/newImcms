@@ -16,7 +16,7 @@
                 date = d.getDate();
             }
 
-            if (!datePicker.hasClass("imcms-data-picker--active")) {
+            if (!datePicker.hasClass("imcms-data-picker--active") && datePicker.find(".imcms-calendar").length !== 0) {
                 datePicker.addClass("imcms-data-picker--active");
                 Imcms.Calendar.buildCalendar(year, month, date, calendar);
             }
@@ -29,7 +29,7 @@
                 month = m,
                 date = d,
                 calendarTitle = $thisCalendar.find(".imcms-calendar__title"),
-                calendarTitleVal = calendarTitle.val().split(""),
+                calendarTitleVal = calendarTitle.val().split(" "),
                 calendarWeek = $thisCalendar.find(".imcms-calendar__week"),
                 firstDay = new Date(year, month - 1),
                 firstDate = parseInt(firstDay.getDate()),

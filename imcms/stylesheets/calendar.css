@@ -2,6 +2,7 @@
     position: absolute;
     top: 42px;
     left: -1px;
+    z-index: 50;
     padding: 15px 10px 10px;
     display: block;
     width: calc(100% + 2px);
