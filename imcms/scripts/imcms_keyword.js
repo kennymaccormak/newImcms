@@ -9,10 +9,10 @@
                 keywordInputVal = keywordInput.val(),
                 keywords = $btn.parent().find(".imcms-keyword__filters")
             ;
-            if (keywordInputVal === ""){
+            if (keywordInputVal === "") {
                 event.preventDefault();
             }
-            else{
+            else {
                 console.log(keywordInputVal);
                 $("<div>", {
                     "class": "imcms-keyword__filter",
