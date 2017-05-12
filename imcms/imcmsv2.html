@@ -395,6 +395,180 @@
 </div>
 <hr>
 
+<h2>Time & Date</h2>
+<hr>
+<div class="imcms-field">
+    <div class="imcms-field__date-time imcms-data-picker imcms-time-picker imcms-date-time">
+        <div class="imcms-data-picker__current-data">
+            <input type="text" class="imcms-current-data__input" title="data-picker" placeholder="YYYY-MM-DD">
+        </div>
+        <div class="imcms-time-picker__current-time">
+            <input type="text" class="imcms-current-time__input" title="current-time" placeholder="HH:MM">
+        </div>
+    </div>
+</div>
+<hr>
+
+<h2>Radio buttons table | Access tab-page</h2>
+<hr>
+<div class="imcms-field imcms-field__access-role">
+    <div class="imcms-access-role">
+        <div class="imcms-access-role__head">
+            <div class="imcms-access-role__title imcms-title">role</div>
+            <div class="imcms-access-role__title imcms-title">view</div>
+            <div class="imcms-access-role__title imcms-title">edit</div>
+            <div class="imcms-access-role__title imcms-title">restricted 1</div>
+            <div class="imcms-access-role__title imcms-title">restricted 2</div>
+
+        </div>
+        <div class="imcms-access-role__body imcms-access-role__row">
+            <div class="imcms-access-role__row__item imcms-title">Useradmin</div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="view01" class="imcms-radio__input imcms-input" name="useradmin0" checked>
+                <label for="view01" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="edit01" class="imcms-radio__input imcms-input" name="useradmin0">
+                <label for="edit01" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="restricted011" class="imcms-radio__input imcms-input" name="useradmin0">
+                <label for="restricted011" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="restricted021" class="imcms-radio__input imcms-input" name="useradmin0">
+                <label for="restricted021" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-access-role__body imcms-access-role__row">
+            <div class="imcms-access-role__row__item imcms-title">Users</div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="view02" class="imcms-radio__input imcms-input" name="users0" checked>
+                <label for="view02" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="edit02" class="imcms-radio__input imcms-input" name="users0">
+                <label for="edit02" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="restricted012" class="imcms-radio__input imcms-input" name="users0">
+                <label for="restricted012" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="restricted022" class="imcms-radio__input imcms-input" name="users0">
+                <label for="restricted022" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+        <div class="imcms-access-role__body imcms-access-role__row">
+            <div class="imcms-access-role__row__item imcms-title">testrole</div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="view03" class="imcms-radio__input imcms-input" name="testrole0" checked>
+                <label for="view03" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="edit03" class="imcms-radio__input imcms-input" name="testrole0">
+                <label for="edit03" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="restricted013" class="imcms-radio__input imcms-input" name="testrole0">
+                <label for="restricted013" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <div class="imcms-access-role__row__item imcms-radio">
+                <input type="radio" id="restricted023" class="imcms-radio__input imcms-input" name="testrole0">
+                <label for="restricted023" class="imcms-radio__label imcms-label"></label>
+            </div>
+            <button type="button" class="imcms-button imcms-button--close"></button>
+        </div>
+    </div>
+</div>
+<hr>
+
+<h2>Radio buttons table | Access tab-page</h2>
+<hr>
+<div class="imcms-field">
+    <div class="imcms-field__access-role imcms-access-addrole">
+        <div class="imcms-select imcms-field__select imcms-access-addrole__select">
+            <label for="select3" class="imcms-select__label imcms-label">Select in Field</label>
+            <div class="imcms-select__drop-down-list">
+                <div class="imcms-drop-down-list__select-item">
+                    <span class="imcms-drop-down-list__select-item__value">option 1</span>
+                    <button type="button"
+                            class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                </div>
+                <div class="imcms-drop-down-list__items">
+                    <div class="imcms-drop-down-list__item" data-value="1">option 1</div>
+                    <div class="imcms-drop-down-list__item" data-value="2">option 2</div>
+                    <div class="imcms-drop-down-list__item" data-value="3">option 3</div>
+                    <div class="imcms-drop-down-list__item" data-value="4">option 4</div>
+                </div>
+            </div>
+            <input type="hidden" id="select3">
+        </div>
+        <button type="button" class="imcms-button imcms-access-addrole__button imcms-button--neutral">ADD ROLE</button>
+    </div>
+</div>
+<hr>
+
+<h2>Head & Title | Page Info Example</h2>
+<hr>
+<div class="imcms-pop-up-modal">
+    <div class="imcms-head">
+        <div class="imcms-head__title imcms-title">document 1001</div>
+    </div>
+</div>
+<hr>
+
+<h2>Tabs & Tab | Page Info Example</h2>
+<hr>
+<div class="imcms-pop-up-modal">
+    <div class="imcms-left-side">
+        <div class="imcms-tabs">
+            <div class="imcms-tab imcms-tab--active imcms-title">appearance</div>
+            <div class="imcms-tab imcms-title">life cycle</div>
+            <div class="imcms-tab imcms-title">keywords</div>
+            <div class="imcms-tab imcms-title">categories</div>
+            <div class="imcms-tab imcms-title">access</div>
+            <div class="imcms-tab imcms-title">permissions</div>
+            <div class="imcms-tab imcms-title">templates</div>
+            <div class="imcms-tab imcms-title">status</div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<h2>Page Info Example: Without Content</h2>
+<hr>
+<div class="imcms-pop-up-modal">
+    <div class="imcms-head">
+        <div class="imcms-head__title imcms-title">document 1001</div>
+    </div>
+    <div class="imcms-left-side">
+        <div class="imcms-tabs">
+            <div class="imcms-tab imcms-title">appearance</div>
+            <div class="imcms-tab imcms-title">life cycle</div>
+            <div class="imcms-tab imcms-title">keywords</div>
+            <div class="imcms-tab imcms-title">categories</div>
+            <div class="imcms-tab imcms-title">access</div>
+            <div class="imcms-tab imcms-title">permissions</div>
+            <div class="imcms-tab imcms-title">templates</div>
+            <div class="imcms-tab imcms-title">status</div>
+        </div>
+    </div>
+    <div class="imcms-right-side">
+
+    </div>
+    <div class="imcms-footer imcms-buttons">
+        <button type="button" class="imcms-button imcms-button--save">Save and publish this version</button>
+        <button type="button" class="imcms-button imcms-button--negative">Cancel</button>
+        <button type="button" class="imcms-button imcms-button--positive">ok</button>
+    </div>
+
+</div>
+<hr>
+
+
 
 </body>
 <!--script files-->

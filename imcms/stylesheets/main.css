@@ -6,6 +6,7 @@
 @import url("checkbox.css");
 @import url("choose_file.css");
 @import url("data_picker.css");
+@import url("time_picker.css");
 @import url("date_time.css");
 @import url("input.css");
 @import url("field.css");
@@ -13,11 +14,11 @@
 @import url("flags.css");
 @import url("fonts.css");
 @import url("form.css");
+@import url("messages.css");
 @import url("head.css");
 @import url("keyword.css");
 @import url("label.css");
 @import url("life_cycle_tabs_page.css");
-@import url("messages.css");
 @import url("number_box.css");
 @import url("placeholder.css");
 @import url("pop_up_modal.css");
@@ -30,7 +31,6 @@
 @import url("tabs.css");
 @import url("text_area.css");
 @import url("text_box.css");
-@import url("time_picker.css");
 
 body {
     padding-bottom: 500px;
