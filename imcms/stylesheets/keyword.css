@@ -1,5 +1,4 @@
 .imcms-keyword {
-    margin-bottom: 30px;
 }
 
 .imcms-keyword__label {
@@ -36,6 +35,6 @@
     color: #2f4047;
 }
 
-.imcms-keyword__filter:last-child{
+.imcms-keyword__filter:last-child {
     margin-right: 0;
 }

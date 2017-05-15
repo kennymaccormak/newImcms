@@ -34,25 +34,6 @@
     overflow-y: auto;
 }
 
-.imcms-pop-up-modal .imcms-right-side .imcms-permissions-box {
-    float: left;
-    width: 33%;
-}
-
-.imcms-pop-up-modal .imcms-right-side .imcms-field__item:first-child {
-    margin-bottom: 10px;
-
-}
-
-.imcms-pop-up-modal .imcms-right-side .imcms-status-box {
-    float: left;
-    margin-right: 25px;
-}
-
-.imcms-pop-up-modal .imcms-right-side .imcms-cycle-box {
-    float: left;
-}
-
 .imcms-pop-up-modal .imcms-footer {
     float: left;
     padding: 27px;

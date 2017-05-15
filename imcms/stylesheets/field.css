@@ -31,25 +31,18 @@
 
 .imcms-field .imcms-field__keyword .imcms-text-box__input {
     display: inline-block;
-    width: 95%;
+    width: 90%;
 }
 
-/*.imcms-field__item {*/
-/*}*/
+.imcms-field__item {
+    margin-right: 5px;
+    display: block;
+}
 
-/*.imcms-field__item--title {*/
-/*text-transform: uppercase;*/
-/*}*/
+.imcms-field__item--float-l {
+    float: left;
+}
 
-/*.imcms-field__item__title {*/
-/*margin-bottom: 10px;*/
-/*}*/
-
-/*.imcms-field__item .imcms-data-picker {*/
-/*float: left;*/
-/*margin-right: 5px;*/
-/*}*/
-
-/*.imcms-field__item .imcms-time-picker {*/
-/*float: left;*/
-/*}*/
+.imcms-field__title {
+    margin-bottom: 10px;
+}

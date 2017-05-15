@@ -1,9 +1,4 @@
-.imcms-text-area__label {
-    display: block;
-}
-
 .imcms-text-area__input {
     padding: 10px 15px;
     display: block;
-    min-height: 50px;
 }
