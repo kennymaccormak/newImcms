@@ -1,5 +1,9 @@
 .imcms-pop-up-modal {
-    display: block;
+    position: absolute;
+    top: calc(50% - 375px);
+    left: calc(50% - 475px);
+    z-index: 150;
+    display: none;
     height: 750px;
     width: 950px;
     -webkit-box-shadow: 0 0 29px 13px rgba(0, 0, 0, 0.07);

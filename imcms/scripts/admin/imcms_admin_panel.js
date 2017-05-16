@@ -3,6 +3,7 @@
         init: function () {
             Imcms.AdminPanel.showPanel();
             $(document).click(Imcms.AdminPanel.hidePanel);
+            $(".imcms-admin").find(".imcms-menu__item").click(Imcms.AdminPanel.menuEvent);
         },
         showPanel: function () {
             $(document).mousemove(function (event) {
@@ -23,6 +24,22 @@
                 event.stopPropagation();
             }
 
+        },
+        menuEvent: function () {
+            var $menuItem = $(this),
+                popUpModal = $(".imcms-pop-up-modal"),
+                currentPopUp
+            ;
+
+            if($menuItem.hasClass("imcms-menu__item--page-info")){
+                popUpModal.each(function () {
+                    if($(this).attr("data-menu") === "pageInfo"){
+                        $(this).css({"display": "block"});
+                        currentPopUp = $(this)
+                    }
+                })
+            }
+            Imcms.PopUp.init(currentPopUp);
         }
     };
 
