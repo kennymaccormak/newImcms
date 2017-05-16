@@ -14,6 +14,11 @@
                 keywords.css({"display": "block"})
             }
 
+            if (keywordInputVal === "" && keywords.children().length === 0) {
+                event.preventDefault();
+                keywords.css({"display": "none"})
+            }
+
             if (keywordInputVal === "") {
                 event.preventDefault();
             }
