@@ -1,8 +1,8 @@
-.imcms-admin{
+.imcms-admin {
 
 }
 
-.imcms-admin-panel{
+.imcms-admin-panel {
     padding-left: 3%;
     display: block;
     min-height: 90px;
@@ -14,14 +14,14 @@
     overflow: hidden;
 }
 
-.imcms-admin-panel__item{
+.imcms-admin-panel__item {
     float: left;
     margin: 17px 15px 17px 0;
     display: block;
     height: 56px;
 }
 
-.imcms-admin-panel__logo{
+.imcms-admin-panel__logo {
     display: block;
     height: 100%;
     width: 115px;
@@ -30,7 +30,7 @@
     text-indent: -99999px;
 }
 
-.imcms-admin-panel__title{
+.imcms-admin-panel__title {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -39,12 +39,12 @@
     text-transform: uppercase;
 }
 
-.imcms-admin-panel__item .imcms-flag{
+.imcms-admin-panel__item .imcms-flag {
     margin: 19px 53px 19px 0;
 }
 
 .imcms-admin-panel__item .imcms-flag__en:after,
-.imcms-admin-panel__item .imcms-flag__sw:after{
+.imcms-admin-panel__item .imcms-flag__sw:after {
     display: block;
 }
 
