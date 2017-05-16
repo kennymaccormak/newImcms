@@ -32,6 +32,8 @@
 @import url("text_area.css");
 @import url("text_box.css");
 @import url("grid.css");
+@import url("admin/admin_panel.css");
+@import url("admin/menu.css");
 
 body {
     padding-bottom: 500px;

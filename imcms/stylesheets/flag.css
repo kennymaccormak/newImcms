@@ -1,4 +1,5 @@
 .imcms-flag{
+    position: relative;
     padding: 0;
     display: block;
     width: 29px;
@@ -23,4 +24,27 @@
 
 .imcms-flag--active{
     opacity: 1;
+}
+
+.imcms-flag:after{
+    position: absolute;
+    right: -30px;
+    top: 0;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #2e3f47;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.imcms-flag__en:after{
+    content: "EN";
+    display: none;
+}
+
+.imcms-flag__sw:after{
+    content: "SW";
+    display: none;
 }
