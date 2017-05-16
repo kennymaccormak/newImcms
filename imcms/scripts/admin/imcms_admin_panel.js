@@ -31,9 +31,9 @@
                 currentPopUp
             ;
 
-            if($menuItem.hasClass("imcms-menu__item--page-info")){
+            if ($menuItem.hasClass("imcms-menu__item--page-info")) {
                 popUpModal.each(function () {
-                    if($(this).attr("data-menu") === "pageInfo"){
+                    if ($(this).attr("data-menu") === "pageInfo") {
                         $(this).css({"display": "block"});
                         currentPopUp = $(this)
                     }

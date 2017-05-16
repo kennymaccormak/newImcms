@@ -2,7 +2,7 @@
     Imcms.PopUp = {
         init: function (currentPopUp) {
             Imcms.PopUp.openPopUp(currentPopUp);
-            currentPopUp.find(".imcms-button--negative").click( Imcms.PopUp.closePopUp)
+            currentPopUp.find(".imcms-button--negative").click(Imcms.PopUp.closePopUp)
         },
         openPopUp: function (currentPopUp) {
             var $popUp = currentPopUp,
@@ -31,12 +31,12 @@
                         if ($(this).attr("data-window-id") === "1") {
                             $(this).addClass("imcms-tab--active");
                         }
-                        else{
+                        else {
                             $(this).removeClass("imcms-tab--active");
                         }
                     });
                 }
-                else{
+                else {
                     $(this).css({"display": "none"});
 
                 }
@@ -60,12 +60,12 @@
                         if ($(this).attr("data-window-id") === windowId) {
                             $(this).addClass("imcms-tab--active");
                         }
-                        else{
+                        else {
                             $(this).removeClass("imcms-tab--active");
                         }
                     });
                 }
-                else{
+                else {
                     $(this).css({"display": "none"});
                 }
             });
