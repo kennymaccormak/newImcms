@@ -6,7 +6,7 @@
         },
         showPanel: function () {
             $(document).mousemove(function (event) {
-                if (event.pageY >= 0 && event.pageY <= 90) {
+                if (event.pageY >= 0 && event.pageY <= 15) {
                     $(".imcms-admin").css({"top": 0});
                 }
 
