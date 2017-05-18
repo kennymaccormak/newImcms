@@ -2,7 +2,7 @@
     Imcms.Select = {
         init: function () {
             $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
-            $(".imcms-drop-down-list__select-item__value").click(Imcms.Select.toggleSelect);
+            $(".imcms-drop-down-list__select-item-value").click(Imcms.Select.toggleSelect);
         },
         toggleSelect: function () {
             var $this = $(this),
@@ -24,7 +24,7 @@
             var $this = $(this),
                 content = $this.text(),
                 select = $this.closest(".imcms-select__drop-down-list"),
-                itemValue = select.find(".imcms-drop-down-list__select-item__value").html(content)
+                itemValue = select.find(".imcms-drop-down-list-select-item__value").html(content)
             ;
 
             select.removeClass("imcms-select__drop-down-list--active");
@@ -32,8 +32,6 @@
             return itemValue;
         }
     };
-
-
 
 
     return Imcms.Select;

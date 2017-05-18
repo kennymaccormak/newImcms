@@ -7,6 +7,9 @@
 }
 
 .imcms-select__drop-down-list {
+}
+
+.imcms-drop-down-list {
     position: relative;
     display: inline-block;
     height: 100%;
@@ -44,7 +47,7 @@
     background-color: #b8bec2;
 }
 
-.imcms-drop-down-list__select-item__value {
+.imcms-drop-down-list__select-item-value {
     cursor: pointer;
     font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;

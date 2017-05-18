@@ -34,14 +34,14 @@
     background-color: #d0e9f9;
 }
 
-.imcms-access-role__body .imcms-access-role__row__item {
+.imcms-access-role__body .imcms-access-role__column {
     float: left;
     display: block;
     width: 19%;
     text-align: center;
 }
 
-.imcms-access-role__body .imcms-access-role__row__item:first-child {
+.imcms-access-role__body .imcms-access-role__column:first-child {
     text-align: left;
 }
 
@@ -54,15 +54,15 @@
     display: block;
 }
 
-.imcms-access-role__row__item .imcms-radio__label {
+.imcms-access-role__column .imcms-radio__label {
     padding-left: 15px;
 }
 
-.imcms-access-role__row__item .imcms-radio__label:before {
+.imcms-access-role__column .imcms-radio__label:before {
     top: 3px;
 }
 
-.imcms-access-role__row__item .imcms-radio__label:after {
+.imcms-access-role__column .imcms-radio__label:after {
     top: 8px;
 }
 

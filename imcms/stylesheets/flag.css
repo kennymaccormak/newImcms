@@ -15,12 +15,14 @@
     transition: all .3s;
 }
 
-.imcms-flag__en {
+.imcms-flag--en {
     background: url("../img/icon_flag_en_active.png") no-repeat left top;
+    background-size: 29px 17px;
 }
 
-.imcms-flag__sw {
+.imcms-flag--sw {
     background: url("../img/icon_flag_sw_active.png") no-repeat left top;
+    background-size: 29px 17px;
 }
 
 .imcms-flag--active {
@@ -40,12 +42,31 @@
     text-transform: uppercase;
 }
 
-.imcms-flag__en:after {
+.imcms-flag--en:after {
     content: "EN";
     display: none;
 }
 
-.imcms-flag__sw:after {
+.imcms-flag--sw:after {
     content: "SW";
     display: none;
 }
+
+/*
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    .imcms-flag--en {
+        background: url("../img/icon_flag_en_active.png") no-repeat left top;
+        background-size: 58px 34px;
+    }
+
+    .imcms-flag--sw {
+        background: url("../img/icon_flag_sw_active.png") no-repeat left top;
+        background-size: 58px 34px;
+    }
+}*/

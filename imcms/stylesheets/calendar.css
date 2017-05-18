@@ -51,7 +51,7 @@
     width: 100%;
 }
 
-.imcms-calendar__days-name {
+.imcms-calendar__day-names {
     position: relative;
     display: block;
     height: 8px;
@@ -103,6 +103,7 @@
 .imcms-day--outer-next {
     color: #587380;
 }
+
 .imcms-calendar__day:hover,
 .imcms-day--today {
     background-color: #0b94d8;

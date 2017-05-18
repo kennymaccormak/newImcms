@@ -3,6 +3,7 @@
 @import url("button.css");
 @import url("buttons.css");
 @import url("calendar.css");
+@import url("checkboxes.css");
 @import url("checkbox.css");
 @import url("choose_file.css");
 @import url("data_picker.css");
@@ -23,6 +24,7 @@
 @import url("placeholder.css");
 @import url("pop_up_modal.css");
 @import url("radio.css");
+@import url("radios.css");
 @import url("scrollbar.css");
 @import url("select.css");
 @import url("space-around-inputs.css");
