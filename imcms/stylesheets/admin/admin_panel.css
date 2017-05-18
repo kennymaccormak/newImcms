@@ -50,8 +50,8 @@
     margin: 19px 53px 19px 0;
 }
 
-.imcms-admin-panel__item .imcms-flag__en:after,
-.imcms-admin-panel__item .imcms-flag__sw:after {
+.imcms-admin-panel__item .imcms-flag--en:after,
+.imcms-admin-panel__item .imcms-flag--sw:after {
     display: block;
 }
 
