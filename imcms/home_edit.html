@@ -23,7 +23,7 @@
         <div class="imcms-admin-panel__item imcms-menu">
             <ul class="imcms-menu__items">
                 <li class="imcms-menu__item">
-                    <button type="button" class="imcms-button imcms-button--positive">log out</button>
+                    <button type="button" class="imcms-button--positive imcms-button">log out</button>
                 </li>
                 <li class="imcms-menu__item imcms-menu__item--admin">admin</li>
                 <li class="imcms-menu__item imcms-menu__item--document">document</li>
@@ -41,6 +41,7 @@
 
 <div class="imcms-info-msg" style="margin-top: 150px">Move your mouse up!</div>
 <div class="imcms-info-msg">Then click everywhere under admin panel</div>
+<a href="imcmsv3.html">imcmsv3</a>
 
 <div class="imcms-pop-up-modal" data-menu="pageInfo">
     <div class="imcms-head">
@@ -91,21 +92,21 @@
                 <span class="imcms-choose-file__file-name">File.path</span>
             </div>
             <div class="imcms-form__field imcms-field">
-                <div class="imcms-select imcms-field__select">
+                <div class="imcms-field__select imcms-select">
                     <label for="select4" class="imcms-select__label imcms-label">Show in</label>
-                    <div class="imcms-select__drop-down-list">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">Same frame</span>
+                            <span class="imcms-drop-down-list__select-item-value">Same frame</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">Same frame</div>
                             <div class="imcms-drop-down-list__item" data-value="2">New window</div>
                             <div class="imcms-drop-down-list__item" data-value="3">Replace all</div>
                         </div>
+                        <input type="hidden" id="select4">
                     </div>
-                    <input type="hidden" id="select4">
                 </div>
             </div>
             <div class="imcms-form__field imcms-field">
@@ -116,20 +117,20 @@
         </div>
         <div class="imcms-form" data-window-id="2">
             <div class="imcms-form__field imcms-field">
-                <div class="imcms-select imcms-field__select">
-                    <div class="imcms-select__drop-down-list">
+                <div class="imcms-field__select imcms-select">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">Approved</span>
+                            <span class="imcms-drop-down-list__select-item-value">Approved</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">In Process</div>
                             <div class="imcms-drop-down-list__item" data-value="2">Disapproved</div>
                             <div class="imcms-drop-down-list__item" data-value="3">Approved</div>
                         </div>
+                        <input type="hidden" id="select5" title="">
                     </div>
-                    <input type="hidden" id="select5" title="">
                 </div>
             </div>
             <div class="imcms-form__field imcms-field">
@@ -148,7 +149,7 @@
                                     class="imcms-button imcms-calendar__button imcms-calendar__next-month imcms-button--next"></button>
                         </div>
                         <div class="imcms-calendar__body">
-                            <div class="imcms-calendar__days-name">
+                            <div class="imcms-calendar__day-names">
                                 <div class="imcms-calendar__day-name">sun</div>
                                 <div class="imcms-calendar__day-name">mon</div>
                                 <div class="imcms-calendar__day-name">tue</div>
@@ -159,58 +160,58 @@
                             </div>
                             <div class="imcms-calendar__weeks">
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">1</div>
-                                    <div class="imcms-calendar__day">2</div>
-                                    <div class="imcms-calendar__day">3</div>
-                                    <div class="imcms-calendar__day">4</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">5</div>
-                                    <div class="imcms-calendar__day">6</div>
-                                    <div class="imcms-calendar__day">7</div>
-                                    <div class="imcms-calendar__day">8</div>
-                                    <div class="imcms-calendar__day">9</div>
-                                    <div class="imcms-calendar__day">10</div>
-                                    <div class="imcms-calendar__day">11</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">12</div>
-                                    <div class="imcms-calendar__day">13</div>
-                                    <div class="imcms-calendar__day">14</div>
-                                    <div class="imcms-calendar__day">15</div>
-                                    <div class="imcms-calendar__day">16</div>
-                                    <div class="imcms-calendar__day">17</div>
-                                    <div class="imcms-calendar__day">18</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">19</div>
-                                    <div class="imcms-calendar__day">20</div>
-                                    <div class="imcms-calendar__day">21</div>
-                                    <div class="imcms-calendar__day">22</div>
-                                    <div class="imcms-calendar__day">23</div>
-                                    <div class="imcms-calendar__day">24</div>
-                                    <div class="imcms-calendar__day">25</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">26</div>
-                                    <div class="imcms-calendar__day">27</div>
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">31</div>
-                                    <div class="imcms-calendar__day">1</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">26</div>
-                                    <div class="imcms-calendar__day">27</div>
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">31</div>
-                                    <div class="imcms-calendar__day">1</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                             </div>
                         </div>
@@ -223,32 +224,32 @@
                     <div class="imcms-time-picker__time">
                         <div class="imcms-time-picker__hours">
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__prev-hour imcms-button imcms-button--increment"></button>
-                            <div class="imcms-time-picker__hour">12</div>
-                            <div class="imcms-time-picker__hour">13</div>
-                            <div class="imcms-time-picker__hour">14</div>
-                            <div class="imcms-time-picker__hour">15</div>
-                            <div class="imcms-time-picker__hour">16</div>
-                            <div class="imcms-time-picker__hour">17</div>
+                                    class="imcms-time-picker__button imcms-time-picker__prev-hour imcms-button--increment imcms-button"></button>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__next-hour imcms-button imcms-button--decrement"></button>
+                                    class="imcms-time-picker__button imcms-time-picker__next-hour imcms-button--decrement imcms-button"></button>
                         </div>
                         <div class="imcms-time-picker__minutes">
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__prev-minute imcms-button imcms-button--increment"></button>
-                            <div class="imcms-time-picker__minute">00</div>
-                            <div class="imcms-time-picker__minute">05</div>
-                            <div class="imcms-time-picker__minute">10</div>
-                            <div class="imcms-time-picker__minute">15</div>
-                            <div class="imcms-time-picker__minute">20</div>
-                            <div class="imcms-time-picker__minute">25</div>
+                                    class="imcms-time-picker__button imcms-time-picker__prev-minute imcms-button--increment imcms-button"></button>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__next-minute imcms-button imcms-button--decrement"></button>
+                                    class="imcms-time-picker__button imcms-time-picker__next-minute imcms-button--decrement imcms-button"></button>
                         </div>
                     </div>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-buttons">
-                    <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">Now</button>
+                    <button type="button" class="imcms-buttons__button imcms-button--neutral imcms-button">Now</button>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-field__date-time imcms-data-picker imcms-time-picker imcms-date-time">
                     <div class="imcms-data-picker__current-data">
@@ -260,7 +261,7 @@
                     </div>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-buttons">
-                    <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">Clear
+                    <button type="button" class="imcms-buttons__button imcms-button--neutral imcms-button">Clear
                     </button>
                 </div>
             </div>
@@ -281,7 +282,7 @@
                                     class="imcms-button imcms-calendar__button imcms-calendar__next-month imcms-button--next"></button>
                         </div>
                         <div class="imcms-calendar__body">
-                            <div class="imcms-calendar__days-name">
+                            <div class="imcms-calendar__day-names">
                                 <div class="imcms-calendar__day-name">sun</div>
                                 <div class="imcms-calendar__day-name">mon</div>
                                 <div class="imcms-calendar__day-name">tue</div>
@@ -292,58 +293,58 @@
                             </div>
                             <div class="imcms-calendar__weeks">
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">1</div>
-                                    <div class="imcms-calendar__day">2</div>
-                                    <div class="imcms-calendar__day">3</div>
-                                    <div class="imcms-calendar__day">4</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">5</div>
-                                    <div class="imcms-calendar__day">6</div>
-                                    <div class="imcms-calendar__day">7</div>
-                                    <div class="imcms-calendar__day">8</div>
-                                    <div class="imcms-calendar__day">9</div>
-                                    <div class="imcms-calendar__day">10</div>
-                                    <div class="imcms-calendar__day">11</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">12</div>
-                                    <div class="imcms-calendar__day">13</div>
-                                    <div class="imcms-calendar__day">14</div>
-                                    <div class="imcms-calendar__day">15</div>
-                                    <div class="imcms-calendar__day">16</div>
-                                    <div class="imcms-calendar__day">17</div>
-                                    <div class="imcms-calendar__day">18</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">19</div>
-                                    <div class="imcms-calendar__day">20</div>
-                                    <div class="imcms-calendar__day">21</div>
-                                    <div class="imcms-calendar__day">22</div>
-                                    <div class="imcms-calendar__day">23</div>
-                                    <div class="imcms-calendar__day">24</div>
-                                    <div class="imcms-calendar__day">25</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">26</div>
-                                    <div class="imcms-calendar__day">27</div>
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">31</div>
-                                    <div class="imcms-calendar__day">1</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">26</div>
-                                    <div class="imcms-calendar__day">27</div>
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">31</div>
-                                    <div class="imcms-calendar__day">1</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                             </div>
                         </div>
@@ -356,32 +357,32 @@
                     <div class="imcms-time-picker__time">
                         <div class="imcms-time-picker__hours">
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__prev-hour imcms-button imcms-button--increment"></button>
-                            <div class="imcms-time-picker__hour">12</div>
-                            <div class="imcms-time-picker__hour">13</div>
-                            <div class="imcms-time-picker__hour">14</div>
-                            <div class="imcms-time-picker__hour">15</div>
-                            <div class="imcms-time-picker__hour">16</div>
-                            <div class="imcms-time-picker__hour">17</div>
+                                    class="imcms-time-picker__button imcms-time-picker__prev-hour imcms-button--increment imcms-button"></button>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__next-hour imcms-button imcms-button--decrement"></button>
+                                    class="imcms-time-picker__button imcms-time-picker__next-hour imcms-button--decrement imcms-button"></button>
                         </div>
                         <div class="imcms-time-picker__minutes">
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__prev-minute imcms-button imcms-button--increment"></button>
-                            <div class="imcms-time-picker__minute">00</div>
-                            <div class="imcms-time-picker__minute">05</div>
-                            <div class="imcms-time-picker__minute">10</div>
-                            <div class="imcms-time-picker__minute">15</div>
-                            <div class="imcms-time-picker__minute">20</div>
-                            <div class="imcms-time-picker__minute">25</div>
+                                    class="imcms-time-picker__button imcms-time-picker__prev-minute imcms-button--increment imcms-button"></button>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__next-minute imcms-button imcms-button--decrement"></button>
+                                    class="imcms-time-picker__button imcms-time-picker__next-minute imcms-button--decrement imcms-button"></button>
                         </div>
                     </div>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-buttons">
-                    <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">Now</button>
+                    <button type="button" class="imcms-buttons__button imcms-button--neutral imcms-button">Now</button>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-field__date-time imcms-data-picker imcms-time-picker imcms-date-time">
                     <div class="imcms-data-picker__current-data">
@@ -393,7 +394,7 @@
                     </div>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-buttons">
-                    <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">Clear
+                    <button type="button" class="imcms-buttons__button imcms-button--neutral imcms-button">Clear
                     </button>
                 </div>
             </div>
@@ -408,13 +409,13 @@
                     <div class="imcms-calendar">
                         <div class="imcms-calendar__header">
                             <button type="button"
-                                    class="imcms-button imcms-calendar__button imcms-calendar__prev-month imcms-button--prev"></button>
+                                    class="imcms-calendar__button imcms-calendar__prev-month imcms-button--prev imcms-button"></button>
                             <div class="imcms-calendar__title">december 2016</div>
                             <button type="button"
-                                    class="imcms-button imcms-calendar__button imcms-calendar__next-month imcms-button--next"></button>
+                                    class="imcms-calendar__button imcms-calendar__next-month imcms-button--next imcms-button"></button>
                         </div>
                         <div class="imcms-calendar__body">
-                            <div class="imcms-calendar__days-name">
+                            <div class="imcms-calendar__day-names">
                                 <div class="imcms-calendar__day-name">sun</div>
                                 <div class="imcms-calendar__day-name">mon</div>
                                 <div class="imcms-calendar__day-name">tue</div>
@@ -425,58 +426,58 @@
                             </div>
                             <div class="imcms-calendar__weeks">
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">1</div>
-                                    <div class="imcms-calendar__day">2</div>
-                                    <div class="imcms-calendar__day">3</div>
-                                    <div class="imcms-calendar__day">4</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">5</div>
-                                    <div class="imcms-calendar__day">6</div>
-                                    <div class="imcms-calendar__day">7</div>
-                                    <div class="imcms-calendar__day">8</div>
-                                    <div class="imcms-calendar__day">9</div>
-                                    <div class="imcms-calendar__day">10</div>
-                                    <div class="imcms-calendar__day">11</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">12</div>
-                                    <div class="imcms-calendar__day">13</div>
-                                    <div class="imcms-calendar__day">14</div>
-                                    <div class="imcms-calendar__day">15</div>
-                                    <div class="imcms-calendar__day">16</div>
-                                    <div class="imcms-calendar__day">17</div>
-                                    <div class="imcms-calendar__day">18</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">19</div>
-                                    <div class="imcms-calendar__day">20</div>
-                                    <div class="imcms-calendar__day">21</div>
-                                    <div class="imcms-calendar__day">22</div>
-                                    <div class="imcms-calendar__day">23</div>
-                                    <div class="imcms-calendar__day">24</div>
-                                    <div class="imcms-calendar__day">25</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">26</div>
-                                    <div class="imcms-calendar__day">27</div>
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">31</div>
-                                    <div class="imcms-calendar__day">1</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                                 <div class="imcms-calendar__week">
-                                    <div class="imcms-calendar__day">26</div>
-                                    <div class="imcms-calendar__day">27</div>
-                                    <div class="imcms-calendar__day">28</div>
-                                    <div class="imcms-calendar__day">29</div>
-                                    <div class="imcms-calendar__day">30</div>
-                                    <div class="imcms-calendar__day">31</div>
-                                    <div class="imcms-calendar__day">1</div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
+                                    <div class="imcms-calendar__day"></div>
                                 </div>
                             </div>
                         </div>
@@ -489,32 +490,32 @@
                     <div class="imcms-time-picker__time">
                         <div class="imcms-time-picker__hours">
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__prev-hour imcms-button imcms-button--increment"></button>
-                            <div class="imcms-time-picker__hour">12</div>
-                            <div class="imcms-time-picker__hour">13</div>
-                            <div class="imcms-time-picker__hour">14</div>
-                            <div class="imcms-time-picker__hour">15</div>
-                            <div class="imcms-time-picker__hour">16</div>
-                            <div class="imcms-time-picker__hour">17</div>
+                                    class="imcms-time-picker__button imcms-time-picker__prev-hour imcms-button--increment imcms-button"></button>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
+                            <div class="imcms-time-picker__hour"></div>
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__next-hour imcms-button imcms-button--decrement"></button>
+                                    class="imcms-time-picker__button imcms-time-picker__next-hour imcms-button--decrement imcms-button"></button>
                         </div>
                         <div class="imcms-time-picker__minutes">
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__prev-minute imcms-button imcms-button--increment"></button>
-                            <div class="imcms-time-picker__minute">00</div>
-                            <div class="imcms-time-picker__minute">05</div>
-                            <div class="imcms-time-picker__minute">10</div>
-                            <div class="imcms-time-picker__minute">15</div>
-                            <div class="imcms-time-picker__minute">20</div>
-                            <div class="imcms-time-picker__minute">25</div>
+                                    class="imcms-time-picker__button imcms-time-picker__prev-minute imcms-button--increment imcms-button"></button>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
+                            <div class="imcms-time-picker__minute"></div>
                             <button type="button"
-                                    class="imcms-time-picker__button imcms-time-picker__next-minute imcms-button imcms-button--decrement"></button>
+                                    class="imcms-time-picker__button imcms-time-picker__next-minute imcms-button--decrement imcms-button"></button>
                         </div>
                     </div>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-buttons">
-                    <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">Now</button>
+                    <button type="button" class="imcms-buttons__button imcms-button--neutral imcms-button">Now</button>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-field__date-time imcms-data-picker imcms-time-picker imcms-date-time">
                     <div class="imcms-data-picker__current-data">
@@ -526,7 +527,7 @@
                     </div>
                 </div>
                 <div class="imcms-field__item imcms-field__item--float-l imcms-buttons">
-                    <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">Clear
+                    <button type="button" class="imcms-buttons__button imcms-button--neutral imcms-button">Clear
                     </button>
                 </div>
             </div>
@@ -534,29 +535,29 @@
             <div class="imcms-form__field imcms-field">
                 <div class="imcms-select imcms-field__select">
                     <label for="select6" class="imcms-select__label imcms-label">Publisher:</label>
-                    <div class="imcms-select__drop-down-list">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">Admin</span>
+                            <span class="imcms-drop-down-list__select-item-value">Admin</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">Admin</div>
                             <div class="imcms-drop-down-list__item" data-value="2">NeAdmin</div>
                         </div>
+                        <input type="hidden" id="select6" title="">
                     </div>
-                    <input type="hidden" id="select6" title="">
                 </div>
             </div>
 
-            <div class="imcms-form__field imcms-field imcms-radio">
+            <div class="imcms-form__field imcms-field imcms-radios">
                 <div class="imcms-field__item imcms-field__title imcms-title">If requested language is missing:</div>
-                <div class="imcms-field__item">
+                <div class="imcms-field__item imcms-radio">
                     <input type="radio" id="radio1" class="imcms-radio__input imcms-input" name="radio0" checked>
                     <label for="radio1" class="imcms-radio__label imcms-label">Show in default language if
                         enabled</label>
                 </div>
-                <div class="imcms-field__item">
+                <div class="imcms-field__item imcms-radio">
                     <input type="radio" id="radio2" class="imcms-radio__input imcms-input" name="radio0">
                     <label for="radio2" class="imcms-radio__label imcms-label">Don't show at all</label>
                 </div>
@@ -592,10 +593,8 @@
                     <label for="keyword1" class="imcms-keyword__label imcms-label">Space Around Input</label>
                     <input type="text" id="keyword1" class="imcms-text-box__input imcms-input" placeholder="keyword"
                            name="space">
-                    <button type="button" class="imcms-button imcms-keyword__button imcms-button--neutral">ADD+</button>
-                    <div class="imcms-keyword__filters">
-
-                    </div>
+                    <button type="button" class="imcms-keyword__button imcms-button--neutral imcms-button">ADD+</button>
+                    <div class="imcms-keyword__filters"></div>
                 </div>
             </div>
             <div class="imcms-form__field imcms-field imcms-checkbox">
@@ -607,48 +606,48 @@
             <div class="imcms-form__field imcms-field">
                 <div class="imcms-select imcms-field__select">
                     <label for="select7" class="imcms-select__label imcms-label">Landscape</label>
-                    <div class="imcms-select__drop-down-list">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">None</span>
+                            <span class="imcms-drop-down-list__select-item-value">None</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">None</div>
                             <div class="imcms-drop-down-list__item" data-value="2">Not None</div>
                         </div>
+                        <input type="hidden" id="select7">
                     </div>
-                    <input type="hidden" id="select7">
                 </div>
             </div>
             <div class="imcms-form__field imcms-field">
                 <div class="imcms-select imcms-field__select">
                     <label for="select8" class="imcms-select__label imcms-label">Test Category Type</label>
-                    <div class="imcms-select__drop-down-list">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">None</span>
+                            <span class="imcms-drop-down-list__select-item-value">None</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">None</div>
                             <div class="imcms-drop-down-list__item" data-value="2">Not None</div>
                         </div>
+                        <input type="hidden" id="select8">
                     </div>
-                    <input type="hidden" id="select8">
                 </div>
             </div>
-            <div class="imcms-form__field imcms-field imcms-checkbox">
-                <div class="imcms-field__item imcms-title">Car</div>
-                <div class="imcms-field__item">
+            <div class="imcms-form__field imcms-field imcms-checkboxes">
+                <div class="imcms-field__item imcms-checkboxes__title imcms-title">Car</div>
+                <div class="imcms-field__item imcms-checkbox">
                     <input type="checkbox" id="checkbox311" class="imcms-checkbox__checkbox" name="checkbox">
                     <label for="checkbox311" class="imcms-checkbox__label imcms-label">Blue</label>
                 </div>
-                <div class="imcms-field__item">
+                <div class="imcms-field__item imcms-checkbox">
                     <input type="checkbox" id="checkbox313" class="imcms-checkbox__checkbox" name="checkbox" checked>
                     <label for="checkbox313" class="imcms-checkbox__label imcms-label">Red</label>
                 </div>
-                <div class="imcms-field__item">
+                <div class="imcms-field__item imcms-checkbox">
                     <input type="checkbox" id="checkbox314" class="imcms-checkbox__checkbox" name="checkbox">
                     <label for="checkbox314" class="imcms-checkbox__label imcms-label">White</label>
                 </div>
@@ -666,22 +665,22 @@
 
                     </div>
                     <div class="imcms-access-role__body imcms-access-role__row">
-                        <div class="imcms-access-role__row__item imcms-title">Useradmin</div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-title">Useradmin</div>
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="view01" class="imcms-radio__input imcms-input" name="useradmin0"
                                    checked>
                             <label for="view01" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="edit01" class="imcms-radio__input imcms-input" name="useradmin0">
                             <label for="edit01" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="restricted011" class="imcms-radio__input imcms-input"
                                    name="useradmin0">
                             <label for="restricted011" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="restricted021" class="imcms-radio__input imcms-input"
                                    name="useradmin0">
                             <label for="restricted021" class="imcms-radio__label imcms-label"></label>
@@ -689,48 +688,48 @@
                         <button type="button" class="imcms-button imcms-button--close"></button>
                     </div>
                     <div class="imcms-access-role__body imcms-access-role__row">
-                        <div class="imcms-access-role__row__item imcms-title">Users</div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-title">Users</div>
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="view02" class="imcms-radio__input imcms-input" name="users0"
                                    checked>
                             <label for="view02" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="edit02" class="imcms-radio__input imcms-input" name="users0">
                             <label for="edit02" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="restricted012" class="imcms-radio__input imcms-input" name="users0">
                             <label for="restricted012" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="restricted022" class="imcms-radio__input imcms-input" name="users0">
                             <label for="restricted022" class="imcms-radio__label imcms-label"></label>
                         </div>
                         <button type="button" class="imcms-button imcms-button--close"></button>
                     </div>
                     <div class="imcms-access-role__body imcms-access-role__row">
-                        <div class="imcms-access-role__row__item imcms-title">testrole</div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-title">testrole</div>
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="view03" class="imcms-radio__input imcms-input" name="testrole0"
                                    checked>
                             <label for="view03" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="edit03" class="imcms-radio__input imcms-input" name="testrole0">
                             <label for="edit03" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="restricted013" class="imcms-radio__input imcms-input"
                                    name="testrole0">
                             <label for="restricted013" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <div class="imcms-access-role__row__item imcms-radio">
+                        <div class="imcms-access-role__column imcms-radio">
                             <input type="radio" id="restricted023" class="imcms-radio__input imcms-input"
                                    name="testrole0">
                             <label for="restricted023" class="imcms-radio__label imcms-label"></label>
                         </div>
-                        <button type="button" class="imcms-button imcms-button--close"></button>
+                        <button type="button" class="imcms-button--close imcms-button"></button>
                     </div>
                 </div>
             </div>
@@ -739,9 +738,9 @@
                 <div class="imcms-field__access-role imcms-access-addrole">
                     <div class="imcms-select imcms-field__select imcms-access-addrole__select">
                         <label for="select3" class="imcms-select__label imcms-label">Select in Field</label>
-                        <div class="imcms-select__drop-down-list">
+                        <div class="imcms-select__drop-down-list imcms-drop-down-list">
                             <div class="imcms-drop-down-list__select-item">
-                                <span class="imcms-drop-down-list__select-item__value">option 1</span>
+                                <span class="imcms-drop-down-list__select-item-value">option 1</span>
                                 <button type="button"
                                         class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
                             </div>
@@ -751,10 +750,10 @@
                                 <div class="imcms-drop-down-list__item" data-value="3">option 3</div>
                                 <div class="imcms-drop-down-list__item" data-value="4">option 4</div>
                             </div>
+                            <input type="hidden" id="select3">
                         </div>
-                        <input type="hidden" id="select3">
                     </div>
-                    <button type="button" class="imcms-button imcms-access-addrole__button imcms-button--neutral">ADD
+                    <button type="button" class="imcms-access-addrole__button imcms-button--neutral imcms-button">ADD
                         ROLE
                     </button>
                 </div>
@@ -762,8 +761,8 @@
         </div>
         <div class="imcms-form" data-window-id="6">
             <div class="imcms-form__field imcms-field">
-                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3">
-                    <div class="imcms-title">Title</div>
+                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3 imcms-checkboxes">
+                    <div class="imcms-checkboxes__title imcms-title">Title</div>
                     <div class="imcms-checkbox">
                         <input type="checkbox" id="checkbox21" class="imcms-checkbox__checkbox" name="checkbox2">
                         <label for="checkbox21" class="imcms-checkbox__label imcms-label">item 1</label>
@@ -785,8 +784,8 @@
                         <label for="checkbox25" class="imcms-checkbox__label imcms-label">item 1</label>
                     </div>
                 </div>
-                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3">
-                    <div class="imcms-title">Title</div>
+                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3 imcms-checkboxes">
+                    <div class="imcms-checkboxes__title imcms-title">Title</div>
                     <div class="imcms-checkbox">
                         <input type="checkbox" id="checkbox31" class="imcms-checkbox__checkbox" name="checkbox2">
                         <label for="checkbox31" class="imcms-checkbox__label imcms-label">item 1</label>
@@ -808,8 +807,8 @@
                         <label for="checkbox35" class="imcms-checkbox__label imcms-label">item 1</label>
                     </div>
                 </div>
-                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3">
-                    <div class="imcms-title">Title</div>
+                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3 imcms-checkboxes">
+                    <div class="imcms-checkboxes__title imcms-title">Title</div>
                     <div class="imcms-checkbox">
                         <input type="checkbox" id="checkbox41" class="imcms-checkbox__checkbox" name="checkbox2">
                         <label for="checkbox41" class="imcms-checkbox__label imcms-label">item 1</label>
@@ -831,8 +830,8 @@
                         <label for="checkbox45" class="imcms-checkbox__label imcms-label">item 1</label>
                     </div>
                 </div>
-                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3">
-                    <div class="imcms-title">Title</div>
+                <div class="imcms-field__item imcms-field__item--float-l imcms-col-3 imcms-checkboxes">
+                    <div class="imcms-checkboxes__title imcms-title">Title</div>
                     <div class="imcms-checkbox">
                         <input type="checkbox" id="checkbox51" class="imcms-checkbox__checkbox" name="checkbox2">
                         <label for="checkbox51" class="imcms-checkbox__label imcms-label">item 1</label>
@@ -860,37 +859,37 @@
             <div class="imcms-form__field imcms-field">
                 <div class="imcms-select imcms-field__select">
                     <label for="select11" class="imcms-select__label imcms-label">Template</label>
-                    <div class="imcms-select__drop-down-list">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">None</span>
+                            <span class="imcms-drop-down-list__select-item-value">None</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">None</div>
                             <div class="imcms-drop-down-list__item" data-value="2">Not None</div>
                             <div class="imcms-drop-down-list__item" data-value="3">Not None None</div>
                         </div>
+                        <input type="hidden" id="select11">
                     </div>
-                    <input type="hidden" id="select11">
                 </div>
             </div>
             <div class="imcms-form__field imcms-field">
                 <div class="imcms-select imcms-field__select">
                     <label for="select12" class="imcms-select__label imcms-label">Default template</label>
-                    <div class="imcms-select__drop-down-list">
+                    <div class="imcms-select__drop-down-list imcms-drop-down-list">
                         <div class="imcms-drop-down-list__select-item">
-                            <span class="imcms-drop-down-list__select-item__value">None</span>
+                            <span class="imcms-drop-down-list__select-item-value">None</span>
                             <button type="button"
-                                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                                    class="imcms-drop-down-list__button imcms-button--drop-down imcms-button"></button>
                         </div>
                         <div class="imcms-drop-down-list__items">
                             <div class="imcms-drop-down-list__item" data-value="1">None</div>
                             <div class="imcms-drop-down-list__item" data-value="2">Not None</div>
                             <div class="imcms-drop-down-list__item" data-value="3">Not None None</div>
                         </div>
+                        <input type="hidden" id="select12">
                     </div>
-                    <input type="hidden" id="select12">
                 </div>
             </div>
         </div>
@@ -999,9 +998,9 @@
         </div>
     </div>
     <div class="imcms-footer imcms-buttons">
-        <button type="button" class="imcms-button imcms-button--save">Save and publish this version</button>
-        <button type="button" class="imcms-button imcms-button--negative">Cancel</button>
-        <button type="button" class="imcms-button imcms-button--positive">ok</button>
+        <button type="button" class="imcms-button--save imcms-button">Save and publish this version</button>
+        <button type="button" class="imcms-button--negative imcms-button">Cancel</button>
+        <button type="button" class="imcms-button--positive imcms-button">ok</button>
     </div>
 
 </div>
