@@ -24,6 +24,10 @@
 
         },
         buildCalendar: function (y, m, d, calendar) {
+            if (!calendar || !calendar.length) {
+                return;
+            }
+
             var $thisCalendar = calendar,
                 year = y,
                 month = m,
