@@ -1,7 +1,7 @@
 (function (Imcms) {
     Imcms.Calendar = {
         init: function (datePicker) {
-            var curDateInput = datePicker.find(".imcms-current-data__input"),
+            var curDateInput = datePicker.find(".imcms-current-date__input"),
                 calendar = datePicker.find(".imcms-calendar"),
                 curDate = curDateInput.val().split("-"),
                 year = parseInt(curDate[0]),
@@ -16,8 +16,8 @@
                 date = d.getDate();
             }
 
-            if (!datePicker.hasClass("imcms-data-picker--active") && datePicker.find(".imcms-calendar").length !== 0) {
-                datePicker.addClass("imcms-data-picker--active");
+            if (!datePicker.hasClass("imcms-date-picker--active") && datePicker.find(".imcms-calendar").length !== 0) {
+                datePicker.addClass("imcms-date-picker--active");
                 Imcms.Calendar.buildCalendar(year, month, date, calendar);
             }
 
@@ -106,7 +106,7 @@
         },
         setSelectDate: function () {
             var $thisDay = $(this),
-                curDateInput = $thisDay.parents(".imcms-data-picker").find(".imcms-current-data__input"),
+                curDateInput = $thisDay.parents(".imcms-date-picker").find(".imcms-current-date__input"),
                 curDateInputVal = curDateInput.val().split('-'),
                 year = curDateInputVal[0],
                 month = curDateInputVal[1],
@@ -145,8 +145,8 @@
         chooseMonth: function () {
             var $btn = $(this),
                 calendar = $btn.parents(".imcms-calendar"),
-                curDate = $btn.parents(".imcms-data-picker")
-                    .find(".imcms-current-data__input")
+                curDate = $btn.parents(".imcms-date-picker")
+                    .find(".imcms-current-date__input")
                     .val()
                     .split("-"),
                 year = parseInt(curDate[0]),
@@ -158,15 +158,15 @@
                 if (parseInt(curDate[1]) > 1) {
                     curDate[1] = parseInt(curDate[1]) - 1;
                     curDate[1] = (curDate[1] < 10) ? "0" + curDate[1] : curDate[1];
-                    $btn.parents(".imcms-data-picker")
-                        .find(".imcms-current-data__input")
+                    $btn.parents(".imcms-date-picker")
+                        .find(".imcms-current-date__input")
                         .val(curDate.join("-"))
                 }
                 else if (parseInt(curDate[1]) === 1) {
                     curDate[1] = "12";
                     curDate[0] = year - 1;
-                    $btn.parents(".imcms-data-picker")
-                        .find(".imcms-current-data__input")
+                    $btn.parents(".imcms-date-picker")
+                        .find(".imcms-current-date__input")
                         .val(curDate.join("-"))
                 }
                 month = curDate[1];
@@ -177,15 +177,15 @@
                 if (parseInt(curDate[1]) < 12) {
                     curDate[1] = parseInt(curDate[1]) + 1;
                     curDate[1] = (curDate[1] < 10) ? "0" + curDate[1] : curDate[1];
-                    $btn.parents(".imcms-data-picker")
-                        .find(".imcms-current-data__input")
+                    $btn.parents(".imcms-date-picker")
+                        .find(".imcms-current-date__input")
                         .val(curDate.join("-"))
                 }
                 else if (parseInt(curDate[1]) === 12) {
                     curDate[1] = "01";
                     curDate[0] = year + 1;
-                    $btn.parents(".imcms-data-picker")
-                        .find(".imcms-current-data__input")
+                    $btn.parents(".imcms-date-picker")
+                        .find(".imcms-current-date__input")
                         .val(curDate.join("-"))
                 }
                 month = curDate[1];
