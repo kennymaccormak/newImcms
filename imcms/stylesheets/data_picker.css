@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-.imcms-current-data__input{
+.imcms-current-data__input {
     display: block;
     width: 100%;
     border: none;
@@ -33,19 +33,20 @@
     color: #2f4047;
 }
 
-.imcms-data-picker__current-year{
+.imcms-data-picker__current-year {
     text-align: right;
 }
 
 .imcms-data-picker__current-day,
-.imcms-data-picker__current-month{
+.imcms-data-picker__current-month {
     width: 16px;
 }
-.imcms-data-picker__current-day{
+
+.imcms-data-picker__current-day {
     text-align: left;
 }
 
-.imcms-data-picker--active{
+.imcms-data-picker--active {
     -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
@@ -71,6 +72,6 @@
     display: block;
 }
 
-.imcms-data-picker__error{
+.imcms-data-picker__error {
     display: none;
 }
