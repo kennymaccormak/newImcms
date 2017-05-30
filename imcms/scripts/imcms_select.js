@@ -10,13 +10,7 @@
                     .find(".imcms-drop-down-list__item")
             ;
 
-            if (select.hasClass("imcms-select__drop-down-list--active")) {
-                select.removeClass("imcms-select__drop-down-list--active")
-            }
-            else {
-                select.addClass("imcms-select__drop-down-list--active")
-            }
-
+            select.toggleClass("imcms-select__drop-down-list--active");
             dropDownItem.click(Imcms.Select.selectItem);
         },
         selectItem: function () {
