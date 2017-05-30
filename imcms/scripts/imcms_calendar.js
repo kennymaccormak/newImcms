@@ -10,31 +10,25 @@
             ;
 
             if (curDateInput.val() === "--") {
-                var d = new Date();
-                year = d.getFullYear();
-                month = d.getMonth() + 1;
-                date = d.getDate();
+                var currentDate = new Date();
+                year = currentDate.getFullYear();
+                month = currentDate.getMonth() + 1;
+                date = currentDate.getDate();
             }
 
             if (!datePicker.hasClass("imcms-date-picker--active") && datePicker.find(".imcms-calendar").length !== 0) {
                 datePicker.addClass("imcms-date-picker--active");
                 Imcms.Calendar.buildCalendar(year, month, date, calendar);
             }
-
-
         },
-        buildCalendar: function (y, m, d, calendar) {
-            if (!calendar || !calendar.length) {
+        buildCalendar: function (year, month, day, $calendar) {
+            if (!$calendar || !$calendar.length) {
                 return;
             }
 
-            var $thisCalendar = calendar,
-                year = y,
-                month = m,
-                date = d,
-                calendarTitle = $thisCalendar.find(".imcms-calendar__title"),
+            var calendarTitle = $calendar.find(".imcms-calendar__title"),
                 calendarTitleVal = calendarTitle.val().split(" "),
-                calendarWeek = $thisCalendar.find(".imcms-calendar__week"),
+                calendarWeek = $calendar.find(".imcms-calendar__week"),
                 firstDay = new Date(year, month - 1),
                 firstDate = parseInt(firstDay.getDate()),
                 firstDayNumber = parseInt(firstDay.getDay()),
@@ -63,50 +57,43 @@
             calendarTitleVal[1] = year;
             calendarTitle.html(calendarTitleVal.join(" "));
             count = 0;
-            var a = firstDayNumber - 1;
-            var b = 1;
+            var previousMonthDayNumber = firstDayNumber - 1;
+            var nextMonthDayNumber = 1;
             calendarWeek.each(function () {
                 $(this).find(".imcms-calendar__day").each(function () {
+                    var $calendarDay = $(this);
                     if (count < firstDayNumber) {
-                        $(this).text(prevMonthDay - a);
-                        $(this).removeClass("imcms-day--outer-prev");
-                        $(this).removeClass("imcms-day--outer-next");
-                        $(this).removeClass("imcms-day--today");
-                        $(this).addClass("imcms-day--outer-prev");
-                        $(this).attr("data-month", prevMonthD.getMonth() + 1);
-                        a--
+                        $calendarDay.removeClass("imcms-day--outer-next imcms-day--today")
+                            .addClass("imcms-day--outer-prev")
+                            .attr("data-month", prevMonthD.getMonth() + 1)
+                            .text(prevMonthDay - previousMonthDayNumber);
+                        previousMonthDayNumber--
                     }
                     else if ((count - firstDayNumber + 1) > lastDay) {
-                        $(this).text(b++);
-                        $(this).removeClass("imcms-day--outer-prev");
-                        $(this).removeClass("imcms-day--outer-next");
-                        $(this).removeClass("imcms-day--today");
-                        $(this).addClass("imcms-day--outer-next");
-                        $(this).attr("data-month", firstDay.getMonth() + 2);
+                        $calendarDay.removeClass("imcms-day--outer-prev imcms-day--today")
+                            .addClass("imcms-day--outer-next")
+                            .attr("data-month", firstDay.getMonth() + 2)
+                            .text(nextMonthDayNumber++);
                     }
                     else {
-                        $(this).text(firstDate);
-                        $(this).removeClass("imcms-day--outer-prev");
-                        $(this).removeClass("imcms-day--outer-next");
-                        $(this).removeClass("imcms-day--today");
-                        $(this).removeAttr("data-month");
+                        $calendarDay.removeClass("imcms-day--outer-prev imcms-day--outer-next imcms-day--today")
+                            .removeAttr("data-month")
+                            .text(firstDate);
                         firstDate++;
-                        if ((count - firstDayNumber + 1) === date) {
-                            $(this).addClass("imcms-day--today");
+                        if ((count - firstDayNumber + 1) === day) {
+                            $calendarDay.addClass("imcms-day--today");
                         }
                     }
-                    $(this).click(Imcms.Calendar.setSelectDate);
+                    $calendarDay.click(Imcms.Calendar.setSelectDate);
                     count++;
                 });
             });
 
-            if ((firstDayNumber + lastDay) <= 35) {
-                calendarWeek.last().css({"display": "none"});
-            }
-            else {
-                calendarWeek.last().css({"display": "block"});
-            }
+            var lastCalendarWeekCss = ((firstDayNumber + lastDay) <= 35)
+                ? {"display": "none"}
+                : {"display": "block"};
 
+            calendarWeek.last().css(lastCalendarWeekCss);
         },
         setSelectDate: function () {
             var $thisDay = $(this),
@@ -201,16 +188,3 @@
 
     return Imcms.Calendar;
 })(Imcms);
-
-
-
-
-
-
-
-
-
-
-
-
-
