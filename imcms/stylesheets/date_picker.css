@@ -1,4 +1,4 @@
-.imcms-data-picker {
+.imcms-date-picker {
     position: relative;
     padding: 10px;
     display: block;
@@ -12,13 +12,13 @@
     text-align: center;
 }
 
-.imcms-data-picker__current-data {
+.imcms-date-picker__current-date {
     position: relative;
     display: block;
     width: 100%;
 }
 
-.imcms-current-data__input{
+.imcms-current-date__input {
     display: block;
     width: 100%;
     border: none;
@@ -33,26 +33,27 @@
     color: #2f4047;
 }
 
-.imcms-data-picker__current-year{
+.imcms-date-picker__current-year {
     text-align: right;
 }
 
-.imcms-data-picker__current-day,
-.imcms-data-picker__current-month{
+.imcms-date-picker__current-day,
+.imcms-date-picker__current-month {
     width: 16px;
 }
-.imcms-data-picker__current-day{
+
+.imcms-date-picker__current-day {
     text-align: left;
 }
 
-.imcms-data-picker--active{
+.imcms-date-picker--active {
     -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
     border-bottom: none;
 }
 
-.imcms-data-picker--active .imcms-data-picker__current-data:after {
+.imcms-date-picker--active .imcms-date-picker__current-date:after {
     content: "";
     position: absolute;
     bottom: -7px;
@@ -63,14 +64,14 @@
     background-color: #d3d8de;
 }
 
-.imcms-data-picker .imcms-calendar {
+.imcms-date-picker .imcms-calendar {
     display: none;
 }
 
-.imcms-data-picker--active .imcms-calendar {
+.imcms-date-picker--active .imcms-calendar {
     display: block;
 }
 
-.imcms-data-picker__error{
+.imcms-date-picker__error {
     display: none;
 }

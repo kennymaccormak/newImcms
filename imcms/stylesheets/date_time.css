@@ -12,13 +12,13 @@
     overflow: hidden;
 }
 
-.imcms-date-time .imcms-data-picker__current-data {
+.imcms-date-time .imcms-date-picker__current-date {
     display: inline-block;
     float: left;
     width: 70%;
 }
 
-.imcms-date-time .imcms-data-picker__current-data input{
+.imcms-date-time .imcms-date-picker__current-date input {
     text-align: center;
 }
 

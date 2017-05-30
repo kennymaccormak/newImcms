@@ -1,8 +1,7 @@
 (function (Imcms) {
     Imcms.Select = {
         init: function () {
-            $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
-            $(".imcms-drop-down-list__select-item-value").click(Imcms.Select.toggleSelect);
+            $(".imcms-drop-down-list__select-item").click(Imcms.Select.toggleSelect);
         },
         toggleSelect: function () {
             var $this = $(this),
@@ -11,13 +10,7 @@
                     .find(".imcms-drop-down-list__item")
             ;
 
-            if (select.hasClass("imcms-select__drop-down-list--active")) {
-                select.removeClass("imcms-select__drop-down-list--active")
-            }
-            else {
-                select.addClass("imcms-select__drop-down-list--active")
-            }
-
+            select.toggleClass("imcms-select__drop-down-list--active");
             dropDownItem.click(Imcms.Select.selectItem);
         },
         selectItem: function () {
