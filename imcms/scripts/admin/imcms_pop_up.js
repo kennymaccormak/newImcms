@@ -1,4 +1,26 @@
 (function (Imcms) {
+    function initFormsAndTabs($popup, windowId) {
+        $popup.find(".imcms-form").each(function () {
+            var $form = $(this);
+
+            if ($form.attr("data-window-id") === windowId) {
+
+                $form.css({"display": "block"})
+                    .parents(".imcms-pop-up-modal")
+                    .find(".imcms-tab")
+                    .each(function () {
+                        var $tab = $(this),
+                            isCurrentWidowId = ($tab.attr("data-window-id") === windowId)
+                        ;
+                        $tab.toggleClass("imcms-tab--active", isCurrentWidowId);
+                    });
+            }
+            else {
+                $form.css({"display": "none"});
+            }
+        });
+    }
+
     Imcms.PopUp = {
         init: function (currentPopUp) {
             Imcms.PopUp.openPopUp(currentPopUp);
@@ -6,10 +28,10 @@
         },
         openPopUp: function (currentPopUp) {
             var $popUp = currentPopUp,
-                tab = $popUp.find(".imcms-tab")
+                $tab = $popUp.find(".imcms-tab")
             ;
 
-            var modal = $("<div>", {
+            var $modal = $("<div>", {
                 "class": "modal"
             }).css({
                 "position": "absolute",
@@ -21,60 +43,24 @@
                 "height": "100vh",
                 "background-color": "rgba(42, 42, 42, 0.8)"
             });
-            modal.appendTo("body");
+            $modal.appendTo("body");
 
-            $popUp.find(".imcms-form").each(function () {
-                if ($(this).attr("data-window-id") === "1") {
-                    $(this).css({"display": "block"});
+            initFormsAndTabs($popUp, "1");
 
-                    $(this).parents(".imcms-pop-up-modal").find(".imcms-tab").each(function () {
-                        if ($(this).attr("data-window-id") === "1") {
-                            $(this).addClass("imcms-tab--active");
-                        }
-                        else {
-                            $(this).removeClass("imcms-tab--active");
-                        }
-                    });
-                }
-                else {
-                    $(this).css({"display": "none"});
-
-                }
-            });
-
-            tab.each(function () {
+            $tab.each(function () {
                 $(this).click(Imcms.PopUp.showHideContent);
-            })
-
+            });
         },
         showHideContent: function () {
             var $tab = $(this),
                 windowId = $tab.attr("data-window-id"),
-                popUp = $tab.parents(".imcms-pop-up-modal")
+                $popUp = $tab.parents(".imcms-pop-up-modal")
             ;
 
-            popUp.find(".imcms-form").each(function () {
-                if ($(this).attr("data-window-id") === windowId) {
-                    $(this).css({"display": "block"});
-                    $(this).parents(".imcms-pop-up-modal").find(".imcms-tab").each(function () {
-                        if ($(this).attr("data-window-id") === windowId) {
-                            $(this).addClass("imcms-tab--active");
-                        }
-                        else {
-                            $(this).removeClass("imcms-tab--active");
-                        }
-                    });
-                }
-                else {
-                    $(this).css({"display": "none"});
-                }
-            });
-
+            initFormsAndTabs($popUp, windowId);
         },
         closePopUp: function () {
-            var $popUp = $(this).parents(".imcms-pop-up-modal");
-
-            $popUp.css({"display": "none"});
+            $(this).parents(".imcms-pop-up-modal").css({"display": "none"});
             $(".modal").css({"display": "none"});
         }
     };
