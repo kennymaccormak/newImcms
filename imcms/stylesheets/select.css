@@ -32,6 +32,7 @@
 }
 
 .imcms-drop-down-list__select-item {
+    cursor: pointer;
     position: relative;
     padding: 10px 20px 10px 15px;
     display: block;
@@ -48,7 +49,6 @@
 }
 
 .imcms-drop-down-list__select-item-value {
-    cursor: pointer;
     font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;

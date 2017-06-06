@@ -1,8 +1,7 @@
 (function (Imcms) {
     Imcms.Select = {
         init: function () {
-            $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
-            $(".imcms-drop-down-list__select-item-value").click(Imcms.Select.toggleSelect);
+            $(".imcms-drop-down-list__select-item").click(Imcms.Select.toggleSelect);
             $(".imcms-select__label").click(Imcms.Select.toggleSelect);
             $(document).click(Imcms.Select.closeSelect);
         },
@@ -41,7 +40,7 @@
                 e.stopPropagation();
             }
 
-            console.log($(e.target).parents(".imcms-select"));
+            console.log($(e.target));
         }
     };
 
