@@ -51,6 +51,7 @@
 }
 
 .imcms-number__button {
-    right: 10px;
+    right: 0;
+    padding: 0 10px;
     display: none;
 }

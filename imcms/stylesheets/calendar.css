@@ -25,14 +25,16 @@
 
 .imcms-calendar__prev-month {
     position: absolute;
-    top: 0;
+    top: -7px;
     left: 0;
+    padding: 10px;
 }
 
 .imcms-calendar__next-month {
     position: absolute;
-    top: 0;
+    top: -7px;
     right: 0;
+    padding: 10px;
 }
 
 .imcms-calendar__title {
