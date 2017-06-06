@@ -4,6 +4,7 @@
             $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
             $(".imcms-drop-down-list__select-item-value").click(Imcms.Select.toggleSelect);
             $(".imcms-select__label").click(Imcms.Select.toggleSelect);
+            $(document).click(Imcms.Select.closeSelect);
         },
         toggleSelect: function () {
             var $this = $(this),
@@ -33,6 +34,14 @@
             selectInput.val(content);
 
             return itemValue;
+        },
+        closeSelect: function (e) {
+            if (!$(e.target).parents(".imcms-select").length) {
+                $(".imcms-select__drop-down-list").removeClass("imcms-select__drop-down-list--active");
+                e.stopPropagation();
+            }
+
+            console.log($(e.target).parents(".imcms-select"));
         }
     };
 
