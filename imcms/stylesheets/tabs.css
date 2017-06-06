@@ -5,13 +5,13 @@
 }
 
 .imcms-tab {
-    position: relative;
-    padding: 27px 35px;
-    display: block;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     cursor: pointer;
     text-transform: uppercase;
+    display: block;
+    padding: 27px 35px;
+    position: relative;
 
 }
 
@@ -21,13 +21,13 @@
 
 .imcms-tab:hover:after {
     content: "";
+    background-color: #389ecf;
+    display: block;
     position: absolute;
     top: -1px;
     right: -1px;
-    display: block;
-    height: calc(100% + 2px);
     width: 3px;
-    background-color: #389ecf;
+    height: calc(100% + 2px);
 }
 
 .imcms-tab--active {
@@ -36,11 +36,11 @@
 
 .imcms-tab--active:after {
     content: "";
+    background-color: #389ecf;
+    display: block;
     position: absolute;
     top: -1px;
     right: -1px;
-    display: block;
-    height: calc(100% + 2px);
     width: 3px;
-    background-color: #389ecf;
+    height: calc(100% + 2px);
 }

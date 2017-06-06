@@ -1,6 +1,6 @@
 .imcms-field {
-    padding-top: 10px;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .imcms-field__select {
@@ -35,8 +35,8 @@
 }
 
 .imcms-field__item {
-    margin-right: 5px;
     display: block;
+    margin-right: 5px;
 }
 
 .imcms-field__item--float-l {

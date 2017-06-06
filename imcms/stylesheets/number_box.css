@@ -6,17 +6,17 @@
 }
 
 .imcms-number-box {
-    position: relative;
     display: block;
+    position: relative;
     max-width: 310px;
 }
 
 .imcms-number-box__input {
-    padding: 10px 15px;
-    display: block;
-    width: 100%;
     background-color: #f3f3fd;
     color: #587380;
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
 }
 
 .imcms-number-box__error-msg {
@@ -51,7 +51,7 @@
 }
 
 .imcms-number__button {
-    right: 0;
-    padding: 0 10px;
     display: none;
+    padding: 0 10px;
+    right: 0;
 }

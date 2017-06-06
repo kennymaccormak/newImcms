@@ -7,8 +7,8 @@
     clear: both;
 }
 .imcms-switches__switch{
-    margin-right: 10px;
     float: left;
+    margin-right: 10px;
 }
 .imcms-switches__switch:last-child {
     margin-right: 0;

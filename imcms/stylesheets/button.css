@@ -1,6 +1,4 @@
 .imcms-button {
-    padding: 15px 28px;
-    display: block;
     border: 1px solid transparent;
     -webkit-border-radius: 23px;
     -moz-border-radius: 23px;
@@ -9,12 +7,14 @@
     -moz-box-shadow: none;
     box-shadow: none;
     cursor: pointer;
-    outline: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 13px;
     text-transform: uppercase;
+    display: block;
+    outline: none;
+    padding: 15px 28px;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
@@ -31,8 +31,8 @@
 .imcms-button--negative {
     background-color: #fbfbfe;
     border-color: #d3d8de;
-    opacity: 0.8;
     color: #587380;
+    opacity: 0.8;
 }
 
 .imcms-button--negative:hover {
@@ -52,10 +52,10 @@
 }
 
 .imcms-button--neutral {
-    padding: 0;
     background-color: transparent;
     border-color: transparent;
     color: #0b94d8;
+    padding: 0;
 }
 
 .imcms-button--neutral:hover {
@@ -76,50 +76,50 @@
 
 /*****************************************/
 .imcms-button--drop-down {
-    position: absolute;
-    padding: 0;
-    display: block;
-    height: 100%;
-    width: 25px;
     background: url("../img/icon_arrow_down.png") no-repeat center;
+    display: block;
+    padding: 0;
+    position: absolute;
+    width: 25px;
+    height: 100%;
 }
 
 .imcms-button--increment {
-    position: absolute;
-    padding: 0;
-    height: 20px;
-    width: 6px;
     background: url("../img/icon_arrow_up.png") no-repeat center;
+    padding: 0;
+    position: absolute;
+    width: 6px;
+    height: 20px;
 }
 
 .imcms-button--decrement {
-    position: absolute;
-    padding: 0;
-    height: 20px;
-    width: 6px;
     background: url("../img/icon_arrow_down.png") no-repeat center;
+    padding: 0;
+    position: absolute;
+    width: 6px;
+    height: 20px;
 }
 
 .imcms-button--close {
-    position: relative;
-    padding: 0;
-    margin: 0 0 0 11px;
-    float: right;
-    display: block;
-    height: 15px;
-    width: 15px;
     background-color: transparent;
+    display: block;
+    float: right;
+    margin: 0 0 0 11px;
+    padding: 0;
+    position: relative;
+    width: 15px;
+    height: 15px;
 }
 
 .imcms-button--close:before {
     content: "";
+    background-color: #2f4047;
+    display: block;
     position: absolute;
     top: 50%;
     left: 0;
-    display: block;
     width: 13px;
     height: 1px;
-    background-color: #2f4047;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -129,13 +129,13 @@
 
 .imcms-button--close:after {
     content: "";
+    background-color: #2f4047;
+    display: block;
     position: absolute;
     top: 50%;
     left: 0;
-    display: block;
     width: 13px;
     height: 1px;
-    background-color: #2f4047;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -149,11 +149,11 @@
 }
 
 .imcms-button--prev {
-    padding: 0;
-    display: block;
-    height: 4px;
-    width: 6px;
     background: url("../img/icon_arrow_down.png") no-repeat center;
+    display: block;
+    padding: 0;
+    width: 6px;
+    height: 4px;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -162,11 +162,11 @@
 }
 
 .imcms-button--next {
-    padding: 0;
-    display: block;
-    height: 4px;
-    width: 6px;
     background: url("../img/icon_arrow_down.png") no-repeat center;
+    display: block;
+    padding: 0;
+    width: 6px;
+    height: 4px;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);

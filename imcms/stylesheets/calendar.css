@@ -1,104 +1,104 @@
 .imcms-calendar {
-    position: absolute;
-    top: 42px;
-    left: -1px;
-    z-index: 50;
-    padding: 15px 10px 10px;
-    display: block;
-    width: calc(100% + 2px);
-    max-width: 166px;
     background-color: #fff;
     border: 1px solid #d3d8de;
     border-top: none;
     -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 0 0 4px 4px;
+    display: block;
+    padding: 15px 10px 10px;
+    position: absolute;
+    top: 42px;
+    left: -1px;
+    width: calc(100% + 2px);
+    max-width: 166px;
+    z-index: 50;
 }
 
 .imcms-calendar__header {
-    position: relative;
-    display: block;
-    height: 20px;
-    width: 100%;
     text-align: center;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 20px;
 }
 
 .imcms-calendar__prev-month {
+    padding: 10px;
     position: absolute;
     top: -7px;
     left: 0;
-    padding: 10px;
 }
 
 .imcms-calendar__next-month {
+    padding: 10px;
     position: absolute;
     top: -7px;
     right: 0;
-    padding: 10px;
 }
 
 .imcms-calendar__title {
+    color: #000;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     font-size: 10px;
     line-height: 10px;
     text-transform: uppercase;
-    color: #000;
 }
 
 .imcms-calendar__body {
-    position: relative;
     display: block;
-    max-height: 118px;
+    position: relative;
     width: 100%;
+    max-height: 118px;
 }
 
 .imcms-calendar__day-names {
-    position: relative;
     display: block;
-    height: 8px;
+    position: relative;
     width: 100%;
+    height: 8px;
 }
 
 .imcms-calendar__day-name {
-    float: left;
-    width: 14%;
-    height: 8px;
+    color: #0b94d8;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     font-size: 8px;
     line-height: 8px;
     text-align: center;
     text-transform: uppercase;
-    color: #0b94d8;
+    float: left;
+    width: 14%;
+    height: 8px;
 }
 
 .imcms-calendar__weeks {
-    position: relative;
     display: block;
-    height: 100%;
+    position: relative;
     width: 100%;
+    height: 100%;
 }
 
 .imcms-calendar__week {
-    position: relative;
-    margin-top: 8px;
     display: block;
-    height: 11px;
+    margin-top: 8px;
+    position: relative;
     width: 100%;
+    height: 11px;
 }
 
 .imcms-calendar__day {
-    float: left;
-    width: 14%;
-    height: 11px;
+    color: #2f4047;
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     font-size: 11px;
     line-height: 11px;
     text-align: center;
-    color: #2f4047;
+    float: left;
+    width: 14%;
+    height: 11px;
 }
 
 .imcms-day--outer-prev,

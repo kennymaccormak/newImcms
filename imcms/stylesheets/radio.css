@@ -6,37 +6,37 @@
 }
 
 .imcms-radio__label {
-    position: relative;
     padding-left: 20px;
+    position: relative;
 }
 
 .imcms-radio__label:before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    height: 15px;
-    width: 15px;
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
 }
 
 .imcms-radio__label:after {
     content: "";
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    display: none;
-    height: 5px;
-    width: 5px;
     background-color: #fff;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 5px;
+    width: 5px;
 }
 
 .imcms-radio__input:checked + .imcms-radio__label:before {

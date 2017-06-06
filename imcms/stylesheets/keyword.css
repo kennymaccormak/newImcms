@@ -2,13 +2,13 @@
 }
 
 .imcms-keyword__label {
-    margin-bottom: 12px;
     display: inline-block;
+    margin-bottom: 12px;
 }
 
 .imcms-keyword .imcms-text-box__input {
-    margin-right: 23px;
     display: inline-block;
+    margin-right: 23px;
 }
 
 .imcms-keyword__button {
@@ -16,14 +16,12 @@
 }
 
 .imcms-keyword__filters {
-    margin-top: 11px;
     display: none;
+    margin-top: 11px;
 }
 
 .imcms-keyword__filter {
-    margin-right: 5px;
-    padding: 6px 14px;
-    display: inline-block;
+    color: #2f4047;
     background-color: #d0e9f9;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -32,7 +30,9 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 15px;
-    color: #2f4047;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 6px 14px;
 }
 
 .imcms-keyword__filter:last-child {

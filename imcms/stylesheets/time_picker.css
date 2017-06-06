@@ -1,16 +1,16 @@
 .imcms-time-picker {
-    position: relative;
-    padding: 10px;
-    display: block;
-    max-width: 70px;
-    /*min-width: 58px;*/
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    overflow: visible;
     text-align: center;
+    display: block;
+    overflow: visible;
+    padding: 10px;
+    position: relative;
+    max-width: 70px;
+    /*min-width: 58px;*/
 }
 
 .imcms-time-picker__current-time {
@@ -18,18 +18,18 @@
 }
 
 .imcms-current-time__input {
-    display: block;
-    width: 100%;
     border: none;
+    color: #2f4047;
     cursor: pointer;
-    outline: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 15px;
     text-align: center;
     text-transform: uppercase;
-    color: #2f4047;
+    outline: none;
+    display: block;
+    width: 100%;
 }
 
 .imcms-time-picker--active{
@@ -42,13 +42,13 @@
 
 .imcms-time-picker--active .imcms-time-picker__current-time:after {
     content: "";
+    background-color: #d3d8de;
+    display: block;
     position: absolute;
     bottom: -10px;
     left: 5%;
-    display: block;
-    height: 1px;
     width: 90%;
-    background-color: #d3d8de;
+    height: 1px;
 }
 
 .imcms-time-picker--active .imcms-time-picker__time {
@@ -56,19 +56,19 @@
 }
 
 .imcms-time-picker__time {
-    position: absolute;
-    top: 31px;
-    left: -1px;
-    z-index: 50;
-    margin-top: 10px;
-    display: none;
-    width: calc(100% + 2px);
     background-color: #fff;
     border: 1px solid #d3d8de;
     border-top: none;
     -webkit-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
+    display: none;
+    margin-top: 10px;
+    position: absolute;
+    top: 31px;
+    left: -1px;
+    width: calc(100% + 2px);
+    z-index: 50;
 }
 
 .imcms-time-picker__hours {

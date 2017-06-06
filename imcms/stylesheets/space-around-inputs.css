@@ -5,16 +5,12 @@
 
 .imcms-space-around__input-box {
     display: block;
-    max-width: 322px;
     overflow: hidden;
+    max-width: 322px;
 }
 
 .imcms-space-around__input {
-    margin: 0;
-    padding: 10px 15px;
-    float: left;
-    display: block;
-    width: 25%;
+    background-color: #fff;
     border-top: 1px solid #d3d8de;
     border-bottom: 1px solid #d3d8de;
     border-right: none;
@@ -22,9 +18,13 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    outline: none;
-    background-color: #fff;
     color: #2f4047;
+    outline: none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 10px 15px;
+    width: 25%;
 }
 
 .imcms-space-around__input:focus {

@@ -10,14 +10,14 @@
 }
 
 .imcms-drop-down-list {
-    position: relative;
-    display: inline-block;
-    height: 100%;
     background: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    height: 100%;
 }
 
 .imcms-select__drop-down-list--active {
@@ -27,63 +27,63 @@
 }
 
 .imcms-drop-down-list__button {
-    top: 0;
     right: 0;
+    top: 0;
 }
 
 .imcms-drop-down-list__select-item {
     cursor: pointer;
-    position: relative;
-    padding: 10px 20px 10px 15px;
     display: block;
+    padding: 10px 20px 10px 15px;
+    position: relative;
 }
 
 .imcms-select__drop-down-list--active .imcms-drop-down-list__select-item:after {
     content: "";
+    background-color: #b8bec2;
+    display: block;
     position: absolute;
     bottom: 0;
     left: 1%;
-    display: block;
     height: 1px;
-    background-color: #b8bec2;
 }
 
 .imcms-drop-down-list__select-item-value {
+    color: #587380;
     font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     line-height: 15px;
-    color: #587380;
 }
 
 .imcms-drop-down-list__items {
-    position: absolute;
-    left: -1px;
-    z-index: 100;
-    display: none;
-    width: calc(100% + 2px);
     background: #fff;
     border: 1px solid #0b94d8;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    display: none;
+    position: absolute;
+    left: -1px;
+    z-index: 100;
+    width: calc(100% + 2px);
 }
 
 .imcms-select__drop-down-list--active .imcms-drop-down-list__items {
-    display: block;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top-color: transparent;
+    display: block;
 }
 
 .imcms-drop-down-list__item {
-    padding: 5px 15px 5px 15px;
+    color: #587380;
     cursor: pointer;
     font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     line-height: 15px;
-    color: #587380;
+    padding: 5px 15px 5px 15px;
 }
 
 .imcms-drop-down-list__item:hover {

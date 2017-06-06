@@ -6,29 +6,29 @@
 }
 
 .imcms-switch__label {
-    position: relative;
-    display: block;
-    height: 15px;
-    width: 30px;
     background-color: #fff;
     border: 1px solid #d3d8de;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    display: block;
+    position: relative;
+    height: 15px;
+    width: 30px;
 }
 
 .imcms-switch__label:before {
     content: "";
-    position: absolute;
-    left: 1px;
-    top: 0;
-    display: block;
-    height: 15px;
-    width: 15px;
     background-color: #b8bec2;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 0;
+    width: 15px;
+    height: 15px;
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     -o-transition: all .2s;
@@ -36,8 +36,8 @@
 }
 
 .imcms-switch__input:checked + .imcms-switch__label:before {
-    left: 14px;
     background-color: #42b070;
+    left: 14px;
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     -o-transition: all .2s;

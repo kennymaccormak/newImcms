@@ -5,8 +5,8 @@
     clear: both;
 }
 .imcms-flags__flag{
-    margin-right: 10px;
     float: left;
+    margin-right: 10px;
 }
 .imcms-flags__flag:last-child {
     margin-right: 0;
