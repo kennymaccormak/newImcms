@@ -3,10 +3,11 @@
         init: function () {
             $(".imcms-drop-down-list__button").click(Imcms.Select.toggleSelect);
             $(".imcms-drop-down-list__select-item-value").click(Imcms.Select.toggleSelect);
+            $(".imcms-select__label").click(Imcms.Select.toggleSelect);
         },
         toggleSelect: function () {
             var $this = $(this),
-                select = $this.closest(".imcms-drop-down-list"),
+                select = $this.closest(".imcms-select").find(".imcms-drop-down-list"),
                 dropDownItem = select.children(".imcms-drop-down-list__items")
                     .find(".imcms-drop-down-list__item")
             ;
@@ -24,10 +25,12 @@
             var $this = $(this),
                 content = $this.text(),
                 select = $this.closest(".imcms-select__drop-down-list"),
-                itemValue = select.find(".imcms-drop-down-list__select-item-value").html(content)
+                itemValue = select.find(".imcms-drop-down-list__select-item-value").html(content),
+                selectInput = select.find("input")
             ;
 
             select.removeClass("imcms-select__drop-down-list--active");
+            selectInput.val(content);
 
             return itemValue;
         }
