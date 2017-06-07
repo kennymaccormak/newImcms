@@ -35,11 +35,17 @@
 @import url("grid.css");
 @import url("admin/admin_panel.css");
 @import url("admin/menu.css");
+@import url("choose_img/content_manager.css");
+@import url("choose_img/folders.css");
+@import url("choose_img/folder.css");
+@import url("sides.css");
 
-body {
+
+
+/*body {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 a {
     text-decoration: none;
 }
