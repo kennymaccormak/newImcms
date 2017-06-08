@@ -1,32 +1,32 @@
-.imcms-content-manager{
+.imcms-content-manager {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.imcms-content-manager:after{
+.imcms-content-manager:after {
     content: "";
     display: block;
     clear: both;
 }
 
-.imcms-content-manager__head{
+.imcms-content-manager__head {
     position: relative;
     z-index: 10;
 }
 
-.imcms-content-manager__left-side{
+.imcms-content-manager__left-side {
     background-color: #545c6f;
     margin-top: -42px;
     padding-top: 42px;
 }
 
-.imcms-content-manager__right-side{
+.imcms-content-manager__right-side {
     position: relative;
     z-index: 10;
 }
 
-.imcms-content-manager__footer{
+.imcms-content-manager__footer {
     margin-top: -42px;
     padding-top: 42px;
 }

@@ -1,8 +1,8 @@
-.imcms-head{
+.imcms-head {
     height: 42px;
 }
 
-.imcms-left-side{
+.imcms-left-side {
     -webkit-box-shadow: 0 0 29px 13px rgba(0, 0, 0, 0.07);
     -moz-box-shadow: 0 0 29px 13px rgba(0, 0, 0, 0.07);
     box-shadow: 0 0 29px 13px rgba(0, 0, 0, 0.07);
@@ -12,7 +12,7 @@
     width: 25%;
 }
 
-.imcms-right-side{
+.imcms-right-side {
     display: block;
     float: left;
     overflow-y: auto;
@@ -21,7 +21,7 @@
     height: 80%;
 }
 
-.imcms-footer{
+.imcms-footer {
     display: block;
     float: left;
     padding: 27px;
