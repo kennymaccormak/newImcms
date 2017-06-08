@@ -1,0 +1,48 @@
+.imcms-folder{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.imcms-folder--open,
+.imcms-folder--close{
+    padding-left: 28px;
+    padding-right: 35px;
+}
+
+.imcms-folder--open:before{
+    content: "";
+    background: url("../../img/content_manager/icon_folder_open.png") no-repeat center;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.imcms-folder--close:before{
+    content: "";
+    background: url("../../img/content_manager/icon_folder_close.png") no-repeat center;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.imcms-folder__name{
+    color: #fff;
+    cursor: pointer;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: left;
+    float: left;
+}
+
+
+

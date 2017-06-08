@@ -1,0 +1,17 @@
+.imcms-folders{
+    display: block;
+    margin-top: 66px;
+    padding-left: 42px;
+    position: relative;
+    width: 100%;
+}
+
+.imcms-folders:before{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.imcms-folders:first-of-type{
+    margin-top: 0;
+}

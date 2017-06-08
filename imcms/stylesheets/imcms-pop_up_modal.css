@@ -12,6 +12,10 @@
     width: 950px;
 }
 
+.imcms-pop-up-modal__head {
+    background-color: #389ecf;
+}
+
 .imcms-pop-up-modal__left-side {
     background-color: #fff;
     max-width: 250px;

@@ -1,5 +1,7 @@
 .imcms-head {
-    height: 42px;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .imcms-left-side {
