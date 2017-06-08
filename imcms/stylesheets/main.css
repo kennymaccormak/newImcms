@@ -1,51 +1,11 @@
-@import url("reset.css");
-@import url("access_tabs_page.css");
-@import url("button.css");
-@import url("buttons.css");
-@import url("calendar.css");
-@import url("checkboxes.css");
-@import url("checkbox.css");
-@import url("choose_file.css");
-@import url("data_picker.css");
-@import url("time_picker.css");
-@import url("date_time.css");
-@import url("input.css");
-@import url("field.css");
-@import url("flag.css");
-@import url("flags.css");
-@import url("fonts.css");
-@import url("form.css");
-@import url("messages.css");
-@import url("head.css");
-@import url("keyword.css");
-@import url("label.css");
-@import url("number_box.css");
-@import url("placeholder.css");
-@import url("pop_up_modal.css");
-@import url("radio.css");
-@import url("radios.css");
-@import url("scrollbar.css");
-@import url("select.css");
-@import url("space-around-inputs.css");
-@import url("switch.css");
-@import url("switches.css");
-@import url("tabs.css");
-@import url("text_area.css");
-@import url("text_box.css");
-@import url("grid.css");
-@import url("admin/admin_panel.css");
-@import url("admin/menu.css");
-@import url("choose_img/content_manager.css");
-@import url("choose_img/folders.css");
-@import url("choose_img/folder.css");
-@import url("sides.css");
-
-
-
-/*body {
-    padding-left: 15px;
-    padding-right: 15px;
-}*/
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
 a {
     text-decoration: none;
 }
