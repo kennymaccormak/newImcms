@@ -26,6 +26,7 @@
 .imcms-content-manager__left-side {
     background-color: #545c6f;
     margin-top: -42px;
+    overflow-y: auto;
     padding-top: 42px;
     position: relative;
     z-index: 15;

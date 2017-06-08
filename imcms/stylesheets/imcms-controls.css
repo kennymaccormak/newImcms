@@ -1,6 +1,13 @@
 .imcms-folder__controls{
-    display: block;
+    display: none;
     float: right;
     padding: 26px 0;
     position: relative;
 }
+
+.imcms-controls__control{
+    display: block;
+    float: right;
+    margin-left: 18px;
+}
+

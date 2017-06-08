@@ -1,7 +1,5 @@
 .imcms-folders{
     display: block;
-    margin-top: 66px;
-    padding-left: 42px;
     position: relative;
     width: 100%;
 }
@@ -12,6 +10,34 @@
     clear: both;
 }
 
-.imcms-folders:first-of-type{
-    margin-top: 0;
+.imcms-folders[data-folders-lvl="2"] .imcms-folder{
+    padding-left: 98px;
+}
+
+.imcms-folders[data-folders-lvl="2"] .imcms-folder:before{
+    left: 70px;
+}
+
+.imcms-folders[data-folders-lvl="3"] .imcms-folder{
+    padding-left: 126px;
+}
+
+.imcms-folders[data-folders-lvl="3"] .imcms-folder:before{
+    left: 98px;
+}
+
+.imcms-folders[data-folders-lvl="4"] .imcms-folder{
+    padding-left: 154px;
+}
+
+.imcms-folders[data-folders-lvl="4"] .imcms-folder:before{
+    left: 126px;
+}
+
+.imcms-folders[data-folders-lvl="5"] .imcms-folder{
+    padding-left: 182px;
+}
+
+.imcms-folders[data-folders-lvl="5"] .imcms-folder:before{
+    left: 154px;
 }
