@@ -6,4 +6,5 @@
     Imcms.TimePicker.init();
     Imcms.Keyword.init();
     Imcms.AdminPanel.init();
+    Imcms.Folders.init();
 })(Imcms);

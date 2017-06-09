@@ -39,8 +39,6 @@
                 $(".imcms-select__drop-down-list").removeClass("imcms-select__drop-down-list--active");
                 e.stopPropagation();
             }
-
-            console.log($(e.target));
         }
     };
 
