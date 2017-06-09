@@ -1,4 +1,4 @@
-.imcms-folder{
+.imcms-folder {
     cursor: pointer;
     display: block;
     overflow: hidden;;
@@ -8,19 +8,19 @@
     width: 100%;
 }
 
-.imcms-folder__btn{
+.imcms-folder__btn {
     padding-left: 70px;
 }
 
-.imcms-folder--active{
+.imcms-folder--active {
     background-color: #f3f3fc;
 }
 
-.imcms-folder--active .imcms-folder__name{
+.imcms-folder--active .imcms-folder__name {
     color: #2f4047;
 }
 
-.imcms-folder__btn{
+.imcms-folder__btn {
     cursor: pointer;
     display: block;
     padding: 10px;
@@ -31,23 +31,23 @@
     height: 10px;
 }
 
-.imcms-folder-btn--open{
+.imcms-folder-btn--open {
     background: url("../../img/content_manager/icon_folder_open.png") no-repeat center;
 }
 
-.imcms-folder-btn--close{
+.imcms-folder-btn--close {
     background: url("../../img/content_manager/icon_folder_close.png") no-repeat center;
 }
 
-.imcms-folder--active .imcms-folder-btn--open{
+.imcms-folder--active .imcms-folder-btn--open {
     background-image: url("../../img/content_manager/icon_folder_open_dark.png");
 }
 
-.imcms-folder--active .imcms-folder-btn--close{
+.imcms-folder--active .imcms-folder-btn--close {
     background-image: url("../../img/content_manager/icon_folder_close_dark.png");
 }
 
-.imcms-folder__name{
+.imcms-folder__name {
     color: #fff;
     cursor: pointer;
     line-height: 70px;
@@ -56,23 +56,22 @@
     float: left;
 }
 
-
-.imcms-folder:hover{
+.imcms-folder:hover {
     background: #4b5366;
 }
 
-.imcms-folder:hover .imcms-folder__controls{
+.imcms-folder:hover .imcms-folder__controls {
     display: block;
 }
 
-.imcms-folder--active:hover .imcms-folder-btn--open{
+.imcms-folder--active:hover .imcms-folder-btn--open {
     background-image: url("../../img/content_manager/icon_folder_open.png");
 }
 
-.imcms-folder--active:hover .imcms-folder-btn--close{
+.imcms-folder--active:hover .imcms-folder-btn--close {
     background-image: url("../../img/content_manager/icon_folder_close.png");
 }
 
-.imcms-folder--active:hover .imcms-folder__name{
+.imcms-folder--active:hover .imcms-folder__name {
     color: #fff;
 }

@@ -19,13 +19,13 @@
     z-index: 20;
 }
 
-.imcms-content-manager__head button{
+.imcms-content-manager__head button {
     position: absolute;
     top: 13px;
     right: 13px;
 }
 
-.imcms-content-manager__head .imcms-head__title{
+.imcms-content-manager__head .imcms-head__title {
     color: #0b94d8;
 }
 
@@ -38,7 +38,7 @@
     z-index: 15;
 }
 
-.imcms-left-side__folders{
+.imcms-left-side__folders {
 
 }
 
@@ -56,7 +56,7 @@
     position: relative;
 }
 
-.imcms-content-manager__footer button{
+.imcms-content-manager__footer button {
     position: absolute;
     top: 48%;
     right: 27px;
