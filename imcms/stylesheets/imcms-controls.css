@@ -1,3 +1,15 @@
+.imcms-main-folders-controls{
+    border-bottom: 2px solid #d3d8de;
+    display: block;
+    overflow: hidden;
+    padding: 26px 25px;
+    width: 100%;
+}
+
+.imcms-main-folders-controls__control{
+    float: right;
+}
+
 .imcms-folder__controls {
     display: none;
     float: right;
