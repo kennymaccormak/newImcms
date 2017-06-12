@@ -71,27 +71,49 @@
         removeFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
-                subFolder = currentFolder.next()
+                subFolder = currentFolder.next(),
+                parentFolder = currentFolder.closest(".imcms-folders")
             ;
 
-            if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
+            if (subFolder.hasClass("imcms-folders")) {
                 subFolder.remove();
             }
             currentFolder.remove();
+
+            if (parentFolder.children().length === 0) {
+                if (parentFolder.prev().hasClass("imcms-folder")) {
+                    parentFolder.prev().find(".imcms-folder__btn").remove();
+                }
+                parentFolder.remove();
+            }
+            console.log(parentFolder);
         },
         renameFolder: function () {
         },
         createFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
-                subFolder = currentFolder.next()
+                subFolder = currentFolder.next(),
+                newFolder = null,
+                folderBtn = null,
+                newSubFolder = null
             ;
 
-            //create folder element
+            if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
+                newFolder = Imcms.Folders.createNewFolder();
+                newFolder.prependTo(subFolder);
+            }
+            else {
+                newSubFolder = Imcms.Folders.createNewSubFolder(currentFolder);
+                currentFolder.after(newSubFolder);
+                newFolder = Imcms.Folders.createNewFolder();
+                newFolder.prependTo(newSubFolder);
+                folderBtn = Imcms.Folders.createFolderShowHideBtn();
+                folderBtn.prependTo(currentFolder);
+            }
+        },
+        createNewFolder: function () {
             var newFolder = $("<div>").addClass("imcms-folders__folder imcms-folder"),
-                folderBtn = $("<div>")
-                    .addClass("imcms-folder__btn imcms-folder-btn--open")
-                    .click(Imcms.Folders.showHide),
                 folderName = $("<div>")
                     .addClass("imcms-folder__name imcms-title")
                     .text("New Folder")
@@ -111,7 +133,6 @@
                     .click(Imcms.Folders.createFolder)
             ;
 
-            // compile folder
             createControl.prependTo(folderControls);
             renameControl.prependTo(folderControls);
             removeControl.prependTo(folderControls);
@@ -119,20 +140,18 @@
             folderName.appendTo(newFolder);
             folderControls.appendTo(newFolder);
 
-            //create subfolder
-            var subFolderLvl = parseInt(currentFolder.closest(".imcms-folders").attr("data-folders-lvl")),
-                newSubFolder = $("<div>").addClass("imcms-left-side__folders imcms-folders")
-                    .attr("data-folders-lvl", subFolderLvl + 1)
-            ;
+            return newFolder;
+        },
+        createNewSubFolder: function (currentFolder) {
+            var subFolderLvl = parseInt(currentFolder.closest(".imcms-folders").attr("data-folders-lvl"));
 
-            if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
-                newFolder.prependTo(subFolder);
-            }
-            else{
-                currentFolder.after(newSubFolder);
-                newFolder.prependTo(newSubFolder);
-                folderBtn.prependTo(currentFolder);
-            }
+            return $("<div>").addClass("imcms-left-side__folders imcms-folders")
+                .attr("data-folders-lvl", subFolderLvl + 1);
+        },
+        createFolderShowHideBtn: function () {
+            return $("<div>")
+                .addClass("imcms-folder__btn imcms-folder-btn--open")
+                .click(Imcms.Folders.showHide);
         }
 
     };
