@@ -5,6 +5,7 @@
             $(".imcms-folder__btn").click(Imcms.Folders.showHide);
             $(".imcms-content-manager .imcms-button--save").click(Imcms.Folders.saveAndCloseWindow);
             $(".imcms-content-manager .imcms-button--close").click(Imcms.Folders.closeWindow);
+            $(".imcms-folder__controls .imcms-control").click(Imcms.Folders.folderControls);
 
             $(function () {
                 var allFoldersSection = $(".imcms-content-manager__left-side"),
@@ -54,10 +55,47 @@
         },
         saveAndCloseWindow: function () {
             $(this).parents(".imcms-content-manager").hide();
+            //todo: save logic
         },
         closeWindow: function () {
             $(this).parents(".imcms-content-manager").hide();
+        },
+        folderControls: function () {
+            var $ctrl = $(this);
+            if ($ctrl.hasClass("imcms-control--move")){
+                Imcms.Folders.moveFolder($ctrl);
+            }
+            else if($ctrl.hasClass("imcms-control--remove")){
+                Imcms.Folders.removeFolder($ctrl);
+            }
+            else if($ctrl.hasClass("imcms-control--rename")){
+                Imcms.Folders.renameFolder($ctrl);
+            }
+            else if($ctrl.hasClass("imcms-control--create")){
+                Imcms.Folders.createFolder($ctrl);
+            }
+        },
+        moveFolder: function () {
+            console.log("moveFolder")
+        },
+        removeFolder: function ($ctrl) {
+            var $removeCtrl = $ctrl,
+                currentFolder = $removeCtrl.closest(".imcms-folder"),
+                subFolder = currentFolder.next()
+            ;
+
+            if(subFolder.length !== 0){
+                subFolder.remove();
+            }
+            currentFolder.remove();
+        },
+        renameFolder: function () {
+            console.log("renameFolder")
+        },
+        createFolder: function () {
+            console.log("createFolder")
         }
+
     };
 
     return Imcms.Folders;
