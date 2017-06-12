@@ -5,7 +5,11 @@
             $(".imcms-folder__btn").click(Imcms.Folders.showHide);
             $(".imcms-content-manager .imcms-button--save").click(Imcms.Folders.saveAndCloseWindow);
             $(".imcms-content-manager .imcms-button--close").click(Imcms.Folders.closeWindow);
-            $(".imcms-folder__controls .imcms-control").click(Imcms.Folders.findFolderAndDetectControls);
+            $(".imcms-folder__controls .imcms-control--move").click(Imcms.Folders.moveFolder);
+            $(".imcms-folder__controls .imcms-control--remove").click(Imcms.Folders.removeFolder);
+            $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.renameFolder);
+            $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.createFolder);
+            //$(".imcms-main-folders-controls .imcms-control--create").click(Imcms.Folders.createFolder);
 
             $(function () {
                 var allFoldersSection = $(".imcms-content-manager__left-side"),
@@ -62,29 +66,12 @@
         closeWindow: function () {
             $(this).parents(".imcms-content-manager").hide();
         },
-        findFolderAndDetectControls: function () {
+        moveFolder: function () {
+        },
+        removeFolder: function () {
             var $ctrl = $(this),
-                currentFolder = $ctrl.closest(".imcms-folder")
-            ;
-
-            if ($ctrl.hasClass("imcms-control--move")) {
-                Imcms.Folders.moveFolder(currentFolder);
-            }
-            else if ($ctrl.hasClass("imcms-control--remove")) {
-                Imcms.Folders.removeFolder(currentFolder);
-            }
-            else if ($ctrl.hasClass("imcms-control--rename")) {
-                Imcms.Folders.renameFolder(currentFolder);
-            }
-            else if ($ctrl.hasClass("imcms-control--create")) {
-                Imcms.Folders.createFolder(currentFolder);
-            }
-        },
-        moveFolder: function (currentFolder) {
-            console.log("moveFolder")
-        },
-        removeFolder: function (currentFolder) {
-            var subFolder = currentFolder.next()
+                currentFolder = $ctrl.closest(".imcms-folder"),
+                subFolder = currentFolder.next()
             ;
 
             if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
@@ -92,30 +79,36 @@
             }
             currentFolder.remove();
         },
-        renameFolder: function (currentFolder) {
-            console.log("renameFolder")
+        renameFolder: function () {
         },
-        createFolder: function (currentFolder) {
-            var subFolder = currentFolder.next()
+        createFolder: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-folder"),
+                subFolder = currentFolder.next()
             ;
 
             //create folder element
             var newFolder = $("<div>").addClass("imcms-folders__folder imcms-folder"),
-
-                folderName = $("<div>").addClass("imcms-folder__name imcms-title")
+                folderBtn = $("<div>")
+                    .addClass("imcms-folder__btn imcms-folder-btn--open")
+                    .click(Imcms.Folders.showHide),
+                folderName = $("<div>")
+                    .addClass("imcms-folder__name imcms-title")
                     .text("New Folder")
                     .click(Imcms.Folders.active),
-
                 folderControls = $("<div>").addClass("imcms-folder__controls"),
-
-                moveControl = $("<div>").addClass("imcms-controls__control imcms-control imcms-control--move")
-                    .click(Imcms.Folders.findFolderAndDetectControls),
-                removeControl = $("<div>").addClass("imcms-controls__control imcms-control imcms-control--remove")
-                    .click(Imcms.Folders.findFolderAndDetectControls),
-                renameControl = $("<div>").addClass("imcms-controls__control imcms-control imcms-control--rename")
-                    .click(Imcms.Folders.findFolderAndDetectControls),
-                createControl = $("<div>").addClass("imcms-controls__control imcms-control imcms-control--create")
-                    .click(Imcms.Folders.findFolderAndDetectControls)
+                moveControl = $("<div>")
+                    .addClass("imcms-controls__control imcms-control imcms-control--move")
+                    .click(Imcms.Folders.moveFolder),
+                removeControl = $("<div>")
+                    .addClass("imcms-controls__control imcms-control imcms-control--remove")
+                    .click(Imcms.Folders.removeFolder),
+                renameControl = $("<div>")
+                    .addClass("imcms-controls__control imcms-control imcms-control--rename")
+                    .click(Imcms.Folders.renameFolder),
+                createControl = $("<div>")
+                    .addClass("imcms-controls__control imcms-control imcms-control--create")
+                    .click(Imcms.Folders.createFolder)
             ;
 
             // compile folder
@@ -126,12 +119,20 @@
             folderName.appendTo(newFolder);
             folderControls.appendTo(newFolder);
 
+            //create subfolder
+            var subFolderLvl = parseInt(currentFolder.closest(".imcms-folders").attr("data-folders-lvl")),
+                newSubFolder = $("<div>").addClass("imcms-left-side__folders imcms-folders")
+                    .attr("data-folders-lvl", subFolderLvl + 1)
+            ;
+
             if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
                 newFolder.prependTo(subFolder);
             }
-
-
-            console.log(subFolder)
+            else{
+                currentFolder.after(newSubFolder);
+                newFolder.prependTo(newSubFolder);
+                folderBtn.prependTo(currentFolder);
+            }
         }
 
     };
