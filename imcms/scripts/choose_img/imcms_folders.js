@@ -175,7 +175,7 @@
                 text: "add+",
                 click: function () {
                     setName = input.val();
-                    if(setName === ""){
+                    if (setName === "") {
                         setName = currentFolderName.text()
                     }
                     currentFolderName.text(setName);
