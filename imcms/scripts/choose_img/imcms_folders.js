@@ -67,16 +67,16 @@
                 currentFolder = $ctrl.closest(".imcms-folder")
             ;
 
-            if ($ctrl.hasClass("imcms-control--move")){
+            if ($ctrl.hasClass("imcms-control--move")) {
                 Imcms.Folders.moveFolder(currentFolder);
             }
-            else if($ctrl.hasClass("imcms-control--remove")){
+            else if ($ctrl.hasClass("imcms-control--remove")) {
                 Imcms.Folders.removeFolder(currentFolder);
             }
-            else if($ctrl.hasClass("imcms-control--rename")){
+            else if ($ctrl.hasClass("imcms-control--rename")) {
                 Imcms.Folders.renameFolder(currentFolder);
             }
-            else if($ctrl.hasClass("imcms-control--create")){
+            else if ($ctrl.hasClass("imcms-control--create")) {
                 Imcms.Folders.createFolder(currentFolder);
             }
         },
@@ -87,7 +87,7 @@
             var subFolder = currentFolder.next()
             ;
 
-            if(subFolder.length !== 0 && subFolder.hasClass("imcms-folders")){
+            if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
                 subFolder.remove();
             }
             currentFolder.remove();
@@ -126,10 +126,9 @@
             folderName.appendTo(newFolder);
             folderControls.appendTo(newFolder);
 
-            if(subFolder.length !== 0 && subFolder.hasClass("imcms-folders")){
+            if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
                 newFolder.prependTo(subFolder);
             }
-
 
 
             console.log(subFolder)
