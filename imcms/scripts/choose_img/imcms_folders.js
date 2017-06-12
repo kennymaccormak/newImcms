@@ -88,8 +88,6 @@
             }
             console.log(parentFolder);
         },
-        renameFolder: function () {
-        },
         createFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
@@ -152,6 +150,44 @@
             return $("<div>")
                 .addClass("imcms-folder__btn imcms-folder-btn--open")
                 .click(Imcms.Folders.showHide);
+        },
+        renameFolder: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-folder")
+            ;
+
+            Imcms.Folders.showHideNamePanel(currentFolder);
+
+
+        },
+        showHideNamePanel: function (currentFolder) {
+            var currentFolderName = currentFolder.find(".imcms-folder__name"),
+                setName = ""
+            ;
+
+            var input = $("<input>", {
+                "class": "imcms-panel-named__input imcms-text-box__input imcms-input",
+                "value": currentFolderName.text()
+            });
+
+            var button = $("<button>", {
+                "class": "imcms-panel-named__button imcms-button--neutral imcms-button",
+                text: "add+",
+                click: function () {
+                    setName = input.val();
+                    if(setName === ""){
+                        setName = currentFolderName.text()
+                    }
+                    currentFolderName.text(setName);
+                    panelNamed.remove();
+                }
+            });
+
+            var panelNamed = $("<div>", {
+                "class": "imcms-panel-named",
+                html: input
+            }).append(button);
+            currentFolder.after(panelNamed);
         }
 
     };
