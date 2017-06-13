@@ -9,7 +9,7 @@
             $(".imcms-folder__controls .imcms-control--remove").click(Imcms.Folders.removeFolder);
             $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.showHideNamePanel);
             $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.showHideNamePanel);
-            //$(".imcms-main-folders-controls .imcms-control--create").click(Imcms.Folders.createFolder);
+            $(".imcms-main-folders-controls .imcms-control--create").click(Imcms.Folders.createFirstLvlFolder);
 
             $(function () {
                 var allFoldersSection = $(".imcms-content-manager__left-side"),
@@ -144,7 +144,9 @@
             return newFolder;
         },
         createVirtualSubFolder: function (currentFolder) {
-            var subFolderLvl = parseInt(currentFolder.closest(".imcms-folders").attr("data-folders-lvl"));
+            var subFolderLvl = (currentFolder === undefined)
+                ? 0
+                : parseInt(currentFolder.closest(".imcms-folders").attr("data-folders-lvl"));
 
             return $("<div>").addClass("imcms-left-side__folders imcms-folders")
                 .attr("data-folders-lvl", subFolderLvl + 1);
@@ -154,9 +156,15 @@
                 .addClass("imcms-folder__btn imcms-folder-btn--open")
                 .click(Imcms.Folders.showHide);
         },
-        renameFolder: function () {
-            var $ctrl = $(this);
-            Imcms.Folders.showHideNamePanel($ctrl);
+        createFirstLvlFolder: function () {
+            var $ctrl = $(this),
+                newFolder = Imcms.Folders.createVirtualFolder("lklk"),
+                subFolder = Imcms.Folders.createVirtualSubFolder()
+            ;
+            $ctrl.parent().after(subFolder.append(newFolder));
+
+            
+
         },
         showHideNamePanel: function () {
             var $ctrl = $(this),
