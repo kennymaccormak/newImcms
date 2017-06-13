@@ -86,31 +86,34 @@
                 }
                 parentFolder.remove();
             }
-            console.log(parentFolder);
         },
         createFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
                 subFolder = currentFolder.next(),
                 newFolder = null,
-                folderBtn = null,
+                folderBtn = null, /*show/hide button*/
                 newSubFolder = null
             ;
-
+            /*
+             check for subfolder; if "is" -> create new folder in subfolder
+             if "no" -> create subfolder, create folder in this subfolder
+             */
             if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
-                newFolder = Imcms.Folders.createNewFolder();
+                newFolder = Imcms.Folders.createVirtualFolder();
                 newFolder.prependTo(subFolder);
             }
             else {
-                newSubFolder = Imcms.Folders.createNewSubFolder(currentFolder);
+                newSubFolder = Imcms.Folders.createVirtualSubFolder(currentFolder); //new subfolder
                 currentFolder.after(newSubFolder);
-                newFolder = Imcms.Folders.createNewFolder();
+                newFolder = Imcms.Folders.createVirtualFolder();                    //new folder
                 newFolder.prependTo(newSubFolder);
-                folderBtn = Imcms.Folders.createFolderShowHideBtn();
+                folderBtn = Imcms.Folders.createFolderShowHideBtn();            //add show/hide button
                 folderBtn.prependTo(currentFolder);
             }
         },
-        createNewFolder: function () {
+        createVirtualFolder: function () {
+            /*create folder elements*/
             var newFolder = $("<div>").addClass("imcms-folders__folder imcms-folder"),
                 folderName = $("<div>")
                     .addClass("imcms-folder__name imcms-title")
@@ -131,6 +134,7 @@
                     .click(Imcms.Folders.createFolder)
             ;
 
+            /*compile elements in folder*/
             createControl.prependTo(folderControls);
             renameControl.prependTo(folderControls);
             removeControl.prependTo(folderControls);
@@ -140,7 +144,7 @@
 
             return newFolder;
         },
-        createNewSubFolder: function (currentFolder) {
+        createVirtualSubFolder: function (currentFolder) {
             var subFolderLvl = parseInt(currentFolder.closest(".imcms-folders").attr("data-folders-lvl"));
 
             return $("<div>").addClass("imcms-left-side__folders imcms-folders")
@@ -152,43 +156,61 @@
                 .click(Imcms.Folders.showHide);
         },
         renameFolder: function () {
-            var $ctrl = $(this),
-                currentFolder = $ctrl.closest(".imcms-folder")
-            ;
-
-            Imcms.Folders.showHideNamePanel(currentFolder);
-
-
+            var $ctrl = $(this);
+            Imcms.Folders.showHideNamePanel($ctrl);
         },
-        showHideNamePanel: function (currentFolder) {
-            var currentFolderName = currentFolder.find(".imcms-folder__name"),
-                setName = ""
+        showHideNamePanel: function ($ctrl) {
+            var currentFolder = $ctrl.closest(".imcms-folder"),
+                currentFolderName = currentFolder.find(".imcms-folder__name")
             ;
 
-            var input = $("<input>", {
+            var folderNameInput = $("<input>", {
                 "class": "imcms-panel-named__input imcms-text-box__input imcms-input",
                 "value": currentFolderName.text()
             });
 
-            var button = $("<button>", {
+            var submitFolderNameBtn = $("<button>", {
                 "class": "imcms-panel-named__button imcms-button--neutral imcms-button",
-                text: "add+",
-                click: function () {
-                    setName = input.val();
-                    if (setName === "") {
-                        setName = currentFolderName.text()
-                    }
-                    currentFolderName.text(setName);
-                    panelNamed.remove();
-                }
+                text: "add+"
             });
+
+            if ($ctrl.hasClass("imcms-control--rename")) {
+                submitFolderNameBtn.addClass("imcms-button--rename")
+            }
+            else {
+                submitFolderNameBtn.addClass("imcms-button--create")
+            }
+
+            submitFolderNameBtn.click(Imcms.Folders.submitFolderName);
 
             var panelNamed = $("<div>", {
                 "class": "imcms-panel-named",
-                html: input
-            }).append(button);
+                html: folderNameInput
+            }).append(submitFolderNameBtn);
             currentFolder.after(panelNamed);
+        },
+        submitFolderName: function () {
+            var $btn = $(this),
+                folderNameInput = $btn.prev(),
+                setName = null,
+                currentFolderName = $btn.parent().prev().find(".imcms-folder__name")
+            ;
+
+            if ($btn.hasClass("imcms-button--rename")) {
+                setName = folderNameInput.val();
+                if (setName === "") {
+                    setName = currentFolderName.text()
+                }
+                currentFolderName.text(setName);
+                $(".imcms-panel-named").remove();
+            }
+            else {
+
+            }
+
+
         }
+
 
     };
 
