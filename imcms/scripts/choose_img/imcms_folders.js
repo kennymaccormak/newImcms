@@ -158,12 +158,11 @@
         },
         createFirstLvlFolder: function () {
             var $ctrl = $(this),
-                newFolder = Imcms.Folders.createVirtualFolder("lklk"),
+                newFolder = Imcms.Folders.createVirtualFolder("folder"),
                 subFolder = Imcms.Folders.createVirtualSubFolder()
             ;
             $ctrl.parent().after(subFolder.append(newFolder));
 
-            
 
         },
         showHideNamePanel: function () {
@@ -171,6 +170,9 @@
                 currentFolder = $ctrl.closest(".imcms-folder"),
                 currentFolderName = currentFolder.find(".imcms-folder__name")
             ;
+
+            $(".imcms-folder__controls .imcms-control--rename").unbind("click");
+            $(".imcms-folder__controls .imcms-control--create").unbind("click");
 
             var folderNameInput = $("<input>", {
                 "class": "imcms-panel-named__input imcms-text-box__input imcms-input",
@@ -221,7 +223,8 @@
                 $(".imcms-panel-named").remove();
             }
 
-
+            $(".imcms-folder__controls .imcms-control--rename").bind("click", Imcms.Folders.showHideNamePanel);
+            $(".imcms-folder__controls .imcms-control--create").bind("click", Imcms.Folders.showHideNamePanel);
         }
 
 
