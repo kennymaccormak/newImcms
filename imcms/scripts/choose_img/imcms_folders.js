@@ -7,8 +7,8 @@
             $(".imcms-content-manager .imcms-button--close").click(Imcms.Folders.closeWindow);
             $(".imcms-folder__controls .imcms-control--move").click(Imcms.Folders.moveFolder);
             $(".imcms-folder__controls .imcms-control--remove").click(Imcms.Folders.removeFolder);
-            $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.renameFolder);
-            $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.createFolder);
+            $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.showHideNamePanel);
+            $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.showHideNamePanel);
             //$(".imcms-main-folders-controls .imcms-control--create").click(Imcms.Folders.createFolder);
 
             $(function () {
@@ -87,9 +87,8 @@
                 parentFolder.remove();
             }
         },
-        createFolder: function () {
-            var $ctrl = $(this),
-                currentFolder = $ctrl.closest(".imcms-folder"),
+        createFolder: function ($btn, name) {
+            var currentFolder = $btn.parent().prev(),
                 subFolder = currentFolder.next(),
                 newFolder = null,
                 folderBtn = null, /*show/hide button*/
@@ -100,24 +99,24 @@
              if "no" -> create subfolder, create folder in this subfolder
              */
             if (subFolder.length !== 0 && subFolder.hasClass("imcms-folders")) {
-                newFolder = Imcms.Folders.createVirtualFolder();
+                newFolder = Imcms.Folders.createVirtualFolder(name);
                 newFolder.prependTo(subFolder);
             }
             else {
                 newSubFolder = Imcms.Folders.createVirtualSubFolder(currentFolder); //new subfolder
                 currentFolder.after(newSubFolder);
-                newFolder = Imcms.Folders.createVirtualFolder();                    //new folder
+                newFolder = Imcms.Folders.createVirtualFolder(name);                    //new folder
                 newFolder.prependTo(newSubFolder);
                 folderBtn = Imcms.Folders.createFolderShowHideBtn();            //add show/hide button
                 folderBtn.prependTo(currentFolder);
             }
         },
-        createVirtualFolder: function () {
+        createVirtualFolder: function (name) {
             /*create folder elements*/
             var newFolder = $("<div>").addClass("imcms-folders__folder imcms-folder"),
                 folderName = $("<div>")
                     .addClass("imcms-folder__name imcms-title")
-                    .text("New Folder")
+                    .text(name)
                     .click(Imcms.Folders.active),
                 folderControls = $("<div>").addClass("imcms-folder__controls"),
                 moveControl = $("<div>")
@@ -128,10 +127,10 @@
                     .click(Imcms.Folders.removeFolder),
                 renameControl = $("<div>")
                     .addClass("imcms-controls__control imcms-control imcms-control--rename")
-                    .click(Imcms.Folders.renameFolder),
+                    .click(Imcms.Folders.showHideNamePanel),
                 createControl = $("<div>")
                     .addClass("imcms-controls__control imcms-control imcms-control--create")
-                    .click(Imcms.Folders.createFolder)
+                    .click(Imcms.Folders.showHideNamePanel)
             ;
 
             /*compile elements in folder*/
@@ -159,8 +158,9 @@
             var $ctrl = $(this);
             Imcms.Folders.showHideNamePanel($ctrl);
         },
-        showHideNamePanel: function ($ctrl) {
-            var currentFolder = $ctrl.closest(".imcms-folder"),
+        showHideNamePanel: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-folder"),
                 currentFolderName = currentFolder.find(".imcms-folder__name")
             ;
 
@@ -205,7 +205,12 @@
                 $(".imcms-panel-named").remove();
             }
             else {
-
+                setName = folderNameInput.val();
+                if (setName === "") {
+                    setName = currentFolderName.text("new folder")
+                }
+                Imcms.Folders.createFolder($btn, setName);
+                $(".imcms-panel-named").remove();
             }
 
 
