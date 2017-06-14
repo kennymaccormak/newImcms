@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Choose Image</title>
     <!--style files-->
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
     <link rel="stylesheet" href="stylesheets/imports_files.css">
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
 </head>
 <body>
@@ -18,12 +20,12 @@
         <button type="button" class="imcms-button imcms-button--close"></button>
     </div>
 
-    <div class="imcms-content-manager__left-side imcms-left-side">
+    <div class="imcms-content-manager__left-side imcms-left-side sortContainer">
         <div class="imcms-main-folders-controls">
             <div class="imcms-main-folders-controls__control imcms-control imcms-control--create"></div>
         </div>
 
-        <div class="imcms-left-side__folders imcms-folders" data-folders-lvl="1">
+        <div class="imcms-left-side__folders imcms-folders sortable" data-folders-lvl="1">
 
             <div class="imcms-folders__folder imcms-folder">
                 <div class="imcms-folder__btn imcms-folder-btn--open"></div>
@@ -36,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="imcms-folders" data-folders-lvl="2">
+            <div class="imcms-folders sortable sortContainer" data-folders-lvl="2">
 
                 <div class="imcms-folders__folder imcms-folder">
                     <div class="imcms-folder__name imcms-title">generated</div>
@@ -59,7 +61,7 @@
                     </div>
                 </div>
 
-                <div class="imcms-folders" data-folders-lvl="3">
+                <div class="imcms-folders sortable sortContainer" data-folders-lvl="3">
 
                     <div class="imcms-folders__folder imcms-folder">
                         <div class="imcms-folder__btn imcms-folder-btn--open"></div>
@@ -72,7 +74,7 @@
                         </div>
                     </div>
 
-                    <div class="imcms-folders" data-folders-lvl="4">
+                    <div class="imcms-folders sortable" data-folders-lvl="4">
 
                         <div class="imcms-folders__folder imcms-folder">
                             <div class="imcms-folder__name imcms-title">lorem ipsum</div>
@@ -92,7 +94,7 @@
 
         </div>
 
-        <div class="imcms-left-side__folders imcms-folders" data-folders-lvl="1">
+        <div class="imcms-left-side__folders imcms-folders sortable" data-folders-lvl="1">
 
             <div class="imcms-folders__folder imcms-folder">
                 <div class="imcms-folder__name imcms-title">generated</div>
@@ -106,7 +108,7 @@
 
         </div>
 
-        <div class="imcms-left-side__folders imcms-folders" data-folders-lvl="1">
+        <div class="imcms-left-side__folders imcms-folders sortable" data-folders-lvl="1">
 
             <div class="imcms-folders__folder imcms-folder">
                 <div class="imcms-folder__name imcms-title">lorem ipsum</div>
@@ -120,7 +122,7 @@
 
         </div>
 
-        <div class="imcms-left-side__folders imcms-folders" data-folders-lvl="1">
+        <div class="imcms-left-side__folders imcms-folders sortable" data-folders-lvl="1">
 
             <div class="imcms-folders__folder imcms-folder">
                 <div class="imcms-folder__btn imcms-folder-btn--open"></div>
@@ -133,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="imcms-folders" data-folders-lvl="2">
+            <div class="imcms-folders sortable" data-folders-lvl="2">
 
                 <div class="imcms-folders__folder imcms-folder">
                     <div class="imcms-folder__name imcms-title">generated</div>
@@ -156,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="imcms-folders" data-folders-lvl="3">
+                <div class="imcms-folders sortable" data-folders-lvl="3">
 
                     <div class="imcms-folders__folder imcms-folder">
                         <div class="imcms-folder__btn imcms-folder-btn--open"></div>
@@ -169,7 +171,7 @@
                         </div>
                     </div>
 
-                    <div class="imcms-folders" data-folders-lvl="4">
+                    <div class="imcms-folders sortable" data-folders-lvl="4">
 
                         <div class="imcms-folders__folder imcms-folder">
                             <div class="imcms-folder__name imcms-title">lorem ipsum</div>
@@ -189,7 +191,7 @@
 
         </div>
 
-        <div class="imcms-left-side__folders imcms-folders" data-folders-lvl="1">
+        <div class="imcms-left-side__folders imcms-folders sortable" data-folders-lvl="1">
 
             <div class="imcms-folders__folder imcms-folder">
                 <div class="imcms-folder__name imcms-title">lorem ipsum</div>
@@ -203,7 +205,7 @@
 
         </div>
 
-        <div class="imcms-left-side__folders imcms-folders" data-folders-lvl="1">
+        <div class="imcms-left-side__folders imcms-folders sortable" data-folders-lvl="1">
 
             <div class="imcms-folders__folder imcms-folder">
                 <div class="imcms-folder__name imcms-title">lorem ipsum</div>

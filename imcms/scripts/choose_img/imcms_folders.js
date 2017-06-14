@@ -66,8 +66,6 @@
         closeWindow: function () {
             $(this).parents(".imcms-content-manager").hide();
         },
-        moveFolder: function () {
-        },
         removeFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
@@ -223,6 +221,15 @@
 
             $(".imcms-folder__controls .imcms-control--rename").on("click", Imcms.Folders.showHideNamePanel);
             $(".imcms-folder__controls .imcms-control--create").on("click", Imcms.Folders.showHideNamePanel);
+        },
+        moveFolder: function () {
+            var $ctrl = $(this),
+                targetFolder = $ctrl.closest(".imcms-folder").parent()
+            ;
+
+            $(".sortContainer").each(function () {
+                $(this).sortable()
+            });
         }
 
 
