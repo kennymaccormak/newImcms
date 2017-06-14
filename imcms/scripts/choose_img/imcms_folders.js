@@ -126,11 +126,9 @@
                     .addClass("imcms-controls__control imcms-control imcms-control--remove")
                     .click(Imcms.Folders.removeFolder),
                 renameControl = $("<div>")
-                    .addClass("imcms-controls__control imcms-control imcms-control--rename")
-                    .click(Imcms.Folders.showHideNamePanel),
+                    .addClass("imcms-controls__control imcms-control imcms-control--rename"),
                 createControl = $("<div>")
                     .addClass("imcms-controls__control imcms-control imcms-control--create")
-                    .click(Imcms.Folders.showHideNamePanel)
             ;
 
             /*compile elements in folder*/
@@ -223,8 +221,8 @@
                 $(".imcms-panel-named").remove();
             }
 
-            $(".imcms-folder__controls .imcms-control--rename").bind("click", Imcms.Folders.showHideNamePanel);
-            $(".imcms-folder__controls .imcms-control--create").bind("click", Imcms.Folders.showHideNamePanel);
+            $(".imcms-folder__controls .imcms-control--rename").on("click", Imcms.Folders.showHideNamePanel);
+            $(".imcms-folder__controls .imcms-control--create").on("click", Imcms.Folders.showHideNamePanel);
         }
 
 
