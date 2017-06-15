@@ -1,16 +1,22 @@
 (function (Imcms) {
     Imcms.DatePicker = {
         init: function () {
-            Imcms.DatePicker.currentDate();
-            $(".imcms-date-picker .imcms-date-picker__current-date")
-                .click(Imcms.DatePicker.openCalendar);
-            $(".imcms-date-picker .imcms-current-date__input")
+            var currentDate = Imcms.DatePicker.currentDate(),
+                datePicker = $(".imcms-date-picker");
+
+            datePicker.find(".imcms-current-date__input")
+                .val(currentDate)
+                .end()
+                .find(".imcms-date-picker__current-date")
+                .click(Imcms.DatePicker.openCalendar)
+                .end()
+                .find(".imcms-current-date__input")
                 .on('blur', Imcms.DatePicker.currentDateValidation)
                 .on('keyup change', Imcms.DatePicker.currentValidationAndBuild)
                 .mask("0000-00-00");
             $(document).click(Imcms.DatePicker.closeCalendar);
 
-            $(".imcms-date-picker .imcms-calendar").find(".imcms-calendar__button").each(function () {
+            datePicker.find(".imcms-calendar").find(".imcms-calendar__button").each(function () {
                 $(this).click(Imcms.Calendar.chooseMonth);
             });
         },
@@ -25,9 +31,9 @@
             // }
             Imcms.Calendar.init(datePicker);
 
-            datePicker.find(".imcms-date-picker__error")
+            datePicker.css({"border-color": "#d3d8de"})
+                .find(".imcms-date-picker__error")
                 .css({"display": "none"});
-            datePicker.css({"border-color": "#d3d8de"});
         },
         closeCalendar: function (e) {
             if (
@@ -39,30 +45,25 @@
                 &&
                 !$(e.target).parents(".imcms-calendar").length
             ) {
-
                 $(".imcms-date-picker").removeClass("imcms-date-picker--active");
                 e.stopPropagation();
             }
-
         },
         currentDate: function () {
-            var d = new Date(),
-                year = d.getFullYear(),
-                month = d.getMonth() + 1,
-                date = d.getDate(),
-                datePicker = $(".imcms-date-picker"),
-                currentDate = datePicker.find(".imcms-current-date__input")
+            var currentDate = new Date(),
+                year = currentDate.getFullYear(),
+                month = currentDate.getMonth() + 1,
+                date = currentDate.getDate()
             ;
 
             if (month < 10) month = "0" + month;
             if (date < 10) date = "0" + date;
 
-            currentDate.val(year + "-" + month + "-" + date);
-            return currentDate.val();
+            return year + "-" + month + "-" + date;
         },
         currentDateValidation: function () {
-            var currentDateInput = $(this);
-            var carDate = currentDateInput.val().split('-'),
+            var currentDateInput = $(this),
+                carDate = currentDateInput.val().split('-'),
                 year, month, date,
                 calendar = currentDateInput.parents(".imcms-date-picker").find(".imcms-calendar")
             ;
@@ -74,8 +75,11 @@
             month = carDate[1];
             date = carDate[2];
             //carDate[1] -= 1;
-            var d = new Date(carDate[0], carDate[1], carDate[2]);
-            if ((d.getFullYear() === carDate[0]) && (d.getMonth() === carDate[1]) && (d.getDate() === carDate[2])) {
+            var currentDate = new Date(carDate[0], carDate[1], carDate[2]);
+            if ((currentDate.getFullYear() === carDate[0])
+                && (currentDate.getMonth() === carDate[1])
+                && (currentDate.getDate() === carDate[2])
+            ) {
                 Imcms.Calendar.buildCalendar(year, month, date, calendar);
                 return true;
             }
@@ -93,8 +97,6 @@
                 currentDateInput.val(cd);
                 return false;
             }
-
-
         },
         currentValidationAndBuild: function () {
             var currentDateInput = $(this);

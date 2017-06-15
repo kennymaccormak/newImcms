@@ -2,8 +2,6 @@
     Imcms.Select = {
         init: function () {
             $(".imcms-drop-down-list__select-item").click(Imcms.Select.toggleSelect);
-            $(".imcms-select__label").click(Imcms.Select.toggleSelect);
-            $(document).click(Imcms.Select.closeSelect);
         },
         toggleSelect: function () {
             var $this = $(this),
@@ -12,13 +10,7 @@
                     .find(".imcms-drop-down-list__item")
             ;
 
-            if (select.hasClass("imcms-select__drop-down-list--active")) {
-                select.removeClass("imcms-select__drop-down-list--active")
-            }
-            else {
-                select.addClass("imcms-select__drop-down-list--active")
-            }
-
+            select.toggleClass("imcms-select__drop-down-list--active");
             dropDownItem.click(Imcms.Select.selectItem);
         },
         selectItem: function () {

@@ -15,27 +15,19 @@
                     Imcms.Button.changeNeighborFlag($btn);
                 }
             }
-
         },
 
         changeNeighborFlag: function ($btn) {
             var neighborFlag = ($btn.next().length !== 0) ? $btn.next() : $btn.prev();
 
             if (neighborFlag.hasClass("imcms-flag--en")) {
-                if (neighborFlag.hasClass("imcms-flag--active")) {
-                    neighborFlag.removeClass("imcms-flag--active");
-                }
-                else {
-                    neighborFlag.addClass("imcms-flag--active");
-                }
+                neighborFlag.toggleClass("imcms-flag--active");
+            }
+            else if (neighborFlag.hasClass("imcms-flag--sw")) {
+                neighborFlag.removeClass("imcms-flag--active");
             }
             else {
-                if (neighborFlag.hasClass("imcms-flag--sw")) {
-                    neighborFlag.removeClass("imcms-flag--active");
-                }
-                else {
-                    neighborFlag.addClass("imcms-flag--active");
-                }
+                neighborFlag.addClass("imcms-flag--active");
             }
         }
     };

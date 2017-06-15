@@ -10,7 +10,7 @@
                 keywords = $btn.parent().find(".imcms-keyword__filters")
             ;
 
-            if(keywords.children().length === 0){
+            if (keywords.children().length === 0) {
                 keywords.css({"display": "block"})
             }
 
@@ -27,8 +27,9 @@
                     "class": "imcms-keyword__filter",
                     html: $("<button>", {
                         type: "button",
-                        "class": "imcms-button imcms-button--close"
-                    }).click(Imcms.Keyword.removeKeyword)
+                        "class": "imcms-button imcms-button--close",
+                        click: Imcms.Keyword.removeKeyword
+                    })
                 }).prepend(keywordInputVal).appendTo(keywords);
             }
 
@@ -41,11 +42,9 @@
             ;
 
             keyword.remove();
-            if(keywords.children().length === 0){
+            if (keywords.children().length === 0) {
                 keywords.css({"display": "none"})
             }
-
-            console.log(keywords);
         }
     };
 
