@@ -227,9 +227,6 @@
                 targetFolder = $ctrl.closest(".imcms-folder").parent()
             ;
 
-            $(".sortContainer").each(function () {
-                $(this).sortable()
-            });
         }
 
 
