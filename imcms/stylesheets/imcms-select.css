@@ -33,9 +33,9 @@
 
 .imcms-drop-down-list__select-item {
     cursor: pointer;
-    display: block;
-    padding: 10px 20px 10px 15px;
     position: relative;
+    padding: 10px 20px 10px 15px;
+    display: block;
 }
 
 .imcms-select__drop-down-list--active .imcms-drop-down-list__select-item:after {
