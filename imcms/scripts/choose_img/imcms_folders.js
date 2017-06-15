@@ -5,7 +5,7 @@
             $(".imcms-folder__btn").click(Imcms.Folders.showHide);
             $(".imcms-content-manager .imcms-button--save").click(Imcms.Folders.saveAndCloseWindow);
             $(".imcms-content-manager .imcms-button--close").click(Imcms.Folders.closeWindow);
-            $(".imcms-folder__controls .imcms-control--move").click(Imcms.Folders.moveFolder);
+            $(".imcms-folder__controls .imcms-control--move").mousedown(Imcms.Folders.moveFolder);
             $(".imcms-folder__controls .imcms-control--remove").click(Imcms.Folders.removeFolder);
             $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.showHideNamePanel);
             $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.showHideNamePanel);
@@ -222,14 +222,8 @@
             $(".imcms-folder__controls .imcms-control--rename").on("click", Imcms.Folders.showHideNamePanel);
             $(".imcms-folder__controls .imcms-control--create").on("click", Imcms.Folders.showHideNamePanel);
         },
-        moveFolder: function () {
-            var $ctrl = $(this),
-                targetFolder = $ctrl.closest(".imcms-folder").parent()
-            ;
-
+        moveFolder: function (e) {
         }
-
-
     };
 
     return Imcms.Folders;
