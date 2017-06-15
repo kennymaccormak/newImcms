@@ -1,4 +1,4 @@
-@import url("reset.css");
+@import url("imcms-reset.css");
 @import url("access_tabs_page.css");
 @import url("button.css");
 @import url("buttons.css");
@@ -6,10 +6,10 @@
 @import url("checkboxes.css");
 @import url("checkbox.css");
 @import url("choose_file.css");
-@import url("date_picker.css");
+@import url("imcms-date_picker.css");
 @import url("time_picker.css");
-@import url("date_time.css");
-@import url("input.css");
+@import url("imcms-date_time.css");
+@import url("imcms-input.css");
 @import url("field.css");
 @import url("flag.css");
 @import url("flags.css");
@@ -25,7 +25,7 @@
 @import url("radio.css");
 @import url("radios.css");
 @import url("scrollbar.css");
-@import url("select.css");
+@import url("imcms-select.css");
 @import url("space-around-inputs.css");
 @import url("switch.css");
 @import url("switches.css");
