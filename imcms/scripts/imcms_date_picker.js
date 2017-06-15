@@ -2,45 +2,45 @@
     Imcms.DatePicker = {
         init: function () {
             Imcms.DatePicker.currentDate();
-            $(".imcms-data-picker .imcms-data-picker__current-data")
+            $(".imcms-date-picker .imcms-date-picker__current-date")
                 .click(Imcms.DatePicker.openCalendar);
-            $(".imcms-data-picker .imcms-current-data__input")
+            $(".imcms-date-picker .imcms-current-date__input")
                 .on('blur', Imcms.DatePicker.currentDateValidation)
                 .on('keyup change', Imcms.DatePicker.currentValidationAndBuild)
                 .mask("0000-00-00");
             $(document).click(Imcms.DatePicker.closeCalendar);
 
-            $(".imcms-data-picker .imcms-calendar").find(".imcms-calendar__button").each(function () {
+            $(".imcms-date-picker .imcms-calendar").find(".imcms-calendar__button").each(function () {
                 $(this).click(Imcms.Calendar.chooseMonth);
             });
         },
         openCalendar: function () {
             var curdate = $(this),
-                datePicker = curdate.parents(".imcms-data-picker"),
+                datePicker = curdate.parents(".imcms-date-picker"),
                 calendar = datePicker.find(".imcms-calendar")
             ;
 
-            // if (!datePicker.hasClass("imcms-data-picker--active")) {
-            //     datePicker.addClass("imcms-data-picker--active");
+            // if (!datePicker.hasClass("imcms-date-picker--active")) {
+            //     datePicker.addClass("imcms-date-picker--active");
             // }
             Imcms.Calendar.init(datePicker);
 
-            datePicker.find(".imcms-data-picker__error")
+            datePicker.find(".imcms-date-picker__error")
                 .css({"display": "none"});
             datePicker.css({"border-color": "#d3d8de"});
         },
         closeCalendar: function (e) {
             if (
-                !$(e.target).closest(".imcms-current-data__input").length
+                !$(e.target).closest(".imcms-current-date__input").length
                 &&
-                (e.target.classList[1] !== "imcms-current-data__input"
+                (e.target.classList[1] !== "imcms-current-date__input"
                 ||
-                e.target.classList[1] !== ".imcms-data-picker__current-data")
+                e.target.classList[1] !== ".imcms-date-picker__current-date")
                 &&
                 !$(e.target).parents(".imcms-calendar").length
             ) {
 
-                $(".imcms-data-picker").removeClass("imcms-data-picker--active");
+                $(".imcms-date-picker").removeClass("imcms-date-picker--active");
                 e.stopPropagation();
             }
 
@@ -50,8 +50,8 @@
                 year = d.getFullYear(),
                 month = d.getMonth() + 1,
                 date = d.getDate(),
-                datePicker = $(".imcms-data-picker"),
-                currentDate = datePicker.find(".imcms-current-data__input")
+                datePicker = $(".imcms-date-picker"),
+                currentDate = datePicker.find(".imcms-current-date__input")
             ;
 
             if (month < 10) month = "0" + month;
@@ -64,7 +64,7 @@
             var currentDateInput = $(this);
             var carDate = currentDateInput.val().split('-'),
                 year, month, date,
-                calendar = currentDateInput.parents(".imcms-data-picker").find(".imcms-calendar")
+                calendar = currentDateInput.parents(".imcms-date-picker").find(".imcms-calendar")
             ;
 
             carDate[0] = parseInt(carDate[0]);
@@ -102,7 +102,7 @@
                 year = carDate[0],
                 month = carDate[1],
                 date = carDate[2],
-                calendar = currentDateInput.parents(".imcms-data-picker").find(".imcms-calendar")
+                calendar = currentDateInput.parents(".imcms-date-picker").find(".imcms-calendar")
             ;
             Imcms.Calendar.buildCalendar(year, month, date, calendar);
             calendar.find(".imcms-calendar__day").each(function () {
