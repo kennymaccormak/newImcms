@@ -135,6 +135,20 @@
         })
     }
 
+    function removeFolderFromServer(folderId) {
+        viewModel.folders.forEach(function (folder) {
+            if (folderId === folder.id) {
+                viewModel.folders.splice(viewModel.folders.indexOf(folder), 1);
+            }
+        });
+    }
+
+    function removeFoldersFromServer(folderId) {
+        viewModel.folders.forEach(function (folder) {
+
+        })
+    }
+
     Imcms.Folders = {
         init: function () {
 
@@ -167,6 +181,7 @@
         },
         showHideSubfolders: function () {
             var $btn = $(this);
+
             $btn.parents(".imcms-folder").next().slideToggle();
             $btn.toggleClass("imcms-folder-btn--open");
         },
@@ -177,6 +192,26 @@
 
         },
         removeFolder: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-folder"),
+                subFolder = currentFolder.next(),
+                parentFolder = currentFolder.closest(".imcms-folders"),
+                folderId = currentFolder.attr("data-folder-id")
+            ;
+
+            if (subFolder.hasClass("imcms-folders")) {
+                subFolder.remove();
+            }
+            currentFolder.remove();
+
+            if (parentFolder.children().length === 0) {
+                if (parentFolder.prev().hasClass("imcms-folder")) {
+                    parentFolder.prev().find(".imcms-folder__btn").remove();
+                }
+                parentFolder.remove();
+            }
+
+            removeFoldersFromServer(folderId);
 
         },
         moveFolder: function () {
