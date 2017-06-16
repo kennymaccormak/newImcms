@@ -8,14 +8,14 @@
                 name: "all image",
                 level: 1,
                 parentFolder: false,
-                subfolder: "folder_2"
+                subfolder: true
             },
             {
                 id: "folder_2",
                 name: "general",
                 level: 2,
                 parentFolder: "folder_1",
-                subfolder: "folder_3"
+                subfolder: true
             },
             {
                 id: "folder_3",
@@ -36,6 +36,13 @@
                 name: "Fucking fucking image",
                 level: 1,
                 parentFolder: false,
+                subfolder: false
+            },
+            {
+                id: "folder_6",
+                name: "Fucking image image",
+                level: 2,
+                parentFolder: "folder_1",
                 subfolder: false
             }
         ]
@@ -84,9 +91,10 @@
 
     function createFolder(folder) {
         var newFolder = $("<div>", {
-            "class": "imcms-folders__folder imcms-folder"
+            "class": "imcms-folders__folder imcms-folder",
+            "data-folder-id": folder.id
         });
-        if(folder.subfolder){
+        if (folder.subfolder) {
             createFolderShowHideButton().appendTo(newFolder);
         }
         createFolderTitle(folder.name).appendTo(newFolder);
@@ -95,13 +103,35 @@
         return newFolder;
     }
 
+    function builtFirstLevelFolder(folder) {
+        return viewModel.foldersArea
+            .append(createSubFolder(folder.level)
+                .append(createFolder(folder)));
+    }
+
+    function builtNotFirstLevelFolder(folder, parentFolderId) {
+        return $(".imcms-folder").each(function () {
+            if ($(this).attr("data-folder-id") === parentFolderId) {
+                if ($(this).next().attr("data-folders-lvl") === folder.level.toString()) {
+                    $(this).next().append(createFolder(folder))
+                } else {
+                    $(this).after(createSubFolder(folder.level)
+                        .append(createFolder(folder)))
+                }
+            }
+        });
+    }
+
     function folderBuilder(folders) {
+        var parentFolderId = null;
         folders.forEach(function (folder) {
             if (folder.level === 1) {
-                viewModel.foldersArea
-                    .append(createSubFolder(folder.level))
-                    .append(createFolder(folder));
+                builtFirstLevelFolder(folder);
+            } else {
+                parentFolderId = folder.parentFolder;
+                builtNotFirstLevelFolder(folder, parentFolderId);
             }
+
         })
     }
 
