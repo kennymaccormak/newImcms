@@ -1,152 +1,84 @@
 (function (Imcms) {
-    var viewModel;
+    var viewModel, folders = [];
+
+    function getFoldersUrl() {
+        return [
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars/bmw",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/holiday",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/holiday",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family/porno",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/img"
+        ];
+    }
+
+    function findFoldersRootUrl(urlsArray) {
+        var length = urlsArray[0].length, index = 0;
+        urlsArray.forEach(function (url) {
+            if (url.length < length) {
+                length = url.length;
+                index = urlsArray.indexOf(url)
+            }
+        });
+
+        return urlsArray[index];
+    }
+
+    function getRelativeFoldersUrl(foldersUrlArray, root) {
+        var relativeFoldersUrlArray = [];
+
+        foldersUrlArray.forEach(function (url) {
+            relativeFoldersUrlArray.push(url.substring(root.length));
+        });
+
+        relativeFoldersUrlArray.forEach(function (relativeUrl) {
+            if (relativeUrl.length === 0) {
+                relativeFoldersUrlArray.splice(relativeFoldersUrlArray.indexOf(relativeUrl), 1);
+            }
+        });
+
+        return relativeFoldersUrlArray;
+    }
+
+    function parseFoldersUrl() {
+        var foldersUrlArray = getFoldersUrl(),
+            root = findFoldersRootUrl(foldersUrlArray),
+            foldersRelativeUrlsArray = [],
+            parseFoldersUrl = []
+        ;
+
+        foldersRelativeUrlsArray = getRelativeFoldersUrl(foldersUrlArray, root);
+
+        foldersRelativeUrlsArray.forEach(function (relUrl) {
+            relUrl = relUrl.split("/");
+            relUrl.splice(0, 1);
+            parseFoldersUrl.push(relUrl);
+        });
+
+        return parseFoldersUrl;
+    }
+
+    function getFoldersObject() {
+        var foldersUrl = parseFoldersUrl()
+        ;
+
+        foldersUrl.forEach(function (url) {
+            folders.push({
+                name: url[url.length - 1],
+                parent: url[url.length - 2],
+                level: url.length
+            })
+
+        });
+    }
 
     function getFolders() {
-        return [
-            {
-                id: "folder_1",
-                name: "all image",
-                level: 1,
-                parentFolder: false,
-                subfolder: true
-            },
-            {
-                id: "folder_2",
-                name: "general",
-                level: 2,
-                parentFolder: "folder_1",
-                subfolder: true
-            },
-            {
-                id: "folder_3",
-                name: "lorem",
-                level: 3,
-                parentFolder: "folder_2",
-                subfolder: false
-            },
-            {
-                id: "folder_4",
-                name: "Fucking image",
-                level: 1,
-                parentFolder: false,
-                subfolder: false
-            },
-            {
-                id: "folder_5",
-                name: "Fucking fucking image",
-                level: 1,
-                parentFolder: false,
-                subfolder: false
-            },
-            {
-                id: "folder_6",
-                name: "Fucking image image",
-                level: 2,
-                parentFolder: "folder_1",
-                subfolder: false
-            }
-        ]
-            ;
-    }
-
-    function createSubFolder(level) {
-        var subFolderClass;
-        subFolderClass = (level === 1)
-            ? "imcms-left-side__folders imcms-folders"
-            : "imcms-folders imcms-subfolders--close";
-        return $("<div>", {
-            "class": subFolderClass,
-            "data-folders-lvl": level
-        })
-    }
-
-    function createFolderShowHideButton() {
-        return $("<div>", {
-            "class": "imcms-folder__btn",
-            click: Imcms.Folders.showHideSubfolders
-        })
-    }
-
-    function createFolderTitle(name) {
-        return $("<div>", {
-            "class": "imcms-folder__name imcms-title",
-            text: name
-        })
-    }
-
-    function createFolderControls() {
-        var controls = $("<div>", {
-            "class": "imcms-folder__controls"
-        });
-
-        viewModel.controls.forEach(function (control) {
-            $("<div>", {
-                "class": "imcms-controls__control imcms-control imcms-control--" + control.name,
-                click: control.click
-            }).prependTo(controls)
-        });
-
-        return controls;
-    }
-
-    function createFolder(folder) {
-        var newFolder = $("<div>", {
-            "class": "imcms-folders__folder imcms-folder",
-            "data-folder-id": folder.id
-        });
-        if (folder.subfolder) {
-            createFolderShowHideButton().appendTo(newFolder);
-        }
-        createFolderTitle(folder.name).appendTo(newFolder);
-        createFolderControls().appendTo(newFolder);
-
-        return newFolder;
-    }
-
-    function builtFirstLevelFolder(folder) {
-        return viewModel.foldersArea
-            .append(createSubFolder(folder.level)
-                .append(createFolder(folder)));
-    }
-
-    function builtNotFirstLevelFolder(folder, parentFolderId) {
-        return $(".imcms-folder").each(function () {
-            if ($(this).attr("data-folder-id") === parentFolderId) {
-                if ($(this).next().attr("data-folders-lvl") === folder.level.toString()) {
-                    $(this).next().append(createFolder(folder))
-                } else {
-                    $(this).after(createSubFolder(folder.level)
-                        .append(createFolder(folder)))
-                }
-            }
-        });
-    }
-
-    function folderBuilder(folders) {
-        var parentFolderId = null;
-        folders.forEach(function (folder) {
-            if (folder.level === 1) {
-                builtFirstLevelFolder(folder);
-            } else {
-                parentFolderId = folder.parentFolder;
-                builtNotFirstLevelFolder(folder, parentFolderId);
-            }
-
-        })
-    }
-
-    function removeFolderFromServer(folderId) {
-        viewModel.folders.forEach(function (folder) {
-            if (folderId === folder.id) {
-                viewModel.folders.splice(viewModel.folders.indexOf(folder), 1);
-            }
-        });
-    }
-
-    function removeFoldersFromServer(folderId) {
-        viewModel.folders.forEach(function (folder) {
-
-        })
+        return getFoldersObject();
     }
 
     Imcms.Folders = {
@@ -174,17 +106,13 @@
                     }
                 ]
             };
-
-            folderBuilder(viewModel.folders);
-
-
         },
-        showHideSubfolders: function () {
-            var $btn = $(this);
+        /*showHideSubfolders: function () {
+         var $btn = $(this);
 
-            $btn.parents(".imcms-folder").next().slideToggle();
-            $btn.toggleClass("imcms-folder-btn--open");
-        },
+         $btn.parents(".imcms-folder").next().slideToggle();
+         $btn.toggleClass("imcms-folder-btn--open");
+         },*/
         createNewFolder: function () {
 
         },
@@ -195,8 +123,7 @@
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
                 subFolder = currentFolder.next(),
-                parentFolder = currentFolder.closest(".imcms-folders"),
-                folderId = currentFolder.attr("data-folder-id")
+                parentFolder = currentFolder.closest(".imcms-folders")
             ;
 
             if (subFolder.hasClass("imcms-folders")) {
@@ -210,9 +137,6 @@
                 }
                 parentFolder.remove();
             }
-
-            removeFoldersFromServer(folderId);
-
         },
         moveFolder: function () {
 
