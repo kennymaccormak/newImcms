@@ -1,8 +1,9 @@
 (function (Imcms) {
-    var viewModel, folders = [];
+    var viewModel;
 
     function getFoldersUrl() {
         return [
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars/bmw",
@@ -12,7 +13,6 @@
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family/porno",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/img"
         ];
     }
@@ -54,6 +54,10 @@
 
         foldersRelativeUrlsArray = getRelativeFoldersUrl(foldersUrlArray, root);
 
+        foldersRelativeUrlsArray.sort(function (a, b) {
+            return a.length < b.length;
+        });
+
         foldersRelativeUrlsArray.forEach(function (relUrl) {
             relUrl = relUrl.split("/");
             relUrl.splice(0, 1);
@@ -64,21 +68,48 @@
     }
 
     function getFoldersObject() {
-        var foldersUrl = parseFoldersUrl()
+        var foldersUrl = parseFoldersUrl(),
+            folders = []
         ;
 
         foldersUrl.forEach(function (url) {
             folders.push({
                 name: url[url.length - 1],
-                parent: url[url.length - 2],
-                level: url.length
+                parent: url.slice(0, url.length - 1).join("/"),
+                path: url.join("/"),
+                level: url.length,
+                subfolder: []
             })
 
         });
+        return folders;
     }
 
     function getFolders() {
-        return getFoldersObject();
+        var foldersArray = getFoldersObject(),
+            pathToFolder = {}
+        ;
+
+        foldersArray.forEach(function (folderFromArray) {
+            if (!pathToFolder[folderFromArray.parent]) {
+                pathToFolder[folderFromArray.parent] = [folderFromArray];
+            } else {
+                for (var path in pathToFolder) {
+                    pathToFolder[path].forEach(function (elem) {
+                        if (elem.parent === folderFromArray.parent) {
+                            pathToFolder[path].push(folderFromArray);
+                        }
+                    })
+                }
+            }
+        });
+/*
+        for (var keyPath in pathToFolder) {
+
+        }*/
+
+        console.log(pathToFolder);
+
     }
 
     Imcms.Folders = {
