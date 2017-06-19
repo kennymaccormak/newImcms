@@ -1,11 +1,13 @@
 (function (Imcms) {
     var viewModel;
 
+    /*response from server*/
+
     function getFoldersUrl() {
         return [
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images",
+            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2018",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2031",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars/bmw",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/holiday",
@@ -15,10 +17,10 @@
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family/porno",
             "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/img",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2015",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2015/bad-foto"
         ];
     }
+
+    /*create foldersObject function*/
 
     function findFoldersRootUrl(urlsArray) {
         var length = urlsArray[0].length, index = 0;
@@ -74,7 +76,7 @@
                 subfolder: []
             }
         }).sort(function (a, b) {
-            return  b.level - a.level;
+            return b.level - a.level;
         });
     }
 
@@ -83,39 +85,118 @@
             pathToFolder = {}
         ;
 
-        foldersArray.forEach(function (folderFromArray) {
-            if (!pathToFolder[folderFromArray.parent]) {
-                pathToFolder[folderFromArray.parent] = [folderFromArray];
+        foldersArray.forEach(function (folder) {
+            /*if (!folder.parent) {
+             return;
+             }*/
+
+            if (pathToFolder[folder.parent]) {
+                pathToFolder[folder.parent].push(folder);
+            } else {
+                pathToFolder[folder.parent] = [folder];
             }
 
-            Object.keys(pathToFolder).forEach(function (path) {
-                var shouldBeAdded = pathToFolder[path].some(function (elem) {
-                    return (elem.parent === folderFromArray.parent && elem.path !== folderFromArray.path);
-                });
-
-                if (shouldBeAdded) {
-                    pathToFolder[path].push(folderFromArray);
-                }
-            });
+            if (pathToFolder[folder.path]) {
+                folder.subfolder = pathToFolder[folder.path];
+                delete pathToFolder[folder.path];
+            }
         });
 
+        // var recurs = function () {
+        //     foldersArray.forEach(function (folder) {
+        //         foldersArray.forEach(function (parent) {
+        //             if (folder.parent === parent.path) {
+        //                 parent.subfolder.push(folder);
+        //                 foldersArray.splice(foldersArray.indexOf(folder), 1);
+        //                 recurs();
+        //             }
+        //         });
+        //     });
+        //
+        // };
+        //
+        // recurs();
 
-/*
-        for (var keyPath in pathToFolder) {
+        return pathToFolder;
+    }
 
-        }*/
+    /*builderFolder functions*/
 
-        console.log(pathToFolder);
-        console.log(foldersArray);
+    function createFolderWrap(folder) {
 
+        return $("<div>", {
+            "class": "imcms-folders",
+            "data-folders-lvl": folder.level
+        })
+    }
+
+    function createControl() {
+        var controls = createControls();
+
+        viewModel.controls.forEach(function (control) {
+            $("<div>", {
+                "class": "imcms-controls__control imcms-control imcms-control--" + control.name,
+                click: control.click
+            }).prependTo(controls);
+        });
+
+        return controls;
+    }
+
+    function createControls() {
+
+        return $("<div>", {
+            "class": "imcms-folder__controls"
+        });
+    }
+
+    function createFolderName(name) {
+
+        return $("<div>", {
+            "class": "imcms-folder__name imcms-title",
+            text: name
+        });
+    }
+
+    function createShowHideBtn(isSubfolder) {
+        if (isSubfolder.length !== 0) {
+
+            return $("<div>", {
+                "class": "imcms-folder__btn",
+                click: Imcms.Folders.showHideSubfolders
+            });
+        }
+    }
+
+    function createFolder(folder) {
+
+        return $("<div>", {"class": "imcms-folders__folder imcms-folder"})
+            .prepend(createControl())
+            .prepend(createFolderName(folder.name))
+            .prepend(createShowHideBtn(folder.subfolder));
+    }
+
+
+    function findMainFolderInObject(folders) {
+        var rootFolders = folders[""];
+
+        rootFolders.forEach(function (folder) {
+            viewModel.foldersArea.append(createFolderWrap(folder).append(createFolder(folder)));
+            console.log(folder);
+        });
+    }
+
+
+    function folderBuilder(folders) {
+        findMainFolderInObject(folders);
     }
 
     Imcms.Folders = {
         init: function () {
 
             viewModel = {
-                folders: getFolders(),
                 foldersArea: $(document).find(".imcms-content-manager__left-side"),
+                folders: getFolders(),
                 controls: [
                     {
                         name: "create",
@@ -135,13 +216,15 @@
                     }
                 ]
             };
-        },
-        /*showHideSubfolders: function () {
-         var $btn = $(this);
 
-         $btn.parents(".imcms-folder").next().slideToggle();
-         $btn.toggleClass("imcms-folder-btn--open");
-         },*/
+            folderBuilder(viewModel.folders);
+        },
+        showHideSubfolders: function () {
+            var $btn = $(this);
+
+            $btn.parents(".imcms-folder").next().slideToggle();
+            $btn.toggleClass("imcms-folder-btn--open");
+        },
         createNewFolder: function () {
 
         },
@@ -154,6 +237,7 @@
                 subFolder = currentFolder.next(),
                 parentFolder = currentFolder.closest(".imcms-folders")
             ;
+
 
             if (subFolder.hasClass("imcms-folders")) {
                 subFolder.remove();
