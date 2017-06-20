@@ -138,19 +138,23 @@
         })
     }
 
-    function createControl() {
+    function createControl(controls) {
         viewModel.controls.forEach(function (control) {
-            return $("<div>", {
+            $("<div>", {
                 "class": "imcms-controls__control imcms-control imcms-control--" + control.name,
                 click: control.click
-            })
-        })
+            }).prependTo(controls);
+        });
+
+        return controls;
     }
 
     function createControls() {
-        return $("<div>", {
+        var controls = $("<div>", {
             "class": "imcms-folder__controls"
-        }).prepend(createControl())
+        });
+
+        return createControl(controls);
     }
 
     function createFolderName(name) {
@@ -174,7 +178,8 @@
         var newFolder = null;
 
         newFolder = $("<div>", {
-            "class": "imcms-folders__folder imcms-folder"
+            "class": "imcms-folders__folder imcms-folder",
+            "data-folder-path": folder.path
         }).prepend(createControls());
         newFolder.prepend(createFolderName(folder.name));
         if (folder.subfolder.length !== 0) {
