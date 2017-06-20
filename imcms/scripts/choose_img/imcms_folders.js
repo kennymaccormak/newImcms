@@ -120,78 +120,89 @@
         //
         // recurs();
 
+        pathToFolder = pathToFolder[""];
+
         return pathToFolder;
     }
 
     /*builderFolder functions*/
 
-    function createFolderWrap(folder) {
-
+    function createFolderWrap(level) {
         return $("<div>", {
-            "class": "imcms-folders",
-            "data-folders-lvl": folder.level
+            "class": (level === 1) ? "imcms-left-side__folders imcms-folders" : "imcms-folders imcms-subfolders--close",
+            "data-folders-lvl": level
         })
     }
 
     function createControl() {
-        var controls = createControls();
-
         viewModel.controls.forEach(function (control) {
-            $("<div>", {
+            return $("<div>", {
                 "class": "imcms-controls__control imcms-control imcms-control--" + control.name,
                 click: control.click
-            }).prependTo(controls);
-        });
-
-        return controls;
+            })
+        })
     }
 
     function createControls() {
-
         return $("<div>", {
             "class": "imcms-folder__controls"
-        });
+        }).prepend(createControl())
     }
 
     function createFolderName(name) {
-
         return $("<div>", {
             "class": "imcms-folder__name imcms-title",
-            text: name
-        });
+            text: name,
+            click: Imcms.Folders.active
+        })
     }
 
     function createShowHideBtn(isSubfolder) {
         if (isSubfolder.length !== 0) {
-
             return $("<div>", {
                 "class": "imcms-folder__btn",
                 click: Imcms.Folders.showHideSubfolders
-            });
+            })
         }
     }
 
     function createFolder(folder) {
+        var newFolder = null;
 
-        return $("<div>", {"class": "imcms-folders__folder imcms-folder"})
-            .prepend(createControl())
-            .prepend(createFolderName(folder.name))
-            .prepend(createShowHideBtn(folder.subfolder));
+        newFolder = $("<div>", {
+            "class": "imcms-folders__folder imcms-folder"
+        }).prepend(createControls());
+        newFolder.prepend(createFolderName(folder.name));
+        if (folder.subfolder.length !== 0) {
+            newFolder.prepend(createShowHideBtn(folder.subfolder));
+        }
+
+        return newFolder;
     }
 
-
-    function findMainFolderInObject(folders) {
-        var rootFolders = folders[""];
-
-        rootFolders.forEach(function (folder) {
-            viewModel.foldersArea.append(createFolderWrap(folder).append(createFolder(folder)));
-            console.log(folder);
-        });
+    function buildSubfolder(subfolders, wrap) {
+        subfolders.forEach(function (subfolder) {
+            wrap.prepend(buildFolderWrap(subfolder));
+        })
     }
 
+    function buildFolder(folder, wrap) {
+        if(folder.subfolder.length !== 0){
+            return createFolder(folder).prepend(buildSubfolder(folder.subfolder, wrap))
+        } else{
+            return createFolder(folder);
+        }
+    }
+
+    function buildFolderWrap(folder) {
+        var wrap = createFolderWrap(folder.level);
+        return wrap.prepend(buildFolder(folder, wrap));
+    }
 
     function folderBuilder(folders) {
-        findMainFolderInObject(folders);
+        folders.forEach(function (folder) {
+            $(document).find(".imcms-content-manager__left-side").append(buildFolderWrap(folder));
+        })
     }
 
     Imcms.Folders = {
@@ -222,11 +233,16 @@
 
             folderBuilder(viewModel.folders);
         },
+        active: function () {
+
+        },
         showHideSubfolders: function () {
             var $btn = $(this);
 
-            $btn.parents(".imcms-folder").next().slideToggle();
-            $btn.toggleClass("imcms-folder-btn--open");
+            if($btn.parents(".imcms-folder").next().hasClass("imcms-folders")){
+                $btn.parents(".imcms-folder").next().slideToggle();
+                $btn.toggleClass("imcms-folder-btn--open");
+            }
         },
         createNewFolder: function () {
 
