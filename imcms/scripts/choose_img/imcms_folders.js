@@ -187,9 +187,9 @@
     }
 
     function buildFolder(folder, wrap) {
-        if(folder.subfolder.length !== 0){
+        if (folder.subfolder.length !== 0) {
             return createFolder(folder).prepend(buildSubfolder(folder.subfolder, wrap))
-        } else{
+        } else {
             return createFolder(folder);
         }
     }
@@ -237,12 +237,19 @@
 
         },
         showHideSubfolders: function () {
-            var $btn = $(this);
+            var $btn = $(this),
+                level = $btn.parents(".imcms-folders").attr("data-folders-lvl")
+            ;
 
-            if($btn.parents(".imcms-folder").next().hasClass("imcms-folders")){
-                $btn.parents(".imcms-folder").next().slideToggle();
-                $btn.toggleClass("imcms-folder-btn--open");
-            }
+            level = parseInt(level) + 1;
+
+            //if($btn.parents(".imcms-folder").next().hasClass("imcms-folders")){
+            $btn.parents(".imcms-folders").find(".imcms-folders[data-folders-lvl=" + level + "]").each(function () {
+                console.log($(this));
+                $(this).slideToggle()
+            });
+            $btn.toggleClass("imcms-folder-btn--open");
+            //}
         },
         createNewFolder: function () {
 
