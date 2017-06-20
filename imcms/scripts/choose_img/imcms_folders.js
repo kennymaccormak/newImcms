@@ -251,14 +251,10 @@
             ;
 
             level = parseInt(level) + 1;
-
-            //if($btn.parents(".imcms-folder").next().hasClass("imcms-folders")){
             $btn.parents(".imcms-folders").find(".imcms-folders[data-folders-lvl=" + level + "]").each(function () {
-                console.log($(this));
                 $(this).slideToggle()
             });
             $btn.toggleClass("imcms-folder-btn--open");
-            //}
         },
         createNewFolder: function () {
 
@@ -269,22 +265,21 @@
         removeFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
-                subFolder = currentFolder.next(),
-                parentFolder = currentFolder.closest(".imcms-folders")
+                subFolders = currentFolder.parent().find(".imcms-folders"),
+                parentFolder = currentFolder.closest(".imcms-folders"),
+                currentFolderWrap = parentFolder.parent()
             ;
 
-
-            if (subFolder.hasClass("imcms-folders")) {
-                subFolder.remove();
-            }
+            subFolders.remove();
             currentFolder.remove();
+            parentFolder.remove();
+            console.log(currentFolderWrap);
 
-            if (parentFolder.children().length === 0) {
-                if (parentFolder.prev().hasClass("imcms-folder")) {
-                    parentFolder.prev().find(".imcms-folder__btn").remove();
-                }
-                parentFolder.remove();
+            if (currentFolderWrap.children().length === 1) {
+                currentFolderWrap.find(".imcms-folder__btn").remove();
             }
+
+
         },
         moveFolder: function () {
 
