@@ -214,6 +214,14 @@
         })
     }
 
+    /*action function (remove, rename, move, create)*/
+
+    function removeFolderFromServer(folderId) {
+        console.log(folderId);
+        console.log(viewModel.folders);
+    }
+
+
     Imcms.Folders = {
         init: function () {
 
@@ -273,17 +281,19 @@
                 currentFolder = $ctrl.closest(".imcms-folder"),
                 subFolders = currentFolder.parent().find(".imcms-folders"),
                 parentFolder = currentFolder.closest(".imcms-folders"),
-                currentFolderWrap = parentFolder.parent()
+                currentFolderWrap = parentFolder.parent(),
+                currentFolderId = currentFolder.attr("data-folder-path")
             ;
 
             subFolders.remove();
             currentFolder.remove();
             parentFolder.remove();
-            console.log(currentFolderWrap);
 
             if (currentFolderWrap.children().length === 1) {
                 currentFolderWrap.find(".imcms-folder__btn").remove();
             }
+
+            removeFolderFromServer(currentFolderId);
         },
         moveFolder: function () {
 
