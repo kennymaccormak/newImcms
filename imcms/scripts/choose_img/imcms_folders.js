@@ -243,7 +243,13 @@
             folderBuilder(viewModel.folders);
         },
         active: function () {
+            var allFolders = $(this).parents(".imcms-content-manager__left-side").find(".imcms-folder");
 
+            allFolders.each(function () {
+                $(this).removeClass("imcms-folder--active");
+            });
+
+            $(this).parents(".imcms-folder").addClass("imcms-folder--active");
         },
         showHideSubfolders: function () {
             var $btn = $(this),
@@ -278,8 +284,6 @@
             if (currentFolderWrap.children().length === 1) {
                 currentFolderWrap.find(".imcms-folder__btn").remove();
             }
-
-
         },
         moveFolder: function () {
 

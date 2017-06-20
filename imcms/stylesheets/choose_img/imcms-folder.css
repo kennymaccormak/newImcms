@@ -36,12 +36,12 @@
     background: url("../../img/content_manager/icon_folder_open.png") no-repeat center;
 }
 
-.imcms-folder--active .imcms-folder-btn--open {
-    background-image: url("../../img/content_manager/icon_folder_open_dark.png");
-}
-
 .imcms-folder--active .imcms-folder__btn {
     background-image: url("../../img/content_manager/icon_folder_close_dark.png");
+}
+
+.imcms-folder--active .imcms-folder-btn--open {
+    background-image: url("../../img/content_manager/icon_folder_open_dark.png");
 }
 
 .imcms-folder__name {
