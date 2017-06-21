@@ -1,7 +1,7 @@
 (function (Imcms) {
     Imcms.REST = {
         create: function (url) {
-
+            console.log(url);
         },
         read: function () {
             return [

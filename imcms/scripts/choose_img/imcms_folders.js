@@ -229,6 +229,14 @@
         Imcms.REST.update(folderFullPath);
     }
 
+    function createFolderOnServer(folder) {
+        var urlsArray = getFoldersUrl(),
+            folderFullPath = findFoldersRootUrl(urlsArray) + "/" + folder.path
+        ;
+
+        Imcms.REST.create(folderFullPath);
+    }
+
 
     Imcms.Folders = {
         init: function () {
@@ -290,8 +298,7 @@
             });
             submitBtn = $("<button>", {
                 "class": "imcms-panel-named__button imcms-button--neutral imcms-button",
-                text: "add+",
-                click: Imcms.Folders.submitRename
+                text: "add+"
             });
             panel.append(nameInput);
             panel.append(submitBtn);
@@ -312,7 +319,34 @@
             $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.createNewFolder);
             renameFolderOnServer(currentFolder);
         },
-        createNewFolder: function () {
+        submitCreate: function () {
+            var $btn = $(this),
+                panel = $btn.closest(".imcms-panel-named"),
+                currentFolder = panel.prev(),
+                newFolder = {
+                    level: parseInt(currentFolder.parent().attr("data-folders-lvl")) + 1,
+                    name: panel.find("input").val(),
+                    parent: currentFolder.attr("data-folder-path"),
+                    path: currentFolder.attr("data-folder-path") + "/" + panel.find("input").val(),
+                    subfolder: []
+                }
+            ;
+
+            if(currentFolder.find(".imcms-folder__btn").length === 0){
+                currentFolder.prepend($("<div>", {
+                    "class": "imcms-folder__btn",
+                    click: Imcms.Folders.showHideSubfolders
+                }));
+            }
+
+
+            currentFolder.after(createFolderWrap(newFolder.level).append(createFolder(newFolder)));
+
+            panel.remove();
+
+            $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.renameFolder);
+            $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.createNewFolder);
+            createFolderOnServer(newFolder);
 
         },
         renameFolder: function () {
@@ -329,6 +363,8 @@
                 "left": "70px",
                 "width": "80%"
             });
+
+            panel.find("button").click(Imcms.Folders.submitRename);
 
             currentFolder.after(panel);
 
@@ -357,6 +393,19 @@
         },
         moveFolder: function () {
 
+        },
+        createNewFolder: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-folder"),
+                panel = Imcms.Folders.createNameInputPanel(currentFolder)
+            ;
+
+            panel.find("button").click(Imcms.Folders.submitCreate);
+
+            currentFolder.after(panel);
+
+            $(".imcms-folder__controls .imcms-control--rename").unbind("click");
+            $(".imcms-folder__controls .imcms-control--create").unbind("click");
         }
 
     };
