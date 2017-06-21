@@ -214,8 +214,19 @@
         Imcms.REST.remove(folderFullPath);
     }
 
-    function renameFolderOnServer() {
+    function renameFolderOnServer(folder) {
+        var folderPathArray = folder.attr("data-folder-path").split("/"),
+            newFolderRelativePath = "",
+            urlsArray = getFoldersUrl(),
+            folderFullPath = findFoldersRootUrl(urlsArray)
+        ;
 
+        folderPathArray[folderPathArray.length - 1] = folder.find(".imcms-folder__name").text();
+        newFolderRelativePath = folderPathArray.join("/");
+        folderFullPath = folderFullPath + "/" + newFolderRelativePath;
+        folder.attr("data-folder-path", newFolderRelativePath);
+
+        Imcms.REST.update(folderFullPath);
     }
 
 
@@ -295,11 +306,11 @@
                 currentFolderName = currentFolder.find(".imcms-folder__name");
 
             currentFolderName.text(panel.find("input").val());
-            currentFolder.attr("data-folder-path", panel.find("input").val());
             panel.remove();
 
             $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.renameFolder);
             $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.createNewFolder);
+            renameFolderOnServer(currentFolder);
         },
         createNewFolder: function () {
 
@@ -321,9 +332,9 @@
 
             currentFolder.after(panel);
 
-
             $(".imcms-folder__controls .imcms-control--rename").unbind("click");
             $(".imcms-folder__controls .imcms-control--create").unbind("click");
+
         },
         removeFolder: function () {
             var $ctrl = $(this),
