@@ -2,33 +2,11 @@
     var viewModel;
 
     /*response from server*/
-
     function getFoldersUrl() {
-        return [
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2019",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2018",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2018/flowers",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2018/flowers/XxX",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2018/flowers/XxX/(Y)",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars/bmw",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars/lada",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/cars/lada/kalyna",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2017/holiday",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/holiday",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/spring",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/family/porno",
-            "/srv/www/tomcat/instance/182/virt/webapp/WEB-INF/images/images_2016/summer/img"
-        ];
+        return Imcms.REST.read();
     }
 
     /*create foldersObject function*/
-
     function findFoldersRootUrl(urlsArray) {
         var length = urlsArray[0].length, index = 0;
         urlsArray.forEach(function (url) {
@@ -130,7 +108,6 @@
     }
 
     /*builderFolder functions*/
-
     function createFolderWrap(level) {
         return $("<div>", {
             "class": (level === 1) ? "imcms-left-side__folders imcms-folders" : "imcms-folders imcms-subfolders--close",
@@ -214,11 +191,31 @@
         })
     }
 
-    /*action function (remove, rename, move, create)*/
+    /*find and delete element in viewModel.folders array */
+    function findAndDeleteFolderInArray(elementPath, arrayOfFolders) {
 
+        arrayOfFolders.forEach(function (folder) {
+            if (folder.path === elementPath) {
+                arrayOfFolders.splice(arrayOfFolders.indexOf(folder), 1);
+            }
+            if (folder.subfolder.length !== 0) {
+                findAndDeleteFolderInArray(elementPath, folder.subfolder);
+            }
+        });
+    }
+
+    /*action function (remove, rename, move, create)*/
     function removeFolderFromServer(folderId) {
-        console.log(folderId);
-        console.log(viewModel.folders);
+        var urlsArray = getFoldersUrl(),
+            folderFullPath = findFoldersRootUrl(urlsArray) + "/" + folderId
+        ;
+
+        findAndDeleteFolderInArray(folderId, viewModel.folders);
+        Imcms.REST.remove(folderFullPath);
+    }
+
+    function renameFolderOnServer() {
+
     }
 
 
@@ -270,11 +267,63 @@
             });
             $btn.toggleClass("imcms-folder-btn--open");
         },
+        createNameInputPanel: function (folder) {
+            var panel, nameInput, submitBtn, currentFolderName;
+
+            currentFolderName = folder.find(".imcms-folder__name");
+
+            panel = $("<div>", {"class": "imcms-panel-named"});
+            nameInput = $("<input>", {
+                "class": "imcms-panel-named__input imcms-text-box__input imcms-input",
+                "value": currentFolderName.text()
+            });
+            submitBtn = $("<button>", {
+                "class": "imcms-panel-named__button imcms-button--neutral imcms-button",
+                text: "add+",
+                click: Imcms.Folders.submitRename
+            });
+            panel.append(nameInput);
+            panel.append(submitBtn);
+
+            return panel;
+
+        },
+        submitRename: function () {
+            var $btn = $(this),
+                panel = $btn.closest(".imcms-panel-named"),
+                currentFolder = panel.prev(),
+                currentFolderName = currentFolder.find(".imcms-folder__name");
+
+            currentFolderName.text(panel.find("input").val());
+            currentFolder.attr("data-folder-path", panel.find("input").val());
+            panel.remove();
+
+            $(".imcms-folder__controls .imcms-control--rename").click(Imcms.Folders.renameFolder);
+            $(".imcms-folder__controls .imcms-control--create").click(Imcms.Folders.createNewFolder);
+        },
         createNewFolder: function () {
 
         },
         renameFolder: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-folder"),
+                panel = Imcms.Folders.createNameInputPanel(currentFolder)
+            ;
 
+            panel.css({
+                "padding-left": 0,
+                "padding-top": 0,
+                "position": "absolute",
+                "top": "16px",
+                "left": "70px",
+                "width": "80%"
+            });
+
+            currentFolder.after(panel);
+
+
+            $(".imcms-folder__controls .imcms-control--rename").unbind("click");
+            $(".imcms-folder__controls .imcms-control--create").unbind("click");
         },
         removeFolder: function () {
             var $ctrl = $(this),

@@ -38,7 +38,15 @@
     margin-right: 10px;
 }
 
+.imcms-panel-named__input:focus{
+    border-color: #d3d8de;
+}
+
 .imcms-panel-named__button {
     display: inline-block;
     color: #fff;
+}
+
+.imcms-panel-named__button:hover{
+    color: #0b94d8;
 }
