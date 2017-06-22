@@ -330,7 +330,7 @@
             ;
 
             urlsArray.forEach(function (url) {
-                if(url === path){
+                if (url === path) {
                     response = false;
                 }
             });
