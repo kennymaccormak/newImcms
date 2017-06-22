@@ -320,16 +320,44 @@
             return panel;
 
         },
+        folderNameValidation: function (path) {
+            var foldersUrlArray = getFoldersUrl(),
+                root = findFoldersRootUrl(foldersUrlArray),
+                urlsArray = getRelativeFoldersUrl(foldersUrlArray, root),
+                response = true
+            ;
+
+            urlsArray.forEach(function (url) {
+                if(url === path){
+                    response = false;
+                }
+                console.log("url: ", url);
+            });
+
+            console.log("path: ", path);
+
+            return response;
+
+        },
         submitRename: function () {
             var $btn = $(this),
                 panel = $btn.closest(".imcms-panel-named"),
                 currentFolder = panel.prev(),
                 currentFolderName = currentFolder.find(".imcms-folder__name"),
-                newName = panel.find("input").val()
+                newName = panel.find("input").val(),
+                path
             ;
 
-            currentFolderName.text(newName);
-            panel.remove();
+            path = currentFolder.attr("data-folder-path").split("/");
+            path[path.length - 1] = newName;
+            path = "/" + path.join("/");
+
+            if (Imcms.Folders.folderNameValidation(path)) {
+                currentFolderName.text(newName);
+                panel.remove();
+            } else {
+                panel.find("input").css({"border-color": "red"});
+            }
 
             currentFolder.find(".imcms-control--rename").click(Imcms.Folders.renameFolder);
 
@@ -349,20 +377,27 @@
                 }
             ;
 
-            if (currentFolder.find(".imcms-folder__btn").length === 0) {
-                currentFolder.prepend($("<div>", {
-                    "class": "imcms-folder__btn imcms-folder-btn--open",
-                    click: Imcms.Folders.showHideSubfolders
-                }));
-            }
+            var path = "/" + newFolder.path;
 
-            if (currentFolder.find(".imcms-folder__btn").hasClass("imcms-folder-btn--open")) {
-                currentFolder.after(createFolderWrap(newFolder.level).append(createFolder(newFolder)));
+            if (Imcms.Folders.folderNameValidation(path)) {
+
+                if (currentFolder.find(".imcms-folder__btn").length === 0) {
+                    currentFolder.prepend($("<div>", {
+                        "class": "imcms-folder__btn imcms-folder-btn--open",
+                        click: Imcms.Folders.showHideSubfolders
+                    }));
+                }
+
+                if (currentFolder.find(".imcms-folder__btn").hasClass("imcms-folder-btn--open")) {
+                    currentFolder.after(createFolderWrap(newFolder.level).append(createFolder(newFolder)));
+                } else {
+                    currentFolder.after(createFolderWrap(newFolder.level).addClass("imcms-subfolders--close").append(createFolder(newFolder)));
+                }
+
+                panel.remove();
             } else {
-                currentFolder.after(createFolderWrap(newFolder.level).addClass("imcms-subfolders--close").append(createFolder(newFolder)));
+                panel.find("input").css({"border-color": "red"});
             }
-
-            panel.remove();
 
             currentFolder.find(".imcms-control--create").click(Imcms.Folders.createNewFolder);
             createFolderOnServer(newFolder);
