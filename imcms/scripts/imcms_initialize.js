@@ -7,4 +7,5 @@
     Imcms.Keyword.init();
     Imcms.AdminPanel.init();
     Imcms.Folders.init();
+    Imcms.ChooseImg.init();
 })(Imcms);
