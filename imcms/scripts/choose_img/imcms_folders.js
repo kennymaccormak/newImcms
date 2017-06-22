@@ -266,6 +266,8 @@
 
             folderBuilder(viewModel.folders);
 
+            $(".imcms-main-folders-controls .imcms-control--create").click(Imcms.Folders.createNewFirstLevelFolder);
+
             $(function () {
                 var allFoldersSection = $(".imcms-content-manager__left-side"),
                     allSubfolders = allFoldersSection
@@ -331,13 +333,9 @@
                 if(url === path){
                     response = false;
                 }
-                console.log("url: ", url);
             });
 
-            console.log("path: ", path);
-
             return response;
-
         },
         submitRename: function () {
             var $btn = $(this),
@@ -368,14 +366,17 @@
                 panel = $btn.closest(".imcms-panel-named"),
                 currentFolder = panel.prev(),
                 newName = panel.find("input").val(),
+                isParentFolder = currentFolder.parent().hasClass("imcms-folders"),
                 newFolder = {
-                    level: parseInt(currentFolder.parent().attr("data-folders-lvl")) + 1,
+                    level: (!isParentFolder) ? 1 : parseInt(currentFolder.parent().attr("data-folders-lvl")) + 1,
                     name: newName,
-                    parent: currentFolder.attr("data-folder-path"),
-                    path: currentFolder.attr("data-folder-path") + "/" + newName,
+                    parent: (!isParentFolder) ? "" : currentFolder.attr("data-folder-path"),
+                    path: (!isParentFolder) ? newName : currentFolder.attr("data-folder-path") + "/" + newName,
                     subfolder: []
                 }
             ;
+
+            console.log(isParentFolder);
 
             var path = "/" + newFolder.path;
 
@@ -446,6 +447,22 @@
         createNewFolder: function () {
             var $ctrl = $(this),
                 currentFolder = $ctrl.closest(".imcms-folder"),
+                panel = Imcms.Folders.createNameInputPanel(currentFolder)
+            ;
+
+            panel.css({
+                "position": "relative"
+            });
+
+            panel.find("button").click(Imcms.Folders.submitCreate);
+
+            currentFolder.after(panel);
+
+            currentFolder.find(".imcms-control--create").unbind("click");
+        },
+        createNewFirstLevelFolder: function () {
+            var $ctrl = $(this),
+                currentFolder = $ctrl.closest(".imcms-main-folders-controls"),
                 panel = Imcms.Folders.createNameInputPanel(currentFolder)
             ;
 
