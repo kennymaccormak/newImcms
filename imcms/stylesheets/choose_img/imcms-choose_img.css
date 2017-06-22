@@ -50,7 +50,7 @@
     text-align: left;
 }
 
-.imcms-choose-img-wrap:hover{
+.imcms-choose-img-wrap:hover {
     background-color: #fff;
     border-radius: 5px;
     -webkit-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.07);
@@ -60,10 +60,10 @@
     padding: 7px;
 }
 
-.imcms-choose-img-wrap:hover .imcms-choose-img{
+.imcms-choose-img-wrap:hover .imcms-choose-img {
     background-color: #fff;
 }
 
-.imcms-choose-img-wrap:hover .imcms-choose-img-description__button{
+.imcms-choose-img-wrap:hover .imcms-choose-img-description__button {
     display: block;
 }
