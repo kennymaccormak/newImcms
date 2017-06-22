@@ -6,6 +6,7 @@
     min-width: 146px;
     margin-right: 1.5%;
     margin-bottom: 51px;
+    padding: 14px;
 }
 
 .imcms-choose-img {
@@ -16,7 +17,7 @@
 }
 
 .imcms-choose-img-description {
-    padding: 7px 0;
+    padding: 7px;
     position: relative;
     width: 100%;
 }
@@ -34,7 +35,7 @@
     display: none;
     position: absolute;
     top: 7px;
-    right: 0;
+    right: 7px;
 }
 
 .imcms-choose-img-description__img-title {
@@ -44,8 +45,8 @@
     color: #587380;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 22px;
     text-align: left;
 }
 
@@ -55,7 +56,7 @@
     -webkit-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.07);
     -moz-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.07);
     box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.07);
-    margin-bottom: 37px;
+    margin-bottom: 80px;
     padding: 7px;
 }
 
