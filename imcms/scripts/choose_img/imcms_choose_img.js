@@ -1,9 +1,9 @@
-(function (Imcms) {
-    Imcms.ChooseImg = {
-        init: function () {
+(function ( Imcms ) {
+  Imcms.ChooseImg = {
+    init: function () {
 
-        }
-    };
+    }
+  };
 
-    return Imcms.ChooseImg;
-})(Imcms);
+  return Imcms.ChooseImg;
+})( Imcms );

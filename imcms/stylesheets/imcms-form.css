@@ -2,11 +2,11 @@
 }
 
 .imcms-form__field {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .imcms-form__field:after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }

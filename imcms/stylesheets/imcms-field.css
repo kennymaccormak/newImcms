@@ -1,20 +1,20 @@
 .imcms-field {
-    padding-bottom: 10px;
-    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .imcms-field__select {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .imcms-field .imcms-field__select .imcms-select__drop-down-list {
-    display: block;
+  display: block;
 }
 
 .imcms-field .imcms-text-box__input,
 .imcms-field .imcms-text-area__input {
-    width: 100%;
+  width: 100%;
 }
 
 .imcms-field .imcms-field__number .imcms-number-box {
@@ -30,19 +30,19 @@
 }
 
 .imcms-field .imcms-field__keyword .imcms-text-box__input {
-    display: inline-block;
-    width: 90%;
+  display: inline-block;
+  width: 90%;
 }
 
 .imcms-field__item {
-    display: block;
-    margin-right: 5px;
+  display: block;
+  margin-right: 5px;
 }
 
 .imcms-field__item--float-l {
-    float: left;
+  float: left;
 }
 
 .imcms-field__title {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

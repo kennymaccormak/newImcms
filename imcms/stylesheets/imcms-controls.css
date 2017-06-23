@@ -1,53 +1,53 @@
 .imcms-main-folders-controls {
-    border-bottom: 2px solid #d3d8de;
-    display: block;
-    overflow: hidden;
-    padding: 26px 25px;
-    width: 100%;
+  border-bottom: 2px solid #d3d8de;
+  display: block;
+  overflow: hidden;
+  padding: 26px 25px;
+  width: 100%;
 }
 
 .imcms-main-folders-controls__control {
-    float: right;
+  float: right;
 }
 
 .imcms-folder__controls {
-    display: none;
-    float: right;
-    padding: 26px 0;
-    position: relative;
+  display: none;
+  float: right;
+  padding: 26px 0;
+  position: relative;
 }
 
 .imcms-controls__control {
-    display: block;
-    float: right;
-    margin-left: 18px;
+  display: block;
+  float: right;
+  margin-left: 18px;
 }
 
 .imcms-panel-named {
-    background-color: #545c6f;
-    display: block;
-    height: 70px;
-    width: 100%;
-    overflow: hidden;
-    padding-left: 70px;
-    padding-top: 16px;
+  background-color: #545c6f;
+  display: block;
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  padding-top: 16px;
 }
 
 .imcms-panel-named__input {
-    display: inline-block;
-    width: 70%;
-    margin-right: 10px;
+  display: inline-block;
+  width: 70%;
+  margin-right: 10px;
 }
 
 .imcms-panel-named__input:focus {
-    border-color: #d3d8de;
+  border-color: #d3d8de;
 }
 
 .imcms-panel-named__button {
-    display: inline-block;
-    color: #fff;
+  display: inline-block;
+  color: #fff;
 }
 
 .imcms-panel-named__button:hover {
-    color: #0b94d8;
+  color: #0b94d8;
 }

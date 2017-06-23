@@ -5,81 +5,81 @@
 }
 
 .imcms-access-role__head {
-    display: block;
-    margin-bottom: 12px;
-    overflow: hidden;
-    width: 100%;
+  display: block;
+  margin-bottom: 12px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .imcms-access-role__head .imcms-access-role__title {
-    text-align: center;
-    text-transform: uppercase;
-    display: block;
-    float: left;
-    width: 19%;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  width: 19%;
 }
 
 .imcms-access-role__head .imcms-access-role__title:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 .imcms-access-role__body {
-    display: block;
-    overflow: hidden;
-    padding: 3px 0;
-    width: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 3px 0;
+  width: 100%;
 }
 
 .imcms-access-role__row:hover {
-    background-color: #d0e9f9;
+  background-color: #d0e9f9;
 }
 
 .imcms-access-role__body .imcms-access-role__column {
-    text-align: center;
-    display: block;
-    float: left;
-    width: 19%;
+  text-align: center;
+  display: block;
+  float: left;
+  width: 19%;
 }
 
 .imcms-access-role__body .imcms-access-role__column:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 .imcms-access-role__body button {
-    display: none;
-    margin-right: 5px;
+  display: none;
+  margin-right: 5px;
 }
 
 .imcms-access-role__row:hover > button {
-    display: block;
+  display: block;
 }
 
 .imcms-access-role__column .imcms-radio__label {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .imcms-access-role__column .imcms-radio__label:before {
-    top: 3px;
+  top: 3px;
 }
 
 .imcms-access-role__column .imcms-radio__label:after {
-    top: 8px;
+  top: 8px;
 }
 
 .imcms-access-addrole {
-    /*overflow: hidden;*/
+  /*overflow: hidden;*/
 }
 
 .imcms-access-addrole .imcms-access-addrole__select {
-    float: left;
-    margin-right: 23px;
-    width: 87%;
+  float: left;
+  margin-right: 23px;
+  width: 87%;
 }
 
 .imcms-access-addrole__select label {
-    display: none;
+  display: none;
 }
 
 .imcms-access-addrole .imcms-access-addrole__button {
-    line-height: 40px;
+  line-height: 40px;
 }

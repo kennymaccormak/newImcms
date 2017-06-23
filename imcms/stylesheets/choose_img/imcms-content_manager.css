@@ -1,41 +1,41 @@
 .imcms-content-manager {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .imcms-content-manager:after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .imcms-content-manager__head {
-    background-color: #fff;
-    -webkit-box-shadow: 0 0 31px 4px rgba(47, 58, 144, 0.16);
-    -moz-box-shadow: 0 0 31px 4px rgba(47, 58, 144, 0.16);
-    box-shadow: 0 0 31px 4px rgba(47, 58, 144, 0.16);
-    position: relative;
-    z-index: 20;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 31px 4px rgba(47, 58, 144, 0.16);
+  -moz-box-shadow: 0 0 31px 4px rgba(47, 58, 144, 0.16);
+  box-shadow: 0 0 31px 4px rgba(47, 58, 144, 0.16);
+  position: relative;
+  z-index: 20;
 }
 
 .imcms-content-manager__head button {
-    position: absolute;
-    top: 13px;
-    right: 13px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
 }
 
 .imcms-content-manager__head .imcms-head__title {
-    color: #0b94d8;
+  color: #0b94d8;
 }
 
 .imcms-content-manager__left-side {
-    background-color: #545c6f;
-    margin-top: -42px;
-    overflow-y: auto;
-    padding-top: 42px;
-    position: relative;
-    z-index: 15;
+  background-color: #545c6f;
+  margin-top: -42px;
+  overflow-y: auto;
+  padding-top: 42px;
+  position: relative;
+  z-index: 15;
 }
 
 .imcms-left-side__folders {
@@ -43,27 +43,27 @@
 }
 
 .imcms-content-manager__right-side {
-    background-color: #f3f3fc;
-    border-bottom: 1px solid #d3d8de;
-    position: relative;
-    z-index: 10;
+  background-color: #f3f3fc;
+  border-bottom: 1px solid #d3d8de;
+  position: relative;
+  z-index: 10;
 }
 
 .imcms-content-manager__footer {
-    background-color: #f3f3fc;
-    margin-top: -42px;
-    padding-top: 42px;
-    position: relative;
+  background-color: #f3f3fc;
+  margin-top: -42px;
+  padding-top: 42px;
+  position: relative;
 }
 
 .imcms-content-manager__footer .imcms-button--save {
-    position: absolute;
-    top: 48%;
-    right: 27px;
+  position: absolute;
+  top: 48%;
+  right: 27px;
 }
 
 .imcms-content-manager__footer .imcms-button--positive {
-    position: absolute;
-    top: 48%;
-    right: 200px;
+  position: absolute;
+  top: 48%;
+  right: 200px;
 }

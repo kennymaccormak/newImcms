@@ -1,39 +1,39 @@
 .imcms-control {
-    background: no-repeat center;
-    cursor: pointer;
-    display: block;
-    width: 16px;
-    height: 16px;
+  background: no-repeat center;
+  cursor: pointer;
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
 .imcms-control--move {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_move.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_move.png");
 }
 
 .imcms-control--create {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_create.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_create.png");
 }
 
 .imcms-control--rename {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_edit.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_edit.png");
 }
 
 .imcms-control--remove {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_remove.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_remove.png");
 }
 
 .imcms-control--move:hover {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_move_hover.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_move_hover.png");
 }
 
 .imcms-control--create:hover {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_create_hover.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_create_hover.png");
 }
 
 .imcms-control--rename:hover {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_edit_hover.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_edit_hover.png");
 }
 
 .imcms-control--remove:hover {
-    background-image: url("../img/content_manager/folder_controll/icon_folder_controll_remove_hover.png");
+  background-image: url("../img/content_manager/folder_controll/icon_folder_controll_remove_hover.png");
 }
