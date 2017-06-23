@@ -10,6 +10,10 @@
     clear: both;
 }
 
+.imcms-subfolders--close{
+    display: none;
+}
+
 .imcms-folders[data-folders-lvl="2"] .imcms-folder {
     padding-left: 98px;
 }
