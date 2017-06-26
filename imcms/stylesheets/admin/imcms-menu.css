@@ -125,3 +125,29 @@
 .imcms-menu__item--public:hover {
   background-image: url("../../img/admin_panel/icon_public_active.png");
 }
+
+@media screen and (max-width: 1600px){
+  .imcms-menu__items{
+    min-width: 0;
+  }
+  .imcms-menu__item{
+    background-position: 50% 0;
+    background-size: 15px;
+    padding-top: 23px;
+    min-width: 80px;
+  }
+  .imcms-menu__item:first-of-type{
+    width: 100px;
+  }
+  .imcms-menu__item:first-of-type button{
+    margin: 0 auto;
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 1600px){
+  .imcms-menu__item{
+    font-size: 10px;
+    min-width: 60px;
+  }
+}
