@@ -55,38 +55,45 @@
   display: block;
 }
 
-@media screen and (max-width: 1600px){
-  .imcms-admin-panel{
+@media screen and (max-width: 1600px) {
+  .imcms-admin-panel {
     min-height: 72px;
   }
-  .imcms-admin-panel__item{
+
+  .imcms-admin-panel__item {
     height: 35px;
     margin-right: 17px;
   }
-  .imcms-admin-panel__logo{
+
+  .imcms-admin-panel__logo {
     width: 72px;
   }
-  .imcms-admin-panel__title{
+
+  .imcms-admin-panel__title {
     line-height: 35px;
   }
-  .imcms-admin-panel .imcms-flags{
+
+  .imcms-admin-panel .imcms-flags {
     margin-right: 0;
   }
-  .imcms-admin-panel__item .imcms-flag{
+
+  .imcms-admin-panel__item .imcms-flag {
     margin: 10px 50px 0 0;
   }
 }
 
-@media screen and (max-width: 1300px){
-  .imcms-admin-panel__title{
+@media screen and (max-width: 1300px) {
+  .imcms-admin-panel__title {
     display: none;
   }
 }
+
 @media screen and (max-width: 1300px) {
-  .imcms-admin-panel__item .imcms-flag{
+  .imcms-admin-panel__item .imcms-flag {
     margin: 10px 10px 0 0;
   }
-  .imcms-admin-panel__item .imcms-flag:after{
+
+  .imcms-admin-panel__item .imcms-flag:after {
     display: none;
   }
 }
