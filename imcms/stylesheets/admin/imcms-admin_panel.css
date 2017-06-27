@@ -98,6 +98,10 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-
+@media screen and (max-width: 750px) {
+  .imcms-admin-panel__item:first-of-type,
+  .imcms-flags {
+    display: none;
+  }
 }
+
