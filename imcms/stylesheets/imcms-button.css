@@ -175,6 +175,109 @@
   transform: rotate(-90deg);
 }
 
+.imcms-button--proportions {
+  background: transparent url("../img/image_editor/icon_size_smth.png") no-repeat center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
 
+.imcms-button--proportions[data-state="active"] {
+  background-color: #fff;
+  border-color: #0b94d8;
+}
 
+.imcms-button--zoom-plus {
+  background: #fff url("../img/image_editor/icon_zoom_plus.png") no-repeat center;
+  border: 1px solid #d3d8de;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
 
+.imcms-button--zoom-minus {
+  background: #fff url("../img/image_editor/icon_zoom_minus.png") no-repeat center;
+  border: 1px solid #d3d8de;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.imcms-button--zoom-out {
+  background: #fff url("../img/image_editor/icon_img_smth.png") no-repeat center;
+  border: 1px solid #d3d8de;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.imcms-button--rotate-left {
+  background: #fff url("../img/image_editor/icon_rotation_left.png") no-repeat center;
+  border: 1px solid #d3d8de;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.imcms-button--rotate-right {
+  background: #fff url("../img/image_editor/icon_rotation_right.png") no-repeat center;
+  border: 1px solid #d3d8de;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.imcms-button-align {
+  background: #fff no-repeat center;
+  border: 1px solid #d3d8de;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.imcms-button-align:hover,
+.imcms-button-align--active {
+  border-color: #0b94d8;
+}
+
+.imcms-button-align--none {
+  background-image: none;
+  text-transform: capitalize;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.imcms-button-align--top {
+  background-image: url("../img/image_editor/icon_text-decoration_top.png");
+}
+
+.imcms-button-align--center {
+  background-image: url("../img/image_editor/icon_text-decoration_center.png");
+}
+
+.imcms-button-align--bottom {
+  background-image: url("../img/image_editor/icon_text-decoration_bottom.png");
+}
+
+.imcms-button-align--left {
+  background-image: url("../img/image_editor/icon_text-decoration_left.png");
+}
+
+.imcms-button-align--right {
+  background-image: url("../img/image_editor/icon_text-decoration_right.png");
+}

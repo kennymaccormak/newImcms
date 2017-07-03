@@ -1,0 +1,41 @@
+.imcms-edit-size {
+  display: block;
+  min-width: 300px;
+  height: 100%;
+}
+
+.imcms-edit-size__title {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+}
+
+.imcms-edit-size__height {
+  float: left;
+}
+
+.imcms-edit-size__height span {
+  line-height: 41px;
+  float: left;
+  margin-right: 5px;
+}
+
+.imcms-edit-size__width {
+  float: left;
+}
+
+.imcms-edit-size__width span {
+  line-height: 41px;
+  float: left;
+  margin-right: 5px;
+}
+
+.imcms-edit-size .imcms-number {
+  float: left;
+  width: 100px;
+}
+
+.imcms-edit-size__button {
+  float: left;
+  margin: 3px 15px;
+}

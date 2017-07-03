@@ -1,0 +1,46 @@
+.imcms-advanced-mode {
+
+}
+
+.imcms-advanced-mode_title {
+  margin-bottom: 10px;
+}
+
+.imcms-advanced-mode__buttons {
+  margin-bottom: 10px;
+}
+
+.imcms-advanced-mode__space-around {
+  margin-bottom: 10px;
+}
+
+.imcms-advanced-mode__space-around .imcms-space-around__input-box {
+  max-width: none;
+}
+
+.imcms-advanced-mode__crop-coordinates {
+
+}
+
+.imcms-crop-coordinates {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.imcms-crop-coordinate {
+  display: block;
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+}
+
+.imcms-crop-coordinate span {
+  line-height: 41px;
+  float: left;
+  margin-right: 5px;
+}
+
+.imcms-crop-coordinate .imcms-number {
+  float: left;
+  max-width: 70px;
+}

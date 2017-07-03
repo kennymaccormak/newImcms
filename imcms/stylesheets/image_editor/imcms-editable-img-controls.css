@@ -1,5 +1,58 @@
 .imcms-editable-img-controls {
   display: block;
+  overflow: hidden;
+  padding-right: 42px;
+  padding-left: 42px;
   width: 100%;
   height: 15%;
+}
+
+.imcms-editable-img-control {
+  display: block;
+  float: left;
+}
+
+.imcms-editable-img-control:first-child {
+  width: 25%;
+}
+
+.imcms-editable-img-control:nth-child(2) {
+  width: 50%;
+}
+
+.imcms-editable-img-control:last-child {
+  width: 25%;
+}
+
+.imcms-editable-img-control-tabs {
+  padding-top: 40px;
+}
+
+.imcms-editable-img-control-tab {
+  cursor: pointer;
+  line-height: 41px;
+  text-align: center;
+  text-transform: uppercase;
+  float: left;
+  position: relative;
+  width: 50%;
+}
+
+.imcms-editable-img-control-tab:after {
+  content: "";
+  background-color: #0b94d8;
+  display: none;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.imcms-editable-img-control-tab--active:after {
+  display: block;
+}
+
+.imcms-editable-img-control-tab:hover:after {
+  display: block;
 }
