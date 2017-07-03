@@ -49,3 +49,32 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
+
+.imcms-editable-img-area::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.imcms-editable-img-area::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+  height: 6px;
+}
+
+.imcms-editable-img-area::-webkit-scrollbar-thumb {
+  background-color: #dfe2e6;
+}
+
+.imcms-editable-controls-area::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.imcms-editable-controls-area::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+  height: 6px;
+}
+
+.imcms-editable-controls-area::-webkit-scrollbar-thumb {
+  background-color: #dfe2e6;
+}

@@ -7,24 +7,31 @@
 }
 
 .imcms-image-characteristic__img-origin-size {
+  font-weight: 400;
   float: right;
+  margin-right: 5%;
 }
 
 .imcms-img-origin-size {
   font-weight: 400;
   line-height: 64px;
   float: left;
+  margin-left: 5px;
 }
 
 .imcms-img-origin-size__width {
-
+  float: right;
 }
 
 .imcms-img-origin-size__height {
-
+  float: right;
 }
 
 .imcms-image-characteristic__img-url {
   font-weight: 400;
   float: right;
+}
+
+.imcms-image-characteristic__img-url span {
+  margin-left: 5px;
 }
