@@ -1,0 +1,30 @@
+.imcms-image-characteristic {
+  line-height: 64px;
+}
+
+.imcms-image-characteristic__img-title {
+  float: left;
+}
+
+.imcms-image-characteristic__img-origin-size {
+  float: right;
+}
+
+.imcms-img-origin-size {
+  font-weight: 400;
+  line-height: 64px;
+  float: left;
+}
+
+.imcms-img-origin-size__width {
+
+}
+
+.imcms-img-origin-size__height {
+
+}
+
+.imcms-image-characteristic__img-url {
+  font-weight: 400;
+  float: right;
+}
