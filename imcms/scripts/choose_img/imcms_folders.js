@@ -38,7 +38,7 @@
   function parseFoldersUrl() {
     var foldersUrlArray          = getFoldersUrl(),
         root                     = findFoldersRootUrl( foldersUrlArray ),
-        foldersRelativeUrlsArray = []
+        foldersRelativeUrlsArray
     ;
 
     foldersRelativeUrlsArray = getRelativeFoldersUrl( foldersUrlArray, root );
@@ -71,10 +71,6 @@
     ;
 
     foldersArray.forEach( function ( folder ) {
-      /*if (!folder.parent) {
-       return;
-       }*/
-
       if ( pathToFolder[ folder.parent ] ) {
         pathToFolder[ folder.parent ].push( folder );
       } else {
@@ -86,21 +82,6 @@
         delete pathToFolder[ folder.path ];
       }
     } );
-
-    // var recurs = function () {
-    //     foldersArray.forEach(function (folder) {
-    //         foldersArray.forEach(function (parent) {
-    //             if (folder.parent === parent.path) {
-    //                 parent.subfolder.push(folder);
-    //                 foldersArray.splice(foldersArray.indexOf(folder), 1);
-    //                 recurs();
-    //             }
-    //         });
-    //     });
-    //
-    // };
-    //
-    // recurs();
 
     pathToFolder = pathToFolder[ "" ];
 
@@ -152,7 +133,7 @@
   }
 
   function createFolder( folder ) {
-    var newFolder = null;
+    var newFolder;
 
     newFolder = $( "<div>", {
       "class": "imcms-folders__folder imcms-folder",
@@ -216,7 +197,7 @@
 
   function renameFolderOnServer( folder ) {
     var folderPathArray       = folder.attr( "data-folder-path" ).split( "/" ),
-        newFolderRelativePath = "",
+        newFolderRelativePath,
         urlsArray             = getFoldersUrl(),
         folderFullPath        = findFoldersRootUrl( urlsArray )
     ;
