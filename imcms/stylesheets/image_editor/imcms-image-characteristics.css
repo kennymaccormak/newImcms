@@ -35,3 +35,24 @@
 .imcms-image-characteristic__img-url span {
   margin-left: 5px;
 }
+
+.imcms-image-characteristic__button {
+  line-height: 64px;
+  display: none;
+}
+
+.imcms-image-characteristic__button--bottom-panel {
+  float: left;
+  margin-right: 2%;
+}
+
+.imcms-image-characteristic__button--right-panel {
+  float: right;
+  margin-left: 2%;
+}
+
+@media screen and (max-width: 790px) {
+  .imcms-image-characteristic__img-origin-size {
+    margin-right: 1%;
+  }
+}
