@@ -9,4 +9,5 @@
   Imcms.Folders.init();
   Imcms.ChooseImg.init();
   Imcms.ContentManager.init();
+  Imcms.ImageEditor.init();
 })( Imcms );
