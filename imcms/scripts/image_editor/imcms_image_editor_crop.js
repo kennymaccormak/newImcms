@@ -29,6 +29,7 @@
 
       cropArea.resizable( {
                             handles: "all",
+                            containment: "parent",
                             resize: function ( event, ui ) {
                               cropArea.css( {
                                               "background-position-x": "-" + positionLeft,
