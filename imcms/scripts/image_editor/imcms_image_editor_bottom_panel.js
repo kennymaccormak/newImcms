@@ -1,4 +1,7 @@
 (function ( Imcms ) {
+
+  var newAngle = 0;
+
   Imcms.ImageEditorBottomPanel = {
     init: function () {
       $( "#editImageZoomPlusBtn" ).click( Imcms.ImageEditorBottomPanel.zoomPlus );
@@ -102,6 +105,42 @@
                                }, 200 );
       cropArea.css( { "background-size": backgroundSizeVal } );
 
+    },
+    rotateLeft: function () {
+      var imageArea           = $( "#imageArea" ),
+          editableImage       = $( "#editableImage" ),
+          imageAreaLayout     = $( "#imageAreaLayout" ),
+          cropArea            = $( "#cropArea" ),
+          editableImageOption = {}
+      ;
+
+      editableImageOption.height = editableImage.height();
+      editableImageOption.width = editableImage.width();
+
+      newAngle -= 90;
+
+      editableImage.css( { "transform": "rotate(" + newAngle + "deg)" } );
+      cropArea.css( { "transform": "rotate(" + newAngle + "deg)" } );
+
+      //todo right logic for rotate -90deg
+    },
+    rotateRight: function () {
+      var imageArea           = $( "#imageArea" ),
+          editableImage       = $( "#editableImage" ),
+          imageAreaLayout     = $( "#imageAreaLayout" ),
+          cropArea            = $( "#cropArea" ),
+          editableImageOption = {}
+      ;
+
+      editableImageOption.height = editableImage.height();
+      editableImageOption.width = editableImage.width();
+
+      newAngle += 90;
+
+      editableImage.css( { "transform": "rotate(" + newAngle + "deg)" } );
+      cropArea.css( { "transform": "rotate(" + newAngle + "deg)" } );
+
+      //todo right logic for rotate +90deg
     }
   };
 
