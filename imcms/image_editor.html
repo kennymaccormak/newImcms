@@ -23,14 +23,16 @@
 
   <div class="imcms-image_editor__image-characteristics">
     <button type="button"
+            id="showHideBottomPanel"
             class="imcms-image-characteristic imcms-image-characteristic__button imcms-image-characteristic__button--bottom-panel imcms-button--neutral imcms-button"
-            data-state="active">
+            data-state="false">
       show bottom panel
     </button>
     <div class="imcms-image-characteristic imcms-image-characteristic__img-title imcms-title">Label text</div>
     <button type="button"
+            id="showHideRightPanel"
             class="imcms-image-characteristic imcms-image-characteristic__button imcms-image-characteristic__button--right-panel imcms-button--neutral imcms-button"
-            data-state="active">
+            data-state="false">
       show right panel
     </button>
     <div class="imcms-image-characteristic imcms-image-characteristic__img-url imcms-title">Url:
@@ -58,7 +60,7 @@
       </div>
     </div>
 
-    <div class="imcms-editable-img-area__controls imcms-editable-img-controls">
+    <div id="bottomPanel" class="imcms-editable-img-area__controls imcms-editable-img-controls">
       <div class="imcms-editable-img-control imcms-edit-size">
         <div class="imcms-edit-size__title imcms-title">Display size</div>
 
@@ -107,7 +109,7 @@
     </div>
   </div>
 
-  <div class="imcms-image_editor__right-side">
+  <div class="imcms-image_editor__right-side" id="rightSidePanel">
     <div class="imcms-editable-controls-area">
       <div class="imcms-editable-controls-area__buttons imcms-buttons">
         <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">select image</button>
@@ -154,10 +156,10 @@
       </div>
 
       <div class="imcms-editable-controls-area__buttons imcms-buttons">
-        <button type="button" class="imcms-buttons__button imcms-button imcms-button--negative">simple</button>
+        <button type="button" id="chooseMode" class="imcms-buttons__button imcms-button imcms-button--negative" data-state="false">advanced</button>
       </div>
 
-      <div class="imcms-editable-controls-area__advanced-mode imcms-advanced-mode" data-state="inactive">
+      <div class="imcms-editable-controls-area__advanced-mode imcms-advanced-mode">
         <!-----------------------------------------------------data-state="active"-->
         <div class="imcms-advanced-mode_title imcms-title">Text alignment</div>
 
