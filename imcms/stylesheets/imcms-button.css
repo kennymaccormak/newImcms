@@ -210,7 +210,7 @@
   height: 35px;
 }
 
-.imcms-button--zoom-out {
+.imcms-button--zoom-contain {
   background: #fff url("../img/image_editor/icon_img_smth.png") no-repeat center;
   border: 1px solid #d3d8de;
   border-radius: 5px;

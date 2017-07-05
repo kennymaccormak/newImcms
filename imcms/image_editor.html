@@ -49,10 +49,10 @@
   </div>
 
   <div class="imcms-image_editor__left-side">
-    <div class="imcms-editable-img-area">
-      <div class="imcms-editable-img" style="width: 1436px; height: 773px"></div>
-      <div class="imcms-editable-img-area__layout" style="width: 1436px; height: 773px"></div>
-      <div class="imcms-crop-area" style="width: 649px; height: 496px">
+    <div class="imcms-editable-img-area" id="imageArea">
+      <div class="imcms-editable-img" id="editableImage" style="width: 1436px; height: 773px"></div>
+      <div class="imcms-editable-img-area__layout" id="imageAreaLayout" style="width: 1436px; height: 773px"></div>
+      <div class="imcms-crop-area" id="cropArea" style="width: 649px; height: 496px">
         <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-left"></div>
         <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-right"></div>
         <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-left"></div>
@@ -95,11 +95,11 @@
       </div>
 
       <div class="imcms-editable-img-control imcms-edit-image">
-        <button type="button" class="imcms-edit-image__button imcms-button--zoom-plus imcms-button"></button>
-        <button type="button" class="imcms-edit-image__button imcms-button--zoom-minus imcms-button"></button>
-        <button type="button" class="imcms-edit-image__button imcms-button--zoom-out imcms-button"></button>
-        <button type="button" class="imcms-edit-image__button imcms-button--rotate-left imcms-button"></button>
-        <button type="button" class="imcms-edit-image__button imcms-button--rotate-right imcms-button"></button>
+        <button type="button" id="editImageZoomPlusBtn" class="imcms-edit-image__button imcms-button--zoom-plus imcms-button"></button>
+        <button type="button" id="editImageZoomMinusBtn" class="imcms-edit-image__button imcms-button--zoom-minus imcms-button"></button>
+        <button type="button" id="editImageZoomContainBtn" class="imcms-edit-image__button imcms-button--zoom-contain imcms-button"></button>
+        <button type="button" id="editImageRotateLeftBtn" class="imcms-edit-image__button imcms-button--rotate-left imcms-button"></button>
+        <button type="button" id="editImageRotateRightBtn" class="imcms-edit-image__button imcms-button--rotate-right imcms-button"></button>
       </div>
 
       <div class="imcms-editable-img-control imcms-editable-img-control-tabs">
@@ -292,6 +292,7 @@
 <script src="scripts/choose_img/imcms_choose_img.js"></script>
 <script src="scripts/choose_img/imcms_content_manager.js"></script>
 <script src="scripts/image_editor/imcms_image_editor.js"></script>
+<script src="scripts/image_editor/imcms_image_editor_bottom_panel.js"></script>
 <script src="scripts/REST/imcms_rest.js"></script>
 
 
