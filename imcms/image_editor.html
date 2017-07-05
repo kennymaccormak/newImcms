@@ -12,6 +12,10 @@
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"></script>
   <script src="libs/jquery.mask.min.js"></script>
+
+  <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+
 </head>
 <body>
 
@@ -53,10 +57,10 @@
       <div class="imcms-editable-img" id="editableImage" style="width: 1436px; height: 773px"></div>
       <div class="imcms-editable-img-area__layout" id="imageAreaLayout" style="width: 1436px; height: 773px"></div>
       <div class="imcms-crop-area" id="cropArea" style="width: 649px; height: 496px">
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-left"></div>
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-right"></div>
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-left"></div>
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-right"></div>
+        <div id="angleTopLeft" class="imcms-crop-area__angle imcms-angle imcms-angle-top-left"></div>
+        <div id="angleTopRight" class="imcms-crop-area__angle imcms-angle imcms-angle-top-right"></div>
+        <div id="angleBottomLeft" class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-left"></div>
+        <div id="angleBottomRight" class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-right"></div>
       </div>
     </div>
 
@@ -293,6 +297,7 @@
 <script src="scripts/choose_img/imcms_content_manager.js"></script>
 <script src="scripts/image_editor/imcms_image_editor.js"></script>
 <script src="scripts/image_editor/imcms_image_editor_bottom_panel.js"></script>
+<script src="scripts/image_editor/imcms_image_editor_crop.js"></script>
 <script src="scripts/REST/imcms_rest.js"></script>
 
 

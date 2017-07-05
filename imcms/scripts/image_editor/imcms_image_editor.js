@@ -5,6 +5,7 @@
       $( "#showHideBottomPanel" ).click( Imcms.ImageEditor.showHideBottomPanel );
       $( "#chooseMode" ).click( Imcms.ImageEditor.chooseMode );
       Imcms.ImageEditorBottomPanel.init();
+      Imcms.ImageEditorCrop.init();
     },
     showHideRightPanel: function () {
       var $btn                = $( this ),

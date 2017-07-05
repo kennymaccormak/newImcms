@@ -5,6 +5,7 @@
   background-position-x: -360px;
   background-size: 1436px 773px;
   border: 2px dashed #fff;
+  cursor: move;
   display: block;
   position: absolute;
   top: 100px;
