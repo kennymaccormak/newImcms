@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Editor</title>
+  <!--style files-->
+  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+  <link rel="stylesheet" href="stylesheets/imcms-imports_files.css">
+  <!--jquery-->
+  <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+  <script src="libs/jquery.mask.min.js"></script>
+
+  <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+<div class="imcms-menu-editor">
+
+  <div class="imcms-menu-editor__head imcms-head">
+    <div class="imcms-head__title imcms-title">menu editor</div>
+    <button type="button" class="imcms-button imcms-button--close"></button>
+  </div>
+
+  <div class="imcms-menu-editor__left-side imcms-left-side">
+    <div class="imcms-menu-editor__tools"></div>
+
+
+
+  </div>
+
+  <div class="imcms-menu-editor__right-side imcms-right-side">
+    <div class="imcms-menu-editor-tools">
+      <button type="button" class="imcms-menu-editor-tools__button imcms-button--negative imcms-button">new folder</button>
+
+      <div class="imcms-menu-editor-tools__text-box imcms-text-box">
+        <input type="text" id="searchMenuItem" class="imcms-text-box__input imcms-input--search imcms-input" name="text" placeholder="Text">
+      </div>
+
+      <div class="imcms-menu-editor-tools__select imcms-select">
+        <div class="imcms-select__drop-down-list imcms-drop-down-list">
+          <div class="imcms-drop-down-list__select-item">
+            <span class="imcms-drop-down-list__select-item-value">My</span>
+            <button type="button"
+                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+          </div>
+          <div class="imcms-drop-down-list__items">
+            <div class="imcms-drop-down-list__item" data-value="1">My</div>
+            <div class="imcms-drop-down-list__item" data-value="2">Not my 1</div>
+            <div class="imcms-drop-down-list__item" data-value="3">Not my 2</div>
+            <div class="imcms-drop-down-list__item" data-value="4">Not my 3</div>
+          </div>
+          <input type="hidden" id="select1">
+        </div>
+      </div>
+
+      <div class="imcms-menu-editor-tools__select imcms-select">
+        <div class="imcms-select__drop-down-list imcms-drop-down-list">
+          <div class="imcms-drop-down-list__select-item">
+            <span class="imcms-drop-down-list__select-item-value">Categories</span>
+            <button type="button"
+                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+          </div>
+          <div class="imcms-drop-down-list__items">
+            <div class="imcms-drop-down-list__item" data-value="1">Categories</div>
+            <div class="imcms-drop-down-list__item" data-value="2">Categories 1</div>
+            <div class="imcms-drop-down-list__item" data-value="3">Categories 2</div>
+            <div class="imcms-drop-down-list__item" data-value="4">Categories 3</div>
+          </div>
+          <input type="hidden" id="select2">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="imcms-menu-editor__footer imcms-footer imcms-buttons">
+    <button type="button" class="imcms-button--save imcms-button">Save and close</button>
+  </div>
+
+</div>
+
+</body>
+<!--script files-->
+<script src="scripts/imcms_main.js"></script>
+<script src="scripts/imcms_select.js"></script>
+<script src="scripts/imcms_numberbox.js"></script>
+<script src="scripts/imcms_button.js"></script>
+<script src="scripts/imcms_date_picker.js"></script>
+<script src="scripts/imcms_calendar.js"></script>
+<script src="scripts/imcms_time_picker.js"></script>
+<script src="scripts/imcms_keyword.js"></script>
+<script src="scripts/admin/imcms_admin_panel.js"></script>
+<script src="scripts/admin/imcms_pop_up.js"></script>
+<script src="scripts/choose_img/imcms_folders.js"></script>
+<script src="scripts/choose_img/imcms_choose_img.js"></script>
+<script src="scripts/choose_img/imcms_content_manager.js"></script>
+<script src="scripts/image_editor/imcms_image_editor.js"></script>
+<script src="scripts/image_editor/imcms_image_editor_bottom_panel.js"></script>
+<script src="scripts/image_editor/imcms_image_editor_crop.js"></script>
+<script src="scripts/modal_window/imcms_modal_window.js"></script>
+
+<script src="scripts/REST/imcms_rest.js"></script>
+
+<script src="scripts/imcms_initialize.js"></script>
+</html>
