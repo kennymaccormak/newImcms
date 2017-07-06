@@ -36,8 +36,8 @@
   }
 
   function parseFoldersUrl() {
-    var foldersUrlArray          = getFoldersUrl(),
-        root                     = findFoldersRootUrl( foldersUrlArray ),
+    var foldersUrlArray = getFoldersUrl(),
+        root            = findFoldersRootUrl( foldersUrlArray ),
         foldersRelativeUrlsArray
     ;
 
@@ -196,10 +196,10 @@
   }
 
   function renameFolderOnServer( folder ) {
-    var folderPathArray       = folder.attr( "data-folder-path" ).split( "/" ),
+    var folderPathArray = folder.attr( "data-folder-path" ).split( "/" ),
         newFolderRelativePath,
-        urlsArray             = getFoldersUrl(),
-        folderFullPath        = findFoldersRootUrl( urlsArray )
+        urlsArray       = getFoldersUrl(),
+        folderFullPath  = findFoldersRootUrl( urlsArray )
     ;
 
     folderPathArray[ folderPathArray.length - 1 ] = folder.find( ".imcms-folder__name" ).text();
@@ -277,9 +277,11 @@
       ;
 
       level = parseInt( level ) + 1;
-      $btn.parents( ".imcms-folders" ).find( ".imcms-folders[data-folders-lvl=" + level + "]" ).each( function () {
-        $( this ).slideToggle()
-      } );
+      $btn.parents( ".imcms-folders" )
+          .find( ".imcms-folders[data-folders-lvl=" + level + "]" )
+          .each( function () {
+            $( this ).slideToggle()
+          } );
       $btn.toggleClass( "imcms-folder-btn--open" );
     },
     createNameInputPanel: function ( folder ) {
@@ -330,12 +332,22 @@
       path[ path.length - 1 ] = newName;
       path = "/" + path.join( "/" );
 
-      if ( Imcms.Folders.folderNameValidation( path ) ) {
-        currentFolderName.text( newName );
-        panel.remove();
-      } else {
-        panel.find( "input" ).css( { "border-color": "red" } );
-      }
+      Imcms.ModalWindow.init( "Do you want to rename folder \""
+                              + currentFolderName.text()
+                              + "\" to \""
+                              + newName
+                              + "\"?", function ( answer ) {
+        if ( answer ) {
+          if ( Imcms.Folders.folderNameValidation( path ) ) {
+            currentFolderName.text( newName );
+            panel.remove();
+          } else {
+            panel.find( "input" ).css( { "border-color": "red" } );
+          }
+        } else {
+          panel.remove();
+        }
+      } );
 
       currentFolder.find( ".imcms-control--rename" ).click( Imcms.Folders.renameFolder );
 
@@ -370,9 +382,12 @@
         }
 
         if ( currentFolder.find( ".imcms-folder__btn" ).hasClass( "imcms-folder-btn--open" ) ) {
-          currentFolder.after( createFolderWrap( newFolder.level ).append( createFolder( newFolder ) ) );
+          currentFolder.after( createFolderWrap( newFolder.level )
+                                   .append( createFolder( newFolder ) ) );
         } else {
-          currentFolder.after( createFolderWrap( newFolder.level ).addClass( "imcms-subfolders--close" ).append( createFolder( newFolder ) ) );
+          currentFolder.after( createFolderWrap( newFolder.level )
+                                   .addClass( "imcms-subfolders--close" )
+                                   .append( createFolder( newFolder ) ) );
         }
 
         panel.remove();
@@ -405,21 +420,28 @@
     removeFolder: function () {
       var $ctrl             = $( this ),
           currentFolder     = $ctrl.closest( ".imcms-folder" ),
+          currentFolderName = currentFolder.find( ".imcms-folder__name" ).text(),
           subFolders        = currentFolder.parent().find( ".imcms-folders" ),
           parentFolder      = currentFolder.closest( ".imcms-folders" ),
           currentFolderWrap = parentFolder.parent(),
           currentFolderId   = currentFolder.attr( "data-folder-path" )
       ;
 
-      subFolders.remove();
-      currentFolder.remove();
-      parentFolder.remove();
+      Imcms.ModalWindow.init( "Do you want to remove folder \""
+                              + currentFolderName
+                              + "\"?", function ( answer ) {
+        if ( answer ) {
+          subFolders.remove();
+          currentFolder.remove();
+          parentFolder.remove();
 
-      if ( currentFolderWrap.children().length === 1 ) {
-        currentFolderWrap.find( ".imcms-folder__btn" ).remove();
-      }
+          if ( currentFolderWrap.children().length === 1 ) {
+            currentFolderWrap.find( ".imcms-folder__btn" ).remove();
+          }
 
-      removeFolderFromServer( currentFolderId );
+          removeFolderFromServer( currentFolderId );
+        }
+      } );
     },
     moveFolder: function () {
 
