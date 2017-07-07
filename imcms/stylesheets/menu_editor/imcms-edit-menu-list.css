@@ -1,0 +1,51 @@
+.imcms-edit-menu-list {
+  width: 100%;
+  height: 100%;
+}
+
+.imcms-edit-menu-list__tools {
+  margin-bottom: 14px;
+}
+
+.imcms-edit-menu-list-tools {
+
+}
+
+.imcms-edit-menu-list-tool {
+  padding: 0 10px;
+}
+
+.imcms-edit-menu-list-tool__button {
+  padding: 13px 17px;
+}
+
+.imcms-edit-menu-list-tool__text-box{
+  width: 100%;
+  padding: 10px 30px 10px 15px;
+}
+
+.imcms-edit-menu-list-tool__select {
+  display: block;
+  width: 100%;
+}
+
+.imcms-edit-menu-list-tool__select .imcms-drop-down-list {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

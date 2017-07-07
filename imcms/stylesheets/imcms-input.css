@@ -4,14 +4,25 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  outline: none;
+  color: #2f4047;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
-  color: #2f4047;
+  outline: none;
 }
 
 .imcms-input:focus {
   border-color: #0b94d8;
+}
+
+.imcms-input-search {
+  position: relative;
+}
+
+.imcms-input-search__button {
+  position: absolute;
+  top: 9px;
+  right: 5px;
+  z-index: 55;
 }

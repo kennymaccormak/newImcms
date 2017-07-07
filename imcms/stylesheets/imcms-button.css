@@ -281,3 +281,13 @@
 .imcms-button-align--right {
   background-image: url("../img/image_editor/icon_text-decoration_right.png");
 }
+
+.imcms-button--search {
+  background: url("../img/icon_search.png") no-repeat center center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 22px;
+  height: 22px;
+}

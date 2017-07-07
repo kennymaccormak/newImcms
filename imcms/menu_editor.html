@@ -22,66 +22,75 @@
 <div class="imcms-menu-editor">
 
   <div class="imcms-menu-editor__head imcms-head">
-    <div class="imcms-head__title imcms-title">menu editor</div>
+    <div class="imcms-head__title imcms-title">menu editor: <span>1001-01</span></div>
     <button type="button" class="imcms-button imcms-button--close"></button>
   </div>
 
-  <div class="imcms-menu-editor__left-side imcms-left-side">
-    <div class="imcms-menu-editor__tools"></div>
+  <div class="imcms-menu-editor__body">
+    <div class="imcms-menu-editor-body__left-side imcms-left-side">
 
+    </div>
 
+    <div class="imcms-menu-editor-body__right-side imcms-right-side">
+      <div class="imcms-edit-menu-list">
+        <div class="imcms-edit-menu-list__tools imcms-edit-menu-list-tools imcms-grid-section">
 
-  </div>
-
-  <div class="imcms-menu-editor__right-side imcms-right-side">
-    <div class="imcms-menu-editor-tools">
-      <button type="button" class="imcms-menu-editor-tools__button imcms-button--negative imcms-button">new folder</button>
-
-      <div class="imcms-menu-editor-tools__text-box imcms-text-box">
-        <input type="text" id="searchMenuItem" class="imcms-text-box__input imcms-input--search imcms-input" name="text" placeholder="Text">
-      </div>
-
-      <div class="imcms-menu-editor-tools__select imcms-select">
-        <div class="imcms-select__drop-down-list imcms-drop-down-list">
-          <div class="imcms-drop-down-list__select-item">
-            <span class="imcms-drop-down-list__select-item-value">My</span>
-            <button type="button"
-                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+          <div class="imcms-edit-menu-list-tool imcms-grid-coll-2">
+            <button class="imcms-edit-menu-list-tool__button imcms-button--negative imcms-button">new document</button>
           </div>
-          <div class="imcms-drop-down-list__items">
-            <div class="imcms-drop-down-list__item" data-value="1">My</div>
-            <div class="imcms-drop-down-list__item" data-value="2">Not my 1</div>
-            <div class="imcms-drop-down-list__item" data-value="3">Not my 2</div>
-            <div class="imcms-drop-down-list__item" data-value="4">Not my 3</div>
-          </div>
-          <input type="hidden" id="select1">
-        </div>
-      </div>
 
-      <div class="imcms-menu-editor-tools__select imcms-select">
-        <div class="imcms-select__drop-down-list imcms-drop-down-list">
-          <div class="imcms-drop-down-list__select-item">
-            <span class="imcms-drop-down-list__select-item-value">Categories</span>
-            <button type="button"
-                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+          <div class="imcms-edit-menu-list-tool imcms-text-box imcms-grid-coll-4">
+            <div class="imcms-input-search">
+              <input type="text" id="searchMenuItem" class="imcms-edit-menu-list-tool__text-box imcms-text-box__input imcms-input--search imcms-input"
+                     name="text" placeholder="Type to find document">
+              <button class="imcms-input-search__button imcms-button--search imcms-button"></button>
+            </div>
           </div>
-          <div class="imcms-drop-down-list__items">
-            <div class="imcms-drop-down-list__item" data-value="1">Categories</div>
-            <div class="imcms-drop-down-list__item" data-value="2">Categories 1</div>
-            <div class="imcms-drop-down-list__item" data-value="3">Categories 2</div>
-            <div class="imcms-drop-down-list__item" data-value="4">Categories 3</div>
+
+          <div class="imcms-edit-menu-list-tool imcms-grid-coll-3">
+            <div class="imcms-edit-menu-list-tool__select imcms-select">
+              <div class="imcms-select__drop-down-list imcms-drop-down-list">
+                <div class="imcms-drop-down-list__select-item">
+                  <span class="imcms-drop-down-list__select-item-value">My</span>
+                  <button type="button"
+                          class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                </div>
+                <div class="imcms-drop-down-list__items">
+                  <div class="imcms-drop-down-list__item" data-value="1">My</div>
+                  <div class="imcms-drop-down-list__item" data-value="2">option 1</div>
+                  <div class="imcms-drop-down-list__item" data-value="3">option 2</div>
+                  <div class="imcms-drop-down-list__item" data-value="4">option 3</div>
+                </div>
+                <input type="hidden" id="select1">
+              </div>
+            </div>
           </div>
-          <input type="hidden" id="select2">
+
+          <div class="imcms-edit-menu-list-tool imcms-grid-coll-3">
+            <div class="imcms-edit-menu-list-tool__select imcms-select">
+              <div class="imcms-select__drop-down-list imcms-drop-down-list">
+                <div class="imcms-drop-down-list__select-item">
+                  <span class="imcms-drop-down-list__select-item-value">Categories</span>
+                  <button type="button"
+                          class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                </div>
+                <div class="imcms-drop-down-list__items">
+                  <div class="imcms-drop-down-list__item" data-value="1">Categories</div>
+                  <div class="imcms-drop-down-list__item" data-value="2">Categories 1</div>
+                  <div class="imcms-drop-down-list__item" data-value="3">Categories 2</div>
+                  <div class="imcms-drop-down-list__item" data-value="4">Categories 3</div>
+                </div>
+                <input type="hidden" id="select2">
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
-
   </div>
 
-  <div class="imcms-menu-editor__footer imcms-footer imcms-buttons">
-    <button type="button" class="imcms-button--save imcms-button">Save and close</button>
-  </div>
 
 </div>
 
