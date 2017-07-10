@@ -16,9 +16,10 @@
 
 .imcms-edit-menu-list-tool__button {
   padding: 13px 17px;
+  width: 100%;
 }
 
-.imcms-edit-menu-list-tool__text-box{
+.imcms-edit-menu-list-tool__text-box {
   width: 100%;
   padding: 10px 30px 10px 15px;
 }
