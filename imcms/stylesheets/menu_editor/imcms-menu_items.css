@@ -10,9 +10,9 @@
   clear: both;
 }
 
-/*.imcms-submenu-items--close {
+.imcms-submenu-items--close {
   display: none;
-}*/
+}
 
 .imcms-menu-items[data-menu-items-lvl="2"] .imcms-menu-item__info-id {
   padding-left: 28px;
