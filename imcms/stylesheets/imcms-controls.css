@@ -10,11 +10,16 @@
   float: right;
 }
 
-.imcms-folder__controls {
+.imcms-folder__controls,
+.imcms-menu-item__controls{
   display: none;
   float: right;
   padding: 26px 0;
   position: relative;
+}
+
+.imcms-menu-item__controls {
+  padding: 14px 0;
 }
 
 .imcms-controls__control {

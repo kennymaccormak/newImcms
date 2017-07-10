@@ -1,0 +1,34 @@
+.imcms-menu-list {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+}
+
+.imcms-menu-list__titles {
+  padding: 0 27px 0 70px;
+  width: 100%;
+  border-bottom: 1px solid #d3d8de;
+}
+
+.imcms-menu-list__title {
+  color: #2e3f47;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.imcms-menu-list__title:nth-child(3),
+.imcms-menu-list__title:nth-child(4) {
+  padding-left: 10px;
+}
+
+.imcms-menu-list__items {
+  display: block;
+  padding-top: 12px;
+  overflow: auto;
+  width: 100%;
+  height: calc(100% - 25px);
+}

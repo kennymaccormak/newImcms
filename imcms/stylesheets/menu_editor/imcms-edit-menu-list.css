@@ -1,10 +1,9 @@
 .imcms-edit-menu-list {
   width: 100%;
-  height: 100%;
 }
 
 .imcms-edit-menu-list__tools {
-  margin-bottom: 14px;
+  padding: 0 27px 14px;
 }
 
 .imcms-edit-menu-list-tools {
