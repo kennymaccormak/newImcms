@@ -27,6 +27,10 @@
   top: -1px;
   right: -1px;
   width: 3px;
+  height: -webkit-calc(100% + 2px);
+  height: -moz-calc(100% + 2px);
+  height: -ms-calc(100% + 2px);
+  height: -o-calc(100% + 2px);
   height: calc(100% + 2px);
 }
 
@@ -42,5 +46,9 @@
   top: -1px;
   right: -1px;
   width: 3px;
+  height: -webkit-calc(100% + 2px);
+  height: -moz-calc(100% + 2px);
+  height: -ms-calc(100% + 2px);
+  height: -o-calc(100% + 2px);
   height: calc(100% + 2px);
 }

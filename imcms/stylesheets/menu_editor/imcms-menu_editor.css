@@ -66,6 +66,7 @@
 
 .imcms-menu-editor-body__right-side {
   border-left: 1px solid #d3d8de;
+  padding-bottom: 0;
 }
 
 .imcms-menu-editor__footer {

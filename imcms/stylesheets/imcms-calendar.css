@@ -10,6 +10,10 @@
   position: absolute;
   top: 42px;
   left: -1px;
+  width: -webkit-calc(100% + 2px);
+  width: -moz-calc(100% + 2px);
+  width: -ms-calc(100% + 2px);
+  width: -o-calc(100% + 2px);
   width: calc(100% + 2px);
   max-width: 166px;
   z-index: 50;

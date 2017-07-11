@@ -66,6 +66,10 @@
   position: absolute;
   top: 31px;
   left: -1px;
+  width: -webkit-calc(100% + 2px);
+  width: -moz-calc(100% + 2px);
+  width: -ms-calc(100% + 2px);
+  width: -o-calc(100% + 2px);
   width: calc(100% + 2px);
   z-index: 50;
 }
@@ -129,20 +133,36 @@
 
 .imcms-time-picker__prev-hour {
   top: 0;
+  left: -webkit-calc(50% - 3px);
+  left: -moz-calc(50% - 3px);
+  left: -ms-calc(50% - 3px);
+  left: -o-calc(50% - 3px);
   left: calc(50% - 3px);
 }
 
 .imcms-time-picker__next-hour {
   bottom: 0;
+  left: -webkit-calc(50% - 3px);
+  left: -moz-calc(50% - 3px);
+  left: -ms-calc(50% - 3px);
+  left: -o-calc(50% - 3px);
   left: calc(50% - 3px);
 }
 
 .imcms-time-picker__prev-minute {
   top: 0;
+  left: -webkit-calc(50% - 3px);
+  left: -moz-calc(50% - 3px);
+  left: -ms-calc(50% - 3px);
+  left: -o-calc(50% - 3px);
   left: calc(50% - 3px);
 }
 
 .imcms-time-picker__next-minute {
   bottom: 0;
+  left: -webkit-calc(50% - 3px);
+  left: -moz-calc(50% - 3px);
+  left: -ms-calc(50% - 3px);
+  left: -o-calc(50% - 3px);
   left: calc(50% - 3px);
 }

@@ -66,6 +66,10 @@
   position: absolute;
   left: -1px;
   z-index: 100;
+  width: -webkit-calc(100% + 2px);
+  width: -moz-calc(100% + 2px);
+  width: -ms-calc(100% + 2px);
+  width: -o-calc(100% + 2px);
   width: calc(100% + 2px);
 }
 

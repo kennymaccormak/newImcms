@@ -16,7 +16,15 @@
   /*display: none;*/
   overflow: hidden;
   position: absolute;
+  top: -webkit-calc(50% - 100px);
+  top: -moz-calc(50% - 100px);
+  top: -ms-calc(50% - 100px);
+  top: -o-calc(50% - 100px);
   top: calc(50% - 100px);
+  left: -webkit-calc(50% - 130px);
+  left: -moz-calc(50% - 130px);
+  left: -ms-calc(50% - 130px);
+  left: -o-calc(50% - 130px);
   left: calc(50% - 130px);
   height: 200px;
   width: 260px;
