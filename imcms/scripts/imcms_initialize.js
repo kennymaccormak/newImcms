@@ -11,4 +11,5 @@
   Imcms.ContentManager.init();
   Imcms.ImageEditor.init();
   Imcms.MenuEditor.init();
+  // Imcms.MenuList.init();
 })( Imcms );
