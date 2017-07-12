@@ -1,9 +1,9 @@
-(function ( Imcms ) {
-  Imcms.MenuList = {
-    init: function () {
+(function (Imcms) {
+    Imcms.MenuList = {
+        init: function () {
 
-    }
-  };
+        }
+    };
 
-  return Imcms.MenuList;
+    return Imcms.MenuList;
 })(Imcms);

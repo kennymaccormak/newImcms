@@ -1,290 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Editor</title>
-  <!--style files-->
-  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
-  <link rel="stylesheet" href="stylesheets/imcms-imports_files.css">
-  <!--jquery-->
-  <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"></script>
-  <script src="libs/jquery.mask.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <!--style files-->
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    <link rel="stylesheet" href="stylesheets/imcms-imports_files.css">
+    <!--jquery-->
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="libs/jquery.mask.min.js"></script>
 
-  <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
 
 </head>
 <body>
 
 <div class="imcms-image_editor">
-  <div class="imcms-image_editor__head imcms-head">
-    <div class="imcms-head__title imcms-title">image editor</div>
-    <button type="button" class="imcms-button imcms-button--close"></button>
-  </div>
-
-  <div class="imcms-image_editor__image-characteristics">
-    <button type="button"
-            id="showHideBottomPanel"
-            class="imcms-image-characteristic imcms-image-characteristic__button imcms-image-characteristic__button--bottom-panel imcms-button--neutral imcms-button"
-            data-state="false">
-      show bottom panel
-    </button>
-    <div class="imcms-image-characteristic imcms-image-characteristic__img-title imcms-title">Label text</div>
-    <button type="button"
-            id="showHideRightPanel"
-            class="imcms-image-characteristic imcms-image-characteristic__button imcms-image-characteristic__button--right-panel imcms-button--neutral imcms-button"
-            data-state="false">
-      show right panel
-    </button>
-    <div class="imcms-image-characteristic imcms-image-characteristic__img-url imcms-title">Url:
-      <span>/img/image_editor/img1.jpg</span>
-    </div>
-    <div class="imcms-image-characteristic imcms-image-characteristic__img-origin-size imcms-title">Orig
-      <div class="imcms-img-origin-size imcms-img-origin-size__height imcms-title">H:
-        <span class="imcms-img-origin-size__height-value">773</span>
-      </div>
-      <div class="imcms-img-origin-size imcms-img-origin-size__width imcms-title">W:
-        <span class="imcms-img-origin-size__width-value">1436</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="imcms-image_editor__left-side">
-    <div class="imcms-editable-img-area" id="imageArea">
-      <div class="imcms-editable-img" id="editableImage" style="width: 1436px; height: 773px"></div>
-      <div class="imcms-editable-img-area__layout" id="imageAreaLayout" style="width: 1436px; height: 773px"></div>
-      <div class="imcms-crop-area" id="cropArea" style="width: 649px; height: 496px">
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-left"></div>
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-right"></div>
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-left"></div>
-        <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-right"></div>
-      </div>
+    <div class="imcms-image_editor__head imcms-head">
+        <div class="imcms-head__title imcms-title">image editor</div>
+        <button type="button" class="imcms-button imcms-button--close"></button>
     </div>
 
-    <div id="bottomPanel" class="imcms-editable-img-area__controls imcms-editable-img-controls">
-      <div class="imcms-editable-img-control imcms-edit-size">
-        <div class="imcms-edit-size__title imcms-title">Display size</div>
-
-        <div class="imcms-edit-size__height"><span class="imcms-title">H</span>
-          <div class="imcms-number">
-            <div class="imcms-number-box">
-              <input type="text" id="editHeight" class="imcms-number-box__input imcms-input" name="number"
-                     placeholder="Number">
-              <button type="button" class="imcms-number__button imcms-button--increment imcms-button"></button>
-              <button type="button" class="imcms-number__button imcms-button--decrement imcms-button"></button>
-            </div>
-            <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
-          </div>
-        </div>
-
-        <button type="button" class="imcms-edit-size__button imcms-button--proportions imcms-button"
-                data-state="active"></button>
-        <!------data-state="inactive"------->
-
-        <div class="imcms-edit-size__width"><span class="imcms-title">W</span>
-          <div class="imcms-number">
-            <div class="imcms-number-box">
-              <input type="text" id="editWidth" class="imcms-number-box__input imcms-input" name="number"
-                     placeholder="Number">
-              <button type="button" class="imcms-number__button imcms-button--increment imcms-button"></button>
-              <button type="button" class="imcms-number__button imcms-button--decrement imcms-button"></button>
-            </div>
-            <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="imcms-editable-img-control imcms-edit-image">
-        <button type="button" id="editImageZoomPlusBtn"
-                class="imcms-edit-image__button imcms-button--zoom-plus imcms-button"></button>
-        <button type="button" id="editImageZoomMinusBtn"
-                class="imcms-edit-image__button imcms-button--zoom-minus imcms-button"></button>
-        <button type="button" id="editImageZoomContainBtn"
-                class="imcms-edit-image__button imcms-button--zoom-contain imcms-button"></button>
-        <button type="button" id="editImageRotateLeftBtn"
-                class="imcms-edit-image__button imcms-button--rotate-left imcms-button"></button>
-        <button type="button" id="editImageRotateRightBtn"
-                class="imcms-edit-image__button imcms-button--rotate-right imcms-button"></button>
-      </div>
-
-      <div class="imcms-editable-img-control imcms-editable-img-control-tabs">
-        <div class="imcms-editable-img-control-tab imcms-title">preview</div>
-        <div class="imcms-editable-img-control-tab imcms-editable-img-control-tab--active imcms-title">original</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="imcms-image_editor__right-side" id="rightSidePanel">
-    <div class="imcms-editable-controls-area">
-      <div class="imcms-editable-controls-area__buttons imcms-buttons">
-        <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">select image</button>
-      </div>
-
-      <div class="imcms-editable-controls-area__text-box imcms-text-box">
-        <label for="altText" class="imcms-text-box__label imcms-label">Text</label>
-        <input type="text" id="altText" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
-      </div>
-
-      <div class="imcms-editable-controls-area__text-box imcms-text-box">
-        <label for="imgUrl" class="imcms-text-box__label imcms-label">Text</label>
-        <input type="text" id="imgUrl" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
-      </div>
-
-      <div class="imcms-editable-controls-area__select imcms-select">
-        <label for="target" class="imcms-select__label imcms-label">Target</label>
-        <div class="imcms-select__drop-down-list imcms-drop-down-list">
-          <div class="imcms-drop-down-list__select-item">
-            <span class="imcms-drop-down-list__select-item-value">Target V</span>
-            <button type="button"
-                    class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
-          </div>
-          <div class="imcms-drop-down-list__items">
-            <div class="imcms-drop-down-list__item" data-value="1">Target V</div>
-            <div class="imcms-drop-down-list__item" data-value="2">Target 2</div>
-            <div class="imcms-drop-down-list__item" data-value="3">Target 3</div>
-            <div class="imcms-drop-down-list__item" data-value="4">Target 4</div>
-          </div>
-          <input type="hidden" id="target">
-        </div>
-      </div>
-
-      <div class="imcms-editable-controls-area__flags imcms-flags">
-        <div class="imcms-flags__flag imcms-flag imcms-flag--en imcms-flag--active"></div>
-        <div class="imcms-flags__flag imcms-flag imcms-flag--sw"></div>
-      </div>
-
-      <div class="imcms-editable-controls-area__checkboxes imcms-checkboxes">
-        <div class="imcms-checkboxes__checkbox imcms-checkbox">
-          <input type="checkbox" id="checkbox01" class="imcms-checkbox__checkbox" name="checkbox">
-          <label for="checkbox01" class="imcms-checkbox__label imcms-label">All language</label>
-        </div>
-      </div>
-
-      <div class="imcms-editable-controls-area__buttons imcms-buttons">
-        <button type="button" id="chooseMode" class="imcms-buttons__button imcms-button imcms-button--negative"
-                data-state="false">advanced
+    <div class="imcms-image_editor__image-characteristics">
+        <button type="button"
+                id="showHideBottomPanel"
+                class="imcms-image-characteristic imcms-image-characteristic__button imcms-image-characteristic__button--bottom-panel imcms-button--neutral imcms-button"
+                data-state="false">
+            show bottom panel
         </button>
-      </div>
-
-      <div class="imcms-editable-controls-area__advanced-mode imcms-advanced-mode">
-        <!-----------------------------------------------------data-state="active"-->
-        <div class="imcms-advanced-mode_title imcms-title">Text alignment</div>
-
-        <div class="imcms-advanced-mode__buttons imcms-buttons">
-          <button
-              class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--none imcms-button-align--active">
-            None
-          </button>
-          <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--top"></button>
-          <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--center"></button>
-          <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--bottom"></button>
-          <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--left"></button>
-          <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--right"></button>
+        <div class="imcms-image-characteristic imcms-image-characteristic__img-title imcms-title">Label text</div>
+        <button type="button"
+                id="showHideRightPanel"
+                class="imcms-image-characteristic imcms-image-characteristic__button imcms-image-characteristic__button--right-panel imcms-button--neutral imcms-button"
+                data-state="false">
+            show right panel
+        </button>
+        <div class="imcms-image-characteristic imcms-image-characteristic__img-url imcms-title">Url:
+            <span>/img/image_editor/img1.jpg</span>
         </div>
-
-        <div class="imcms-advanced-mode__space-around imcms-space-around">
-          <label for="space1" class="imcms-space-around__label imcms-label">Space around image (h-vspace)</label>
-          <div class="imcms-space-around__input-box">
-            <input type="text" id="space1" class="imcms-space-around__input imcms-input" placeholder="0" name="space">
-            <input type="text" id="space2" class="imcms-space-around__input imcms-input" placeholder="top" name="space">
-            <input type="text" id="space3" class="imcms-space-around__input imcms-input" placeholder="1000"
-                   name="space">
-            <input type="text" id="space4" class="imcms-space-around__input imcms-input" placeholder="1000"
-                   name="space">
-          </div>
+        <div class="imcms-image-characteristic imcms-image-characteristic__img-origin-size imcms-title">Orig
+            <div class="imcms-img-origin-size imcms-img-origin-size__height imcms-title">H:
+                <span class="imcms-img-origin-size__height-value">773</span>
+            </div>
+            <div class="imcms-img-origin-size imcms-img-origin-size__width imcms-title">W:
+                <span class="imcms-img-origin-size__width-value">1436</span>
+            </div>
         </div>
-
-        <div class="imcms-advanced-mode_title imcms-title">Crop Coordinates (W:<span
-            class="imcms-advanced-mode__current-crop-width imcms-title">400</span> H:<span
-            class="imcms-advanced-mode__current-crop-width imcms-title">100</span>)
-        </div>
-
-        <div class="imcms-advanced-mode__crop-coordinates imcms-crop-coordinates">
-          <div class="imcms-crop-coordinate imcms-crop-coordinate__x"><span class="imcms-title">X</span>
-            <div class="imcms-number">
-              <div class="imcms-number-box">
-                <input type="text" id="cropCoordX" class="imcms-number-box__input imcms-input" name="number"
-                       placeholder="X">
-                <button type="button" class="imcms-number__button imcms-button--increment imcms-button"></button>
-                <button type="button" class="imcms-number__button imcms-button--decrement imcms-button"></button>
-              </div>
-              <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
-            </div>
-          </div>
-
-          <div class="imcms-crop-coordinate imcms-crop-coordinate__y"><span class="imcms-title">Y</span>
-            <div class="imcms-number">
-              <div class="imcms-number-box">
-                <input type="text" id="cropCoordY" class="imcms-number-box__input imcms-input" name="number"
-                       placeholder="Y">
-                <button type="button" class="imcms-number__button imcms-button--increment imcms-button"></button>
-                <button type="button" class="imcms-number__button imcms-button--decrement imcms-button"></button>
-              </div>
-              <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
-            </div>
-          </div>
-
-          <div class="imcms-crop-coordinate imcms-crop-coordinate__X1"><span class="imcms-title">X1</span>
-            <div class="imcms-number">
-              <div class="imcms-number-box">
-                <input type="text" id="cropCoordX1" class="imcms-number-box__input imcms-input" name="number"
-                       placeholder="X1">
-                <button type="button" class="imcms-number__button imcms-button--increment imcms-button"></button>
-                <button type="button" class="imcms-number__button imcms-button--decrement imcms-button"></button>
-              </div>
-              <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
-            </div>
-          </div>
-
-          <div class="imcms-crop-coordinate imcms-crop-coordinate__Y1"><span class="imcms-title">Y1</span>
-            <div class="imcms-number">
-              <div class="imcms-number-box">
-                <input type="text" id="cropCoordY1" class="imcms-number-box__input imcms-input" name="number"
-                       placeholder="Y1">
-                <button type="button" class="imcms-number__button imcms-button--increment imcms-button"></button>
-                <button type="button" class="imcms-number__button imcms-button--decrement imcms-button"></button>
-              </div>
-              <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="imcms-advanced-mode_title imcms-title">File format</div>
-
-        <div class="imcms-advanced-mode__file-format">
-          <div class="imcms-select">
-            <div class="imcms-select__drop-down-list imcms-drop-down-list">
-              <div class="imcms-drop-down-list__select-item">
-                <span class="imcms-drop-down-list__select-item-value">GIF</span>
-                <button type="button"
-                        class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
-              </div>
-              <div class="imcms-drop-down-list__items">
-                <div class="imcms-drop-down-list__item" data-value="1">GIF</div>
-                <div class="imcms-drop-down-list__item" data-value="2">PNG</div>
-                <div class="imcms-drop-down-list__item" data-value="3">PNG-24</div>
-                <div class="imcms-drop-down-list__item" data-value="4">JPG</div>
-              </div>
-              <input type="hidden" id="select1">
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="imcms-advanced-mode__button imcms-button imcms-button--neutral">Show exif</button>
-
-      </div>
-
     </div>
-    <div class="imcms-image_editor__footer imcms-buttons">
-      <button type="button" class="imcms-button--negative imcms-button">remove and close</button>
-      <button type="button" class="imcms-button--save imcms-button">Save and close</button>
+
+    <div class="imcms-image_editor__left-side">
+        <div class="imcms-editable-img-area" id="imageArea">
+            <div class="imcms-editable-img" id="editableImage" style="width: 1436px; height: 773px"></div>
+            <div class="imcms-editable-img-area__layout" id="imageAreaLayout"
+                 style="width: 1436px; height: 773px"></div>
+            <div class="imcms-crop-area" id="cropArea" style="width: 649px; height: 496px">
+                <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-left"></div>
+                <div class="imcms-crop-area__angle imcms-angle imcms-angle-top-right"></div>
+                <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-left"></div>
+                <div class="imcms-crop-area__angle imcms-angle imcms-angle-bottom-right"></div>
+            </div>
+        </div>
+
+        <div id="bottomPanel" class="imcms-editable-img-area__controls imcms-editable-img-controls">
+            <div class="imcms-editable-img-control imcms-edit-size">
+                <div class="imcms-edit-size__title imcms-title">Display size</div>
+
+                <div class="imcms-edit-size__height"><span class="imcms-title">H</span>
+                    <div class="imcms-number">
+                        <div class="imcms-number-box">
+                            <input type="text" id="editHeight" class="imcms-number-box__input imcms-input" name="number"
+                                   placeholder="Number">
+                            <button type="button"
+                                    class="imcms-number__button imcms-button--increment imcms-button"></button>
+                            <button type="button"
+                                    class="imcms-number__button imcms-button--decrement imcms-button"></button>
+                        </div>
+                        <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+                    </div>
+                </div>
+
+                <button type="button" class="imcms-edit-size__button imcms-button--proportions imcms-button"
+                        data-state="active"></button>
+                <!------data-state="inactive"------->
+
+                <div class="imcms-edit-size__width"><span class="imcms-title">W</span>
+                    <div class="imcms-number">
+                        <div class="imcms-number-box">
+                            <input type="text" id="editWidth" class="imcms-number-box__input imcms-input" name="number"
+                                   placeholder="Number">
+                            <button type="button"
+                                    class="imcms-number__button imcms-button--increment imcms-button"></button>
+                            <button type="button"
+                                    class="imcms-number__button imcms-button--decrement imcms-button"></button>
+                        </div>
+                        <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="imcms-editable-img-control imcms-edit-image">
+                <button type="button" id="editImageZoomPlusBtn"
+                        class="imcms-edit-image__button imcms-button--zoom-plus imcms-button"></button>
+                <button type="button" id="editImageZoomMinusBtn"
+                        class="imcms-edit-image__button imcms-button--zoom-minus imcms-button"></button>
+                <button type="button" id="editImageZoomContainBtn"
+                        class="imcms-edit-image__button imcms-button--zoom-contain imcms-button"></button>
+                <button type="button" id="editImageRotateLeftBtn"
+                        class="imcms-edit-image__button imcms-button--rotate-left imcms-button"></button>
+                <button type="button" id="editImageRotateRightBtn"
+                        class="imcms-edit-image__button imcms-button--rotate-right imcms-button"></button>
+            </div>
+
+            <div class="imcms-editable-img-control imcms-editable-img-control-tabs">
+                <div class="imcms-editable-img-control-tab imcms-title">preview</div>
+                <div class="imcms-editable-img-control-tab imcms-editable-img-control-tab--active imcms-title">
+                    original
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="imcms-image_editor__right-side" id="rightSidePanel">
+        <div class="imcms-editable-controls-area">
+            <div class="imcms-editable-controls-area__buttons imcms-buttons">
+                <button type="button" class="imcms-buttons__button imcms-button imcms-button--neutral">select image
+                </button>
+            </div>
+
+            <div class="imcms-editable-controls-area__text-box imcms-text-box">
+                <label for="altText" class="imcms-text-box__label imcms-label">Text</label>
+                <input type="text" id="altText" class="imcms-text-box__input imcms-input" name="text"
+                       placeholder="Text">
+            </div>
+
+            <div class="imcms-editable-controls-area__text-box imcms-text-box">
+                <label for="imgUrl" class="imcms-text-box__label imcms-label">Text</label>
+                <input type="text" id="imgUrl" class="imcms-text-box__input imcms-input" name="text" placeholder="Text">
+            </div>
+
+            <div class="imcms-editable-controls-area__select imcms-select">
+                <label for="target" class="imcms-select__label imcms-label">Target</label>
+                <div class="imcms-select__drop-down-list imcms-drop-down-list">
+                    <div class="imcms-drop-down-list__select-item">
+                        <span class="imcms-drop-down-list__select-item-value">Target V</span>
+                        <button type="button"
+                                class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                    </div>
+                    <div class="imcms-drop-down-list__items">
+                        <div class="imcms-drop-down-list__item" data-value="1">Target V</div>
+                        <div class="imcms-drop-down-list__item" data-value="2">Target 2</div>
+                        <div class="imcms-drop-down-list__item" data-value="3">Target 3</div>
+                        <div class="imcms-drop-down-list__item" data-value="4">Target 4</div>
+                    </div>
+                    <input type="hidden" id="target">
+                </div>
+            </div>
+
+            <div class="imcms-editable-controls-area__flags imcms-flags">
+                <div class="imcms-flags__flag imcms-flag imcms-flag--en imcms-flag--active"></div>
+                <div class="imcms-flags__flag imcms-flag imcms-flag--sw"></div>
+            </div>
+
+            <div class="imcms-editable-controls-area__checkboxes imcms-checkboxes">
+                <div class="imcms-checkboxes__checkbox imcms-checkbox">
+                    <input type="checkbox" id="checkbox01" class="imcms-checkbox__checkbox" name="checkbox">
+                    <label for="checkbox01" class="imcms-checkbox__label imcms-label">All language</label>
+                </div>
+            </div>
+
+            <div class="imcms-editable-controls-area__buttons imcms-buttons">
+                <button type="button" id="chooseMode" class="imcms-buttons__button imcms-button imcms-button--negative"
+                        data-state="false">advanced
+                </button>
+            </div>
+
+            <div class="imcms-editable-controls-area__advanced-mode imcms-advanced-mode">
+                <!-----------------------------------------------------data-state="active"-->
+                <div class="imcms-advanced-mode_title imcms-title">Text alignment</div>
+
+                <div class="imcms-advanced-mode__buttons imcms-buttons">
+                    <button
+                            class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--none imcms-button-align--active">
+                        None
+                    </button>
+                    <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--top"></button>
+                    <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--center"></button>
+                    <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--bottom"></button>
+                    <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--left"></button>
+                    <button class="imcms-buttons__button imcms-button imcms-button-align imcms-button-align--right"></button>
+                </div>
+
+                <div class="imcms-advanced-mode__space-around imcms-space-around">
+                    <label for="space1" class="imcms-space-around__label imcms-label">Space around image
+                        (h-vspace)</label>
+                    <div class="imcms-space-around__input-box">
+                        <input type="text" id="space1" class="imcms-space-around__input imcms-input" placeholder="0"
+                               name="space">
+                        <input type="text" id="space2" class="imcms-space-around__input imcms-input" placeholder="top"
+                               name="space">
+                        <input type="text" id="space3" class="imcms-space-around__input imcms-input" placeholder="1000"
+                               name="space">
+                        <input type="text" id="space4" class="imcms-space-around__input imcms-input" placeholder="1000"
+                               name="space">
+                    </div>
+                </div>
+
+                <div class="imcms-advanced-mode_title imcms-title">Crop Coordinates (W:<span
+                        class="imcms-advanced-mode__current-crop-width imcms-title">400</span> H:<span
+                        class="imcms-advanced-mode__current-crop-width imcms-title">100</span>)
+                </div>
+
+                <div class="imcms-advanced-mode__crop-coordinates imcms-crop-coordinates">
+                    <div class="imcms-crop-coordinate imcms-crop-coordinate__x"><span class="imcms-title">X</span>
+                        <div class="imcms-number">
+                            <div class="imcms-number-box">
+                                <input type="text" id="cropCoordX" class="imcms-number-box__input imcms-input"
+                                       name="number"
+                                       placeholder="X">
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--increment imcms-button"></button>
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--decrement imcms-button"></button>
+                            </div>
+                            <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+                        </div>
+                    </div>
+
+                    <div class="imcms-crop-coordinate imcms-crop-coordinate__y"><span class="imcms-title">Y</span>
+                        <div class="imcms-number">
+                            <div class="imcms-number-box">
+                                <input type="text" id="cropCoordY" class="imcms-number-box__input imcms-input"
+                                       name="number"
+                                       placeholder="Y">
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--increment imcms-button"></button>
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--decrement imcms-button"></button>
+                            </div>
+                            <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+                        </div>
+                    </div>
+
+                    <div class="imcms-crop-coordinate imcms-crop-coordinate__X1"><span class="imcms-title">X1</span>
+                        <div class="imcms-number">
+                            <div class="imcms-number-box">
+                                <input type="text" id="cropCoordX1" class="imcms-number-box__input imcms-input"
+                                       name="number"
+                                       placeholder="X1">
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--increment imcms-button"></button>
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--decrement imcms-button"></button>
+                            </div>
+                            <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+                        </div>
+                    </div>
+
+                    <div class="imcms-crop-coordinate imcms-crop-coordinate__Y1"><span class="imcms-title">Y1</span>
+                        <div class="imcms-number">
+                            <div class="imcms-number-box">
+                                <input type="text" id="cropCoordY1" class="imcms-number-box__input imcms-input"
+                                       name="number"
+                                       placeholder="Y1">
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--increment imcms-button"></button>
+                                <button type="button"
+                                        class="imcms-number__button imcms-button--decrement imcms-button"></button>
+                            </div>
+                            <div class="imcms-number-box__error-msg imcms-error-msg">Special info - Error</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="imcms-advanced-mode_title imcms-title">File format</div>
+
+                <div class="imcms-advanced-mode__file-format">
+                    <div class="imcms-select">
+                        <div class="imcms-select__drop-down-list imcms-drop-down-list">
+                            <div class="imcms-drop-down-list__select-item">
+                                <span class="imcms-drop-down-list__select-item-value">GIF</span>
+                                <button type="button"
+                                        class="imcms-button imcms-drop-down-list__button imcms-button--drop-down"></button>
+                            </div>
+                            <div class="imcms-drop-down-list__items">
+                                <div class="imcms-drop-down-list__item" data-value="1">GIF</div>
+                                <div class="imcms-drop-down-list__item" data-value="2">PNG</div>
+                                <div class="imcms-drop-down-list__item" data-value="3">PNG-24</div>
+                                <div class="imcms-drop-down-list__item" data-value="4">JPG</div>
+                            </div>
+                            <input type="hidden" id="select1">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="imcms-advanced-mode__button imcms-button imcms-button--neutral">Show exif
+                </button>
+
+            </div>
+
+        </div>
+        <div class="imcms-image_editor__footer imcms-buttons">
+            <button type="button" class="imcms-button--negative imcms-button">remove and close</button>
+            <button type="button" class="imcms-button--save imcms-button">Save and close</button>
+        </div>
+    </div>
 
 </div>
 </body>

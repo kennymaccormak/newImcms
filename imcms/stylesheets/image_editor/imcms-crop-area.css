@@ -1,51 +1,51 @@
 .imcms-crop-area {
-  background-image: url("../../img/image_editor/img1.jpg");
-  background-repeat: no-repeat;
-  background-position-y: -100px;
-  background-position-x: -360px;
-  background-size: 1436px 773px;
-  border: 2px dashed #fff;
-  cursor: move;
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 360px;
-  z-index: 50;
+    background-image: url("../../img/image_editor/img1.jpg");
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    background-position-x: -360px;
+    background-size: 1436px 773px;
+    border: 2px dashed #fff;
+    cursor: move;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 360px;
+    z-index: 50;
 }
 
 .imcms-crop-area__angle {
-  position: absolute;
+    position: absolute;
 }
 
 .imcms-angle {
-  background-color: #303e47;
-  border-radius: 100%;
-  border: 2px solid #fff;
-  display: block;
-  width: 12px;
-  height: 12px;
+    background-color: #303e47;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    display: block;
+    width: 12px;
+    height: 12px;
 }
 
 .imcms-angle-top-left {
-  cursor: nw-resize;
-  top: -6px;
-  left: -6px;
+    cursor: nw-resize;
+    top: -6px;
+    left: -6px;
 }
 
 .imcms-angle-top-right {
-  cursor: ne-resize;
-  top: -6px;
-  right: -6px;
+    cursor: ne-resize;
+    top: -6px;
+    right: -6px;
 }
 
 .imcms-angle-bottom-left {
-  cursor: sw-resize;
-  bottom: -6px;
-  left: -6px;
+    cursor: sw-resize;
+    bottom: -6px;
+    left: -6px;
 }
 
 .imcms-angle-bottom-right {
-  cursor: se-resize;
-  bottom: -6px;
-  right: -6px;
+    cursor: se-resize;
+    bottom: -6px;
+    right: -6px;
 }

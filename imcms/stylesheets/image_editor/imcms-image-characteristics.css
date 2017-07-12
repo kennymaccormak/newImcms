@@ -1,58 +1,58 @@
 .imcms-image-characteristic {
-  line-height: 64px;
+    line-height: 64px;
 }
 
 .imcms-image-characteristic__img-title {
-  float: left;
+    float: left;
 }
 
 .imcms-image-characteristic__img-origin-size {
-  font-weight: 400;
-  float: right;
-  margin-right: 5%;
+    font-weight: 400;
+    float: right;
+    margin-right: 5%;
 }
 
 .imcms-img-origin-size {
-  font-weight: 400;
-  line-height: 64px;
-  float: left;
-  margin-left: 5px;
+    font-weight: 400;
+    line-height: 64px;
+    float: left;
+    margin-left: 5px;
 }
 
 .imcms-img-origin-size__width {
-  float: right;
+    float: right;
 }
 
 .imcms-img-origin-size__height {
-  float: right;
+    float: right;
 }
 
 .imcms-image-characteristic__img-url {
-  font-weight: 400;
-  float: right;
+    font-weight: 400;
+    float: right;
 }
 
 .imcms-image-characteristic__img-url span {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .imcms-image-characteristic__button {
-  line-height: 64px;
-  display: none;
+    line-height: 64px;
+    display: none;
 }
 
 .imcms-image-characteristic__button--bottom-panel {
-  float: left;
-  margin-right: 2%;
+    float: left;
+    margin-right: 2%;
 }
 
 .imcms-image-characteristic__button--right-panel {
-  float: right;
-  margin-left: 2%;
+    float: right;
+    margin-left: 2%;
 }
 
 @media screen and (max-width: 790px) {
-  .imcms-image-characteristic__img-origin-size {
-    margin-right: 1%;
-  }
+    .imcms-image-characteristic__img-origin-size {
+        margin-right: 1%;
+    }
 }
