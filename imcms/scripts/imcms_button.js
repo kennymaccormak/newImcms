@@ -2,6 +2,11 @@
     Imcms.Button = {
         init: function () {
             $(".imcms-flags__flag").click(Imcms.Button.flagBtn);
+
+            $("#goHome").click(function () {
+                window.location.href = "./index.html";
+            });
+
         },
         flagBtn: function (event) {
             var $btn = $(this);
